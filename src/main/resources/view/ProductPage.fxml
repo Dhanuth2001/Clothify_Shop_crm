@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="580.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.crm.controller.ProductPageController">
+   <children>
+      <Label layoutX="66.0" layoutY="83.0" text="Product ID">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="66.0" layoutY="158.0" text="Name">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="66.0" layoutY="200.0" text="Category">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtProductId" layoutX="192.0" layoutY="81.0" />
+      <TextField fx:id="txtProductName" layoutX="192.0" layoutY="156.0" />
+      <ChoiceBox fx:id="productCategory" layoutX="192.0" layoutY="198.0" prefWidth="150.0" />
+      <Label layoutX="66.0" layoutY="239.0" text="Size">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="66.0" layoutY="323.0" text="Unit Price">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUnitPrice" layoutX="192.0" layoutY="320.0" />
+      <Label layoutX="66.0" layoutY="365.0" text="Supplier ID">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSupplierId" layoutX="192.0" layoutY="362.0" />
+      <Button fx:id="btnSearch" layoutX="262.0" layoutY="113.0" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="32.0" prefWidth="79.0" style="-fx-background-color: black; -fx-background-radius: 5px;" text="SEARCH" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnAdd" layoutX="153.0" layoutY="413.0" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="32.0" prefWidth="79.0" style="-fx-background-color: black; -fx-background-radius: 5px;" text="ADD" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnUpdate" layoutX="106.0" layoutY="455.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="32.0" prefWidth="79.0" style="-fx-background-color: black; -fx-background-radius: 5px;" text="UPDATE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnDelete" layoutX="199.0" layoutY="455.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="32.0" prefWidth="79.0" style="-fx-background-color: black; -fx-background-radius: 5px;" text="DELETE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <TableView layoutX="485.0" layoutY="130.0" prefHeight="305.0" prefWidth="713.0">
+         <columns>
+            <TableColumn fx:id="ColId" prefWidth="64.0" text="ID" />
+            <TableColumn fx:id="colName" prefWidth="99.0" text="Name" />
+            <TableColumn fx:id="colDate" prefWidth="101.0" text="Date Added" />
+            <TableColumn fx:id="colCategory" prefWidth="105.0" text="Category" />
+            <TableColumn fx:id="colSize" prefWidth="98.0" text="Size" />
+            <TableColumn fx:id="colQuantity" prefWidth="90.0" text="Quantity" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="77.0" text="Unit Price" />
+            <TableColumn fx:id="colSupplierId" prefWidth="77.0" text="Supplier ID" />
+         </columns>
+      </TableView>
+      <Separator layoutX="411.0" layoutY="105.0" orientation="VERTICAL" prefHeight="350.0" prefWidth="2.0" />
+      <Label fx:id="txtTime" layoutX="1042.0" layoutY="59.0" text="08.30">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtDate" layoutX="1122.0" layoutY="59.0" text="2023-08-25">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtProductSize" layoutX="192.0" layoutY="237.0" />
+      <Label layoutX="66.0" layoutY="280.0" text="Quantity">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtProductQuantity" layoutX="192.0" layoutY="278.0" />
+   </children>
+</AnchorPane>

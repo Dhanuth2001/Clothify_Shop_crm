@@ -1,0 +1,21 @@
+
+˜
+java:S1104
+"UMake userEmail a static final constant or non-public and provide accessors if needed.(ÜóÆí8íÎÄëş1J$ecf1f406-5658-44ff-b948-70183e6dd0cc
+œ
+java:S1104"TMake btnLogin a static final constant or non-public and provide accessors if needed.(’ÎöØùÿÿÿÿ8¤îÄëş1J$4f886478-c21f-43ac-8630-a63be9346416
+|
+java:S1104"ZMake forgotPassword a static final constant or non-public and provide accessors if needed.(ç”½°ÿÿÿÿÿ8ËÛğŒÿ1
+œ
+java:S1104"YMake createAccount a static final constant or non-public and provide accessors if needed.(Š™Ê8Œ«Åëş1J$81336782-85ad-426d-a28b-06c288c9d12b
+ 
+java:S1104"XMake userPassword a static final constant or non-public and provide accessors if needed.(äƒÌùÿÿÿÿ8º¡Çíş1J$cc66504c-b14f-40e3-a441-007538837e7e
+z
+java:S1172"2Remove this unused method parameter "actionEvent".(Ùõášşÿÿÿÿ8¸Äìş1J$dfe6466a-7549-42e3-90ae-c1556e56ffc7
+l	java:S106"+Replace this use of System.out by a logger.(Ó÷îZ8»Äìş1J$41e62d60-4ca4-46a9-ace4-c9521b698416
+z
+java:S1172"2Remove this unused method parameter "actionEvent".(©µüœüÿÿÿÿ8×Ù íş1J$3de31219-dc76-48d2-bbca-96890b03bace
+l	java:S106"+Replace this use of System.out by a logger.(Ó÷îZ8ØÙ íş1J$815c9832-9044-49f2-8fe4-c50af1eac70e
+z
+java:S1172"2Remove this unused method parameter "actionEvent".(ĞŞÕÙüÿÿÿÿ8Æô íş1J$0cd6c348-ba81-4a62-9adb-38f6369ede14
+l	java:S106"+Replace this use of System.out by a logger.(Ó÷îZ8Éô íş1J$3bc63411-af10-4c14-8e71-7178a51e80f4

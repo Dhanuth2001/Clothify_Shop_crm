@@ -1,0 +1,64 @@
+
+r
+java:S3740
+"/Provide the parametrized type for this generic.(®÷¥¨8„ê2J$cb2506b0-9416-4508-a246-2cd376b23946
+w
+java:S3740"/Provide the parametrized type for this generic.(•“Ä®ÿÿÿÿÿ8í³‡ê2J$18254b69-a947-40fa-9cab-0502f78f82d4
+w
+java:S3740"/Provide the parametrized type for this generic.(ÊÚÎ¨ùÿÿÿÿ8üÏ‡ê2J$fc9640b2-9abe-42b1-b6a9-6cf31868f787
+r
+java:S3740"/Provide the parametrized type for this generic.(§³¸İ8¨ˆê2J$f18e2535-10d6-49b0-b554-023bc5082d6b
+r
+java:S3740"/Provide the parametrized type for this generic.(ú¶øõ8¥¶ˆê2J$b3250e2a-3fe1-49b9-a134-1e912603e91f
+r
+java:S3740"/Provide the parametrized type for this generic.(¯ÿı°8˜ÇŠê2J$56f4cfc8-69ef-4bd6-88fd-d45ea7837df8
+r
+java:S3740"/Provide the parametrized type for this generic.(ƒäÆ8²ãŠê2J$b0211bd7-34ac-4de3-bddc-06d15b336b13
+r
+java:S3740"/Provide the parametrized type for this generic.(ÕÿàÙ8Õ„‹ê2J$b2814355-41d3-4158-a768-779b45bae839
+¡
+java:S1104"YMake txtEmployeeId a static final constant or non-public and provide accessors if needed.(ò¯”¬úÿÿÿÿ8Ü´ƒê2J$d7772ebc-81e4-4e58-b781-6cac7d37a8e3
+
+java:S1104"[Make txtEmployeeName a static final constant or non-public and provide accessors if needed.(´ü¢é8Éİƒê2J$15ee0f90-b967-4263-9806-80b278b53de5
+¢
+java:S1104	"ZMake txtEmployeeDob a static final constant or non-public and provide accessors if needed.(œß•¤ıÿÿÿÿ8Õöƒê2J$cbc365fc-a3f7-4ae2-9aef-6d0c71de48c3
+›
+java:S1104
+"XMake employeeRole a static final constant or non-public and provide accessors if needed.(®÷¥¨8„ê2J$28f7a2f5-e5b2-4351-b4a8-6eceb19852b4
+™
+java:S1104"VMake txtAddress a static final constant or non-public and provide accessors if needed.(œàÂš8¢ú…ê2J$5c1bfd36-30a7-4b37-a508-11ea0e89f30d
+˜
+java:S1104"UMake btnSearch a static final constant or non-public and provide accessors if needed.(É¹ŠÄ8œ­†ê2J$a6823d71-7872-4ca3-8df5-8873f601c49f
+•
+java:S1104"RMake btnAdd a static final constant or non-public and provide accessors if needed.(‰ÂÈ8ÖÒ†ê2J$7b60bb22-187b-4cce-8715-d1b81fbeffa9
+
+java:S1104"UMake btnUpdate a static final constant or non-public and provide accessors if needed.(”ƒ³Šÿÿÿÿÿ8¡ò†ê2J$b81ff49a-b58a-4af5-92d0-6f9ad1060eef
+˜
+java:S1104"UMake btnDelete a static final constant or non-public and provide accessors if needed.(ˆªü›8Ì”‡ê2J$fa95572c-5ffe-4eda-a757-f3fb9eea847c
+™
+java:S1104"QMake ColId a static final constant or non-public and provide accessors if needed.(•“Ä®ÿÿÿÿÿ8ï³‡ê2J$aed5bee2-0368-4840-bedf-f2bcba408ee5
+›
+java:S1104"SMake colName a static final constant or non-public and provide accessors if needed.(ÊÚÎ¨ùÿÿÿÿ8şÏ‡ê2J$24d515cc-9f28-4a23-b4e7-c3a7deccbc62
+•
+java:S1104"RMake colDob a static final constant or non-public and provide accessors if needed.(§³¸İ8ªˆê2J$e581ccc2-5e76-420f-9e24-a6f959d5ca63
+–
+java:S1104"SMake colRole a static final constant or non-public and provide accessors if needed.(ú¶øõ8§¶ˆê2J$31f6d7b6-00e1-4902-bf9b-2fc48d5af89a
+™
+java:S1104"VMake colAddress a static final constant or non-public and provide accessors if needed.(¯ÿı°8šÇŠê2J$49a8331a-b4f5-4940-aae9-a4b6cb8616e6
+—
+java:S1104"TMake colEmail a static final constant or non-public and provide accessors if needed.(ƒäÆ8´ãŠê2J$b941cdc7-4240-4041-a5d6-2a7a33b511fd
+›
+java:S1104"XMake colContactNo a static final constant or non-public and provide accessors if needed.(ÕÿàÙ8Û„‹ê2J$3d4833eb-4fbe-47a9-ae5b-35dff6114484
+›
+java:S1104"SMake txtTime a static final constant or non-public and provide accessors if needed.(İ—’Ùÿÿÿÿÿ8¦³‹ê2J$5fd90a3c-f764-42d3-934e-b94dd998476d
+u
+java:S1104"SMake txtDate a static final constant or non-public and provide accessors if needed.(˜º©²ùÿÿÿÿ8şÏ‹ê2
+—	java:S116"PRename this field "ColId" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•“Ä®ÿÿÿÿÿ8ü³‡ê2J$9691a78f-2e2b-4227-b1c6-865459642c27
+Ä
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(áÄ´ü8æÈ„ê2J$08fe1310-82da-4773-ae62-76b42ec1f84c
+É
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(»…ä«ùÿÿÿÿ8Øã„ê2J$ff8b79d5-3951-40c8-911a-1f6966063034
+É
+java:S1186 "€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¿˜å•øÿÿÿÿ8‘…ê2J$c7a6dfb3-6257-4488-b99e-6a3fcce0eeda
+Ä
+java:S1186#"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Œ“‘8¤Å…ê2J$fcc35278-11c1-4edb-81dc-702b1ac8128b

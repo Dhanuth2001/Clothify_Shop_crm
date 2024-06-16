@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="580.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.crm.controller.EmployeePageController">
+   <children>
+      <Label layoutX="66.0" layoutY="83.0" text="Employee ID">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="66.0" layoutY="158.0" text="Name">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="66.0" layoutY="193.0" text="Date of birth">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="66.0" layoutY="230.0" text="Role">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEmployeeId" layoutX="192.0" layoutY="81.0" />
+      <TextField fx:id="txtEmployeeName" layoutX="192.0" layoutY="156.0" />
+      <DatePicker fx:id="txtEmployeeDob" layoutX="192.0" layoutY="191.0" prefHeight="25.0" prefWidth="149.0" />
+      <ChoiceBox fx:id="employeeRole" layoutX="192.0" layoutY="228.0" prefWidth="150.0" />
+      <Label layoutX="66.0" layoutY="270.0" text="Address">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="66.0" layoutY="336.0" text="Email">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEmail" layoutX="192.0" layoutY="333.0" />
+      <Label layoutX="66.0" layoutY="374.0" text="Contact No.">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtContactNo" layoutX="192.0" layoutY="371.0" />
+      <TextArea fx:id="txtAddress" layoutX="192.0" layoutY="266.0" prefHeight="54.0" prefWidth="150.0" />
+      <Button fx:id="btnSearch" layoutX="262.0" layoutY="113.0" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="32.0" prefWidth="79.0" style="-fx-background-color: black; -fx-background-radius: 5px;" text="SEARCH" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnAdd" layoutX="153.0" layoutY="413.0" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="32.0" prefWidth="79.0" style="-fx-background-color: black; -fx-background-radius: 5px;" text="ADD" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnUpdate" layoutX="106.0" layoutY="455.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="32.0" prefWidth="79.0" style="-fx-background-color: black; -fx-background-radius: 5px;" text="UPDATE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnDelete" layoutX="199.0" layoutY="455.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="32.0" prefWidth="79.0" style="-fx-background-color: black; -fx-background-radius: 5px;" text="DELETE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <TableView layoutX="485.0" layoutY="130.0" prefHeight="305.0" prefWidth="713.0">
+        <columns>
+          <TableColumn fx:id="ColId" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="colName" prefWidth="108.0" text="Name" />
+            <TableColumn fx:id="colDob" prefWidth="73.0" text="DOB" />
+            <TableColumn fx:id="colRole" prefWidth="91.0" text="Role" />
+            <TableColumn fx:id="colAddress" prefWidth="125.0" text="Address" />
+            <TableColumn fx:id="colEmail" prefWidth="125.0" text="Email" />
+            <TableColumn fx:id="colContactNo" prefWidth="115.0" text="Contact No" />
+        </columns>
+      </TableView>
+      <Separator layoutX="411.0" layoutY="105.0" orientation="VERTICAL" prefHeight="350.0" prefWidth="2.0" />
+      <Label fx:id="txtTime" layoutX="1042.0" layoutY="59.0" text="08.30">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtDate" layoutX="1122.0" layoutY="59.0" text="2023-08-25">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

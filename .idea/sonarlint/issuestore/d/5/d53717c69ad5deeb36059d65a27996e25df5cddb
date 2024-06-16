@@ -1,0 +1,33 @@
+
+w
+java:S3740"/Provide the parametrized type for this generic.(Ì£Ëâûÿÿÿÿ8ÒËÊı2J$fb80f3bb-4bdb-425e-aa40-ceec32c9b005
+w
+java:S3740
+"/Provide the parametrized type for this generic.(ïµ¿Ëüÿÿÿÿ8ÓËÊı2J$af7626da-439a-4c9f-9b5f-29082d9c9f72
+¦
+java:S1104"^Make salesOverTimeChart a static final constant or non-public and provide accessors if needed.(Ì£Ëâûÿÿÿÿ8ÕËÊı2J$98045cd9-b9fd-4c0c-bbc9-702f451bb7ea
+«
+java:S1104
+"cMake topSellingProductsChart a static final constant or non-public and provide accessors if needed.(ïµ¿Ëüÿÿÿÿ8ÕËÊı2J$248f14b4-f1cf-487b-b355-74fefaded0e0
+¦
+java:S1104"^Make costBreakdownChart a static final constant or non-public and provide accessors if needed.(œÃÙäıÿÿÿÿ8ÕËÊı2J$be46dc25-deb4-44fe-90c5-7d60ae9aee5b
+
+java:S1854"9Remove this useless assignment to local variable "yAxis".(°ÿÒöøÿÿÿÿ8•ÌÊı2J$121bbc50-d4be-4c62-943d-2418ccaa6f5c
+
+java:S1854"9Remove this useless assignment to local variable "xAxis".(é¨ıÙıÿÿÿÿ8•ÌÊı2J$450922da-f69f-420a-abb0-bf2b15cbe5f7
+r
+java:S1481"*Remove this unused "xAxis" local variable.(é¨ıÙıÿÿÿÿ8™ÌÊı2J$e30f4ea1-1cd6-41c7-8bfa-ee9ea9aedcd7
+r
+java:S1481"*Remove this unused "yAxis" local variable.(°ÿÒöøÿÿÿÿ8›ÌÊı2J$1d734f01-32f7-4a37-87c8-649db769513a
+
+java:S1854?"9Remove this useless assignment to local variable "yAxis".(°ÿÒöøÿÿÿÿ8¥ÌÊı2J$81d1faa6-0aaa-4f9a-9e3b-0c1688f376ba
+
+java:S1854>"9Remove this useless assignment to local variable "xAxis".(é¨ıÙıÿÿÿÿ8¥ÌÊı2J$a3bea2eb-d40f-4233-9bbb-cb4373150fb8
+r
+java:S1481>"*Remove this unused "xAxis" local variable.(é¨ıÙıÿÿÿÿ8¦ÌÊı2J$91838660-d9c5-43c1-af66-2f5239717426
+r
+java:S1481?"*Remove this unused "yAxis" local variable.(°ÿÒöøÿÿÿÿ8¦ÌÊı2J$8711cc91-8151-4747-b8ff-16ffee76b54c
+
+java:S1128"7Remove this unused import 'javafx.scene.control.Label'.(ö²­ÿÿÿÿÿ8«ÌÊı2J$05d736c2-15c0-4010-b585-e0813a6cb95a
+~
+java:S1128";Remove this unused import 'javafx.scene.layout.AnchorPane'.(Ø µ8¬ÌÊı2J$84efbcdf-6168-4587-be7d-808c25b282b6
