@@ -1,10 +1,8 @@
 package edu.icet.crm.controller;
 
 import javafx.scene.chart.*;
-import javafx.scene.control.Label;
-import javafx.scene.layout.AnchorPane;
 
-public class HomePageController {
+public class AdminHomePageController {
     public LineChart salesOverTimeChart;
 
     public BarChart topSellingProductsChart;

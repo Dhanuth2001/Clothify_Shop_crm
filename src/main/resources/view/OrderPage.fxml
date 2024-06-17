@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="580.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.crm.controller.OrderPageController">
+   <children>
+      <Label layoutX="66.0" layoutY="83.0" text="Order ID">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="66.0" layoutY="154.0" text="Product ID">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="66.0" layoutY="253.0" text="Category">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtOrderId" layoutX="192.0" layoutY="81.0" />
+      <ChoiceBox fx:id="productCategory" layoutX="192.0" layoutY="254.0" prefWidth="150.0" />
+      <Label layoutX="66.0" layoutY="289.0" text="Size">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="66.0" layoutY="356.0" text="Unit Price">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUnitPrice" layoutX="192.0" layoutY="353.0" />
+      <Label layoutX="66.0" layoutY="423.0" text="Net Total">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNetTotal" layoutX="192.0" layoutY="420.0" />
+      <Button fx:id="btnSearch" layoutX="262.0" layoutY="112.0" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="32.0" prefWidth="79.0" style="-fx-background-color: black; -fx-background-radius: 5px;" text="SEARCH" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnUpdate" layoutX="106.0" layoutY="461.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="32.0" prefWidth="79.0" style="-fx-background-color: black; -fx-background-radius: 5px;" text="UPDATE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnDelete" layoutX="199.0" layoutY="461.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="32.0" prefWidth="79.0" style="-fx-background-color: black; -fx-background-radius: 5px;" text="DELETE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <TableView layoutX="485.0" layoutY="130.0" prefHeight="305.0" prefWidth="713.0">
+         <columns>
+            <TableColumn fx:id="ColId" prefWidth="64.0" text="Order ID" />
+            <TableColumn fx:id="colName" prefWidth="99.0" text="Product Name" />
+            <TableColumn fx:id="colDate" text="Date Added" />
+            <TableColumn fx:id="colCategory" prefWidth="95.0" text="Category" />
+            <TableColumn fx:id="colSize" prefWidth="63.0" text="Size" />
+            <TableColumn fx:id="colQuantity" prefWidth="67.0" text="Quantity" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="78.0" text="Unit Price" />
+            <TableColumn fx:id="colDiscount" prefWidth="85.0" text="Discount (%)" />
+            <TableColumn fx:id="colProductId" prefWidth="81.0" text="Product ID" />
+         </columns>
+      </TableView>
+      <Separator layoutX="411.0" layoutY="105.0" orientation="VERTICAL" prefHeight="350.0" prefWidth="2.0" />
+      <Label fx:id="txtTime" layoutX="1042.0" layoutY="59.0" text="08.30">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtDate" layoutX="1122.0" layoutY="59.0" text="2023-08-25">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtProductSize" layoutX="192.0" layoutY="287.0" />
+      <Label layoutX="66.0" layoutY="323.0" text="Quantity">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtProductQuantity" layoutX="192.0" layoutY="320.0" />
+      <ChoiceBox fx:id="comboProductId" layoutX="192.0" layoutY="152.0" prefWidth="150.0" />
+      <Label layoutX="66.0" layoutY="222.0" text="Date">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="orderAddedDate" layoutX="192.0" layoutY="220.0" prefHeight="25.0" prefWidth="150.0" />
+      <Label layoutX="66.0" layoutY="188.0" text="Product Name">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtProductName" layoutX="192.0" layoutY="186.0" />
+      <Label layoutX="66.0" layoutY="390.0" text="Discount (per)">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDiscount" layoutX="192.0" layoutY="386.0" />
+   </children>
+</AnchorPane>

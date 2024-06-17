@@ -1,0 +1,9 @@
+
+
+java:S1192"GDefine a constant instead of duplicating this literal "roleId" 3 times.(˜öÁ¥üÿÿÿÿ8á´¯¶‚2J$250a36d1-3b7a-438b-9cec-1e4fec1ad626
+‘
+java:S1192"IDefine a constant instead of duplicating this literal "roleName" 3 times.(¤ÿÔîÿÿÿÿÿ8¨œ°¶‚2J$e84ff24b-a164-4dc1-bfb7-01eac8994e08
+Ä
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Êôòª8š·ª‚2J$4a5dded2-8b43-470f-8abc-af9cf9226def
+z
+java:S1128"8Remove this unused import 'edu.icet.crm.model.Employee'.(Éÿß{8Ó‹²¶‚2J$aef7d50a-1ebe-4c66-b786-eb5023d1ab36

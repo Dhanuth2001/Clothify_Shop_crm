@@ -1,27 +1,27 @@
 
 w
-java:S3740"/Provide the parametrized type for this generic.(Ì£Ëâûÿÿÿÿ8ÒËÊı2J$c40c83c0-a471-4696-9d41-9811ada1d80b
+java:S3740"/Provide the parametrized type for this generic.(Ì£Ëâûÿÿÿÿ8ÒËÊı2J$52597552-cbf6-4d04-a672-a1025e6822c0
 w
-java:S3740"/Provide the parametrized type for this generic.(ïµ¿Ëüÿÿÿÿ8ÓËÊı2J$d1420b23-3522-4a12-bf62-e3b6a119c636
+java:S3740"/Provide the parametrized type for this generic.(ïµ¿Ëüÿÿÿÿ8ÓËÊı2J$bbbe2e27-9bf9-49ae-b0af-8cf95155c192
 ¦
-java:S1104"^Make salesOverTimeChart a static final constant or non-public and provide accessors if needed.(Ì£Ëâûÿÿÿÿ8ÕËÊı2J$4682d593-365b-4540-bcba-2f527bf19c2f
+java:S1104"^Make salesOverTimeChart a static final constant or non-public and provide accessors if needed.(Ì£Ëâûÿÿÿÿ8ÕËÊı2J$90d045b2-51c9-4b02-b586-aff56c33047f
 «
-java:S1104"cMake topSellingProductsChart a static final constant or non-public and provide accessors if needed.(ïµ¿Ëüÿÿÿÿ8ÕËÊı2J$6a185122-5786-42b1-bc9b-0bbd11cba67f
+java:S1104"cMake topSellingProductsChart a static final constant or non-public and provide accessors if needed.(ïµ¿Ëüÿÿÿÿ8ÕËÊı2J$6c760e6e-d601-4505-8d4d-1ef2d917ba8e
 ¦
-java:S1104	"^Make costBreakdownChart a static final constant or non-public and provide accessors if needed.(œÃÙäıÿÿÿÿ8ÕËÊı2J$e786d39b-fa3b-447c-8af9-bafbbf6e2195
+java:S1104	"^Make costBreakdownChart a static final constant or non-public and provide accessors if needed.(œÃÙäıÿÿÿÿ8ÕËÊı2J$7b30d23c-1427-41a0-8d5a-c29b65ca0481
 
-java:S1854"9Remove this useless assignment to local variable "yAxis".(°ÿÒöøÿÿÿÿ8•ÌÊı2J$9afff800-6085-4923-8156-e59e70dd0e04
+java:S1854"9Remove this useless assignment to local variable "yAxis".(°ÿÒöøÿÿÿÿ8•ÌÊı2J$35b025cd-464b-4cb9-a334-c38c22d6c093
 
-java:S1854"9Remove this useless assignment to local variable "xAxis".(é¨ıÙıÿÿÿÿ8•ÌÊı2J$af278cf5-c487-4f5a-b400-cba1f591c4cb
+java:S1854"9Remove this useless assignment to local variable "xAxis".(é¨ıÙıÿÿÿÿ8•ÌÊı2J$04faad30-cfe2-451c-9437-ee30051a6ccf
 r
-java:S1481"*Remove this unused "xAxis" local variable.(é¨ıÙıÿÿÿÿ8™ÌÊı2J$85f75b62-42bd-4582-9e73-56399966d4ad
+java:S1481"*Remove this unused "xAxis" local variable.(é¨ıÙıÿÿÿÿ8™ÌÊı2J$01295c00-49a1-4300-b345-bc9a8a008b69
 r
-java:S1481"*Remove this unused "yAxis" local variable.(°ÿÒöøÿÿÿÿ8›ÌÊı2J$0658dd27-c970-42b9-bc23-5dc7cd377440
+java:S1481"*Remove this unused "yAxis" local variable.(°ÿÒöøÿÿÿÿ8›ÌÊı2J$6ac8143f-5b98-4146-8c38-537d27bb3b76
 
-java:S1854="9Remove this useless assignment to local variable "yAxis".(°ÿÒöøÿÿÿÿ8¥ÌÊı2J$445c3642-76cd-40b7-80ff-302e75831c6e
+java:S1854="9Remove this useless assignment to local variable "yAxis".(°ÿÒöøÿÿÿÿ8¥ÌÊı2J$ed2bfb1c-bd39-408f-bd2f-2972c85b714d
 
-java:S1854<"9Remove this useless assignment to local variable "xAxis".(é¨ıÙıÿÿÿÿ8¥ÌÊı2J$80a52b59-e715-41dc-ac3b-48a1e4a60af2
+java:S1854<"9Remove this useless assignment to local variable "xAxis".(é¨ıÙıÿÿÿÿ8¥ÌÊı2J$b19994cf-9096-4c90-a12d-4bb9526c7b89
 r
-java:S1481<"*Remove this unused "xAxis" local variable.(é¨ıÙıÿÿÿÿ8¦ÌÊı2J$21ff6d8e-e341-4092-adae-a87d4791db57
+java:S1481<"*Remove this unused "xAxis" local variable.(é¨ıÙıÿÿÿÿ8¦ÌÊı2J$fef69b3c-f76b-4693-976e-0a9808bb7f17
 r
-java:S1481="*Remove this unused "yAxis" local variable.(°ÿÒöøÿÿÿÿ8¦ÌÊı2J$41e41804-c9b1-47d5-ad42-f29ab0b0ec6e
+java:S1481="*Remove this unused "yAxis" local variable.(°ÿÒöøÿÿÿÿ8¦ÌÊı2J$d80dfc59-3f67-4407-944a-c0366998b30a

@@ -1,21 +1,29 @@
 
 ˜
-java:S1104
-"UMake userEmail a static final constant or non-public and provide accessors if needed.(ÜóÆí8íÎÄëş1J$ecf1f406-5658-44ff-b948-70183e6dd0cc
+java:S1104"UMake userEmail a static final constant or non-public and provide accessors if needed.(ÜóÆí8“èˆ§‚2J$4d800f65-c2b5-46c2-bb4a-c6a3a18d7e2a
 œ
-java:S1104"TMake btnLogin a static final constant or non-public and provide accessors if needed.(’ÎöØùÿÿÿÿ8¤îÄëş1J$4f886478-c21f-43ac-8630-a63be9346416
-|
-java:S1104"ZMake forgotPassword a static final constant or non-public and provide accessors if needed.(ç”½°ÿÿÿÿÿ8ËÛğŒÿ1
+java:S1104"TMake btnLogin a static final constant or non-public and provide accessors if needed.(’ÎöØùÿÿÿÿ8“èˆ§‚2J$08ef8d60-0321-4989-852c-6b0dac1d5e58
+¢
+java:S1104"ZMake forgotPassword a static final constant or non-public and provide accessors if needed.(ç”½°ÿÿÿÿÿ8“èˆ§‚2J$d54b0b65-776e-4c69-819a-ec0d90f0ecc8
 œ
-java:S1104"YMake createAccount a static final constant or non-public and provide accessors if needed.(Š™Ê8Œ«Åëş1J$81336782-85ad-426d-a28b-06c288c9d12b
+java:S1104"YMake createAccount a static final constant or non-public and provide accessors if needed.(Š™Ê8“èˆ§‚2J$ecf5751e-a95d-46fb-9280-89ac272918ba
  
-java:S1104"XMake userPassword a static final constant or non-public and provide accessors if needed.(äƒÌùÿÿÿÿ8º¡Çíş1J$cc66504c-b14f-40e3-a441-007538837e7e
-z
-java:S1172"2Remove this unused method parameter "actionEvent".(Ùõášşÿÿÿÿ8¸Äìş1J$dfe6466a-7549-42e3-90ae-c1556e56ffc7
-l	java:S106"+Replace this use of System.out by a logger.(Ó÷îZ8»Äìş1J$41e62d60-4ca4-46a9-ace4-c9521b698416
-z
-java:S1172"2Remove this unused method parameter "actionEvent".(©µüœüÿÿÿÿ8×Ù íş1J$3de31219-dc76-48d2-bbca-96890b03bace
-l	java:S106"+Replace this use of System.out by a logger.(Ó÷îZ8ØÙ íş1J$815c9832-9044-49f2-8fe4-c50af1eac70e
-z
-java:S1172"2Remove this unused method parameter "actionEvent".(ĞŞÕÙüÿÿÿÿ8Æô íş1J$0cd6c348-ba81-4a62-9adb-38f6369ede14
-l	java:S106"+Replace this use of System.out by a logger.(Ó÷îZ8Éô íş1J$3bc63411-af10-4c14-8e71-7178a51e80f4
+java:S1104"XMake userPassword a static final constant or non-public and provide accessors if needed.(äƒÌùÿÿÿÿ8”èˆ§‚2J$21004fbf-5754-4a5c-8d12-25e34ff6144b
+Ê
+java:S1186¡"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(©µüœüÿÿÿÿ8Şèˆ§‚2J$b1522a02-aa7a-48ba-8386-81915aa99ec9
+Ê
+java:S1186¥"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ĞŞÕÙüÿÿÿÿ8Şèˆ§‚2J$0cb76268-ee94-4907-ad9c-1ef81683b5e3
+Ä
+java:S1186%"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ì­¯8ßèˆ§‚2J$ce5038ec-7dd6-461d-861e-5122fae52784
+~
+java:S2696*"6Make the enclosing method "static" or remove this set.(ã‹ûÂıÿÿÿÿ8æèˆ§‚2J$247a8bc1-41a8-4370-b2ef-926414d4f901
+r	java:S1064"+Replace this use of System.out by a logger.(şßõ’ÿÿÿÿÿ8èèˆ§‚2J$03ef3a94-3150-44ee-9115-4d9d91a8855a
+m	java:S1065"+Replace this use of System.out by a logger.(¯ÅÿÀ8éèˆ§‚2J$ae6eacb3-3bed-4138-86e1-a27635cc8e43
+
+java:S5998_"LRefactor this repetition that can lead to a stack overflow for large inputs.(õæˆB8éˆ§‚2J$19cdafd6-c084-40eb-acc1-03735b5a2311
+m	java:S106m"+Replace this use of System.out by a logger.(Üâû»8—éˆ§‚2J$be41fcd9-7120-40e6-9edd-1eed5c4f0744
+Á
+java:S1130x"yRemove the declaration of thrown exception 'java.lang.ClassNotFoundException', as it cannot be thrown from method's body.(ÖÖ‹¯ıÿÿÿÿ8œéˆ§‚2J$fc9119ee-9629-4286-a34b-baa75a45de66
+r	java:S106"+Replace this use of System.out by a logger.(ú‘û¬şÿÿÿÿ8éˆ§‚2J$c8125a3f-2751-44c5-b574-5f68c54fa5f9
+½
+java:S1130Š"yRemove the declaration of thrown exception 'java.lang.ClassNotFoundException', as it cannot be thrown from method's body.(æÀ´8Êó‰§‚2J$4f51740c-b401-42b7-99e4-863fe8e38a35

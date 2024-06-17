@@ -1,4 +1,5 @@
 package edu.icet.crm.controller;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -9,41 +10,30 @@ import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
-public class AdminDashboardController {
-
-
+public class EmployeeDashboardController {
     public Label lblHome;
-    public Label lblEmployee;
+    public Label lblOrders;
     public Label lblProducts;
     public Label lblSupplier;
-
     public AnchorPane contentPane;
-    public Label lblName;
     public Button btnLogOut;
-    public Label lblOrders;
-    public Label lblWelcome;
-
+    public Label lblName;
 
     public void initialize() throws IOException {
 
-         loadFXML("/view/AdminHomePage.fxml");
+        loadFXML("/view/EmployeeHomePage.fxml");
     }
-
-
     public void lblHomeOnClick(MouseEvent mouseEvent) throws IOException {
-        loadFXML("/view/AdminHomePage.fxml");
+        loadFXML("/view/EmployeeHomePage.fxml");
     }
 
-
-    public void lblEmployeeOnClick(MouseEvent mouseEvent) throws IOException {
-        loadFXML("/view/EmployeePage.fxml");
+    public void lblOrdersOnClick(MouseEvent mouseEvent) throws IOException {
+        loadFXML("/view/OrderPage.fxml");
     }
-
 
     public void lblProductsOnClick(MouseEvent mouseEvent) throws IOException {
         loadFXML("/view/ProductPage.fxml");
     }
-
 
     public void lblSupplierOnClick(MouseEvent mouseEvent) throws IOException {
         loadFXML("/view/SupplierPage.fxml");
@@ -60,13 +50,9 @@ public class AdminDashboardController {
         contentPane.getChildren().add(root);
     }
 
-    public void profileOnClick(MouseEvent mouseEvent) {
-    }
-
     public void btnLogOutOnAction(ActionEvent actionEvent) {
     }
 
-    public void lblOrdersOnClick(MouseEvent mouseEvent) throws IOException {
-        loadFXML("/view/OrderPage.fxml");
+    public void profileOnClick(MouseEvent mouseEvent) {
     }
 }
