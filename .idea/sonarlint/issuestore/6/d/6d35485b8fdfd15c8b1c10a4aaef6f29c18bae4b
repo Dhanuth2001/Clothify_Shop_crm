@@ -1,0 +1,27 @@
+
+›
+java:S1104"SMake lblHome a static final constant or non-public and provide accessors if needed.(Øğ³ÿÿÿÿÿ8´Ü•â2J$fcf4f6e6-5cc6-4892-8818-b1194febf031
+š
+java:S1104"WMake lblEmployee a static final constant or non-public and provide accessors if needed.(¨Ì‹î8 ˜÷â2J$c476e8c7-603b-40ad-99fd-f8130840c94b
+š
+java:S1104"WMake lblProducts a static final constant or non-public and provide accessors if needed.(Ç«è¯8»‘øâ2J$f38007d8-9f13-46ad-96f7-dc9dd6eea56e
+š
+java:S1104"WMake lblSupplier a static final constant or non-public and provide accessors if needed.(À½Ùò8‹®øâ2J$55fc7384-56d3-48e0-b533-9ca7c35f4834
+Ÿ
+java:S1104"WMake contentPane a static final constant or non-public and provide accessors if needed.(è×¸øÿÿÿÿ8µØÖã2J$09d7301f-ca00-445f-8dd7-716a5971a61c
+›
+java:S1104"SMake lblName a static final constant or non-public and provide accessors if needed.(½Ï®·ıÿÿÿÿ8¯¦¢ç2J$5deeab18-24a3-44a4-b1a6-49c30f0247d6
+
+java:S1104"UMake btnLogOut a static final constant or non-public and provide accessors if needed.(æ÷Ëúùÿÿÿÿ8Äü¤ç2J$54364682-1534-4764-b0a7-13a4c6451768
+É
+java:S1186="€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(áÛÇ£üÿÿÿÿ8òä£ç2J$da364fd6-de78-4cf6-b1e0-b470084bd3f7
+Ä
+java:S1186@"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ù³¶­8ÓØ¤ç2J$05609b75-779a-423b-bf97-0c8339b1246e
+y
+java:S1172"1Remove this unused method parameter "mouseEvent".(æóû–ıÿÿÿÿ8éêßã2J$77ea288b-a5de-4b11-81e4-caba81a92c2f
+y
+java:S1172$"1Remove this unused method parameter "mouseEvent".(ôÓƒÿÿÿÿÿÿ8ó½ÿé2J$7acf00ad-f57c-44f3-908d-b2339888d674
+t
+java:S1172)"1Remove this unused method parameter "mouseEvent".(¶ŸÎ€8ÌĞÿé2J$bbb52c6a-d5f8-468d-9ed6-8f473edc68d2
+y
+java:S1172."1Remove this unused method parameter "mouseEvent".(Ñ¡Ÿ şÿÿÿÿ8…ğÿé2J$70d27358-8e10-4626-ab53-d13a04447275
