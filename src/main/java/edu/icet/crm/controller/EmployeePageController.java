@@ -46,6 +46,7 @@ public class EmployeePageController {
     public TextField txtEmail;
     public TextField txtContactNo;
     public TableView employeeTable;
+    public Button btnClear;
 
     private EmployeeService employeeService;
     private RoleService roleService;
@@ -99,8 +100,8 @@ public class EmployeePageController {
 
     @FXML
     public void btnSearchOnAction(ActionEvent actionEvent) {
-        String employeeId = txtEmployeeId.getText();
-        if (employeeId.isEmpty()) {
+        Integer employeeId = Integer.valueOf(txtEmployeeId.getText());
+        if (employeeId==null) {
             showAlert(Alert.AlertType.ERROR, "Error", "Please enter an employee ID.");
             return;
         }
@@ -114,7 +115,7 @@ public class EmployeePageController {
     }
 
     private void populateEmployeeDetails(Employee employee) {
-        txtEmployeeId.setText(employee.getId());
+        txtEmployeeId.setText(String.valueOf(employee.getId()));
         txtEmployeeName.setText(employee.getName());
         txtEmployeeDob.setValue(employee.getDob());
         employeeRole.setValue(employee.getRole());
@@ -127,11 +128,12 @@ public class EmployeePageController {
     public void btnAddOnAction(ActionEvent actionEvent) {
         if (isValidInput()) {
             Employee employee = new Employee(
-                    txtEmployeeId.getText(),
+                    Integer.parseInt(txtEmployeeId.getText()),
+                    (String) employeeRole.getValue(),
                     txtEmployeeName.getText(),
                     txtEmployeeDob.getValue(),
                     LocalDate.now(),
-                    (String) employeeRole.getValue(),
+
                     txtAddress.getText(),
                     txtEmail.getText(),
                     txtContactNo.getText()
@@ -139,11 +141,23 @@ public class EmployeePageController {
             boolean success = employeeService.addEmployee(employee);
             System.out.println(success);
             if (success) {
-                employeeList.add(employee);
-                showAlert(Alert.AlertType.INFORMATION, "Success", "Employee added successfully.");
+                int selectedIndex = employeeTable.getSelectionModel().getSelectedIndex();
+                if (selectedIndex != -1) {
+                    employeeList.set(selectedIndex, employee);
+                } else {
+
+                    for (int i = 0; i < employeeList.size(); i++) {
+                        if (employeeList.get(i).getId() == employee.getId()) {
+                            employeeList.set(i, employee);
+                            break;
+                        }
+                    }
+                }
+                showAlert(Alert.AlertType.INFORMATION, "Success", "Product updated successfully.");
+                loadEmployeeTable();
                 clearFields();
             } else {
-                showAlert(Alert.AlertType.ERROR, "Error", "Failed to add employee.");
+                showAlert(Alert.AlertType.ERROR, "Error", "Failed to update product.");
             }
         }
     }
@@ -152,11 +166,12 @@ public class EmployeePageController {
     public void btnUpdateOnAction(ActionEvent actionEvent) {
         if (isValidInput()) {
             Employee employee = new Employee(
-                    txtEmployeeId.getText(),
+                    Integer.parseInt(txtEmployeeId.getText()),
+                    (String) employeeRole.getValue(),
                     txtEmployeeName.getText(),
                     txtEmployeeDob.getValue(),
                     LocalDate.now(),
-                    (String) employeeRole.getValue(),
+
                     txtAddress.getText(),
                     txtEmail.getText(),
                     txtContactNo.getText()
@@ -164,19 +179,30 @@ public class EmployeePageController {
             boolean success = employeeService.updateEmployee(employee);
             if (success) {
                 int selectedIndex = employeeTable.getSelectionModel().getSelectedIndex();
-                employeeList.set(selectedIndex, employee);
-                showAlert(Alert.AlertType.INFORMATION, "Success", "Employee updated successfully.");
+                if (selectedIndex != -1) {
+                    employeeList.set(selectedIndex, employee);
+                } else {
+
+                    for (int i = 0; i < employeeList.size(); i++) {
+                        if (employeeList.get(i).getId() == employee.getId()) {
+                            employeeList.set(i, employee);
+                            break;
+                        }
+                    }
+                }
+                showAlert(Alert.AlertType.INFORMATION, "Success", "Product updated successfully.");
+                loadEmployeeTable();
                 clearFields();
             } else {
-                showAlert(Alert.AlertType.ERROR, "Error", "Failed to update employee.");
+                showAlert(Alert.AlertType.ERROR, "Error", "Failed to update product.");
             }
         }
     }
 
     @FXML
     public void btnDeleteOnAction(ActionEvent actionEvent) {
-        String employeeId = txtEmployeeId.getText();
-        if (employeeId.isEmpty()) {
+        Integer employeeId = Integer.parseInt(txtEmployeeId.getText());
+        if (employeeId==null) {
             showAlert(Alert.AlertType.ERROR, "Error", "Please enter an employee ID.");
             return;
         }
@@ -237,6 +263,10 @@ public class EmployeePageController {
         );
         timeline.setCycleCount(Animation.INDEFINITE);
         timeline.play();
+    }
+
+    public void btnClearOnAction(ActionEvent actionEvent) {
+        clearFields();
     }
 }
 

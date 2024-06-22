@@ -1,27 +1,27 @@
 
 ›
-java:S1104"SMake lblHome a static final constant or non-public and provide accessors if needed.(Øğ³ÿÿÿÿÿ8Ì÷•‚2J$52ee0ca7-129f-4ca8-b4fb-62d6252f6967
+java:S1104"SMake lblHome a static final constant or non-public and provide accessors if needed.(Øğ³ÿÿÿÿÿ8ìŒÈÔ‚2J$44a1b727-35bc-4d46-8332-45f344395d22
 
-java:S1104"UMake lblOrders a static final constant or non-public and provide accessors if needed.(øĞ½›úÿÿÿÿ8ë–‚2J$77119406-b396-4978-942d-a0cf7c3b4b7a
+java:S1104"UMake lblOrders a static final constant or non-public and provide accessors if needed.(øĞ½›úÿÿÿÿ8ìŒÈÔ‚2J$b94f25db-d9e7-4b38-9558-e6b53fada344
 š
-java:S1104"WMake lblProducts a static final constant or non-public and provide accessors if needed.(Ç«è¯8ÓØ—‚2J$5c9f6638-7774-44da-a852-ddf2013f6999
+java:S1104"WMake lblProducts a static final constant or non-public and provide accessors if needed.(Ç«è¯8ìŒÈÔ‚2J$e64087c8-855a-4297-84f5-9c894125e154
 š
-java:S1104"WMake lblSupplier a static final constant or non-public and provide accessors if needed.(À½Ùò8â˜‚2J$b69f5d23-31c1-4119-8d48-1c2d5893aa36
+java:S1104"WMake lblSupplier a static final constant or non-public and provide accessors if needed.(À½Ùò8ìŒÈÔ‚2J$8cf3660b-6b66-4526-9a52-2d9e9c3d1db2
 Ÿ
-java:S1104"WMake contentPane a static final constant or non-public and provide accessors if needed.(è×¸øÿÿÿÿ8È™™‚2J$949142d6-b616-4ae9-ab6f-9a1e12ff1862
+java:S1104"WMake contentPane a static final constant or non-public and provide accessors if needed.(è×¸øÿÿÿÿ8ìŒÈÔ‚2J$b156f38b-befd-41c0-873b-cf481a258629
 
-java:S1104"UMake btnLogOut a static final constant or non-public and provide accessors if needed.(æ÷Ëúùÿÿÿÿ8¢¹™‚2J$02f90e9d-cb5a-4477-9454-e6d2328fbfdc
-›
-java:S1104"SMake lblName a static final constant or non-public and provide accessors if needed.(½Ï®·ıÿÿÿÿ8ë¦š‚2J$a3f481ea-9916-4254-baed-2d3ddce7e07f
+java:S1104"UMake btnLogOut a static final constant or non-public and provide accessors if needed.(æ÷Ëúùÿÿÿÿ8ìŒÈÔ‚2J$5fc42066-368a-4f3f-960d-e7dc89392c0b
+¥
+java:S1104"]Make lblLoggedUserName a static final constant or non-public and provide accessors if needed.(©Ş„ìùÿÿÿÿ8ìŒÈÔ‚2J$bcea1cce-2005-44e9-be9b-176182c4b86d
 Ä
-java:S11865"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ù³¶­8êà™‚2J$26a428d4-5fbe-4ec8-b938-d5dab631b985
+java:S1186>"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ù³¶­8¤ÈÔ‚2J$15d132d3-7534-4762-8ecb-4a2d05bf6037
 É
-java:S11868"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(áÛÇ£üÿÿÿÿ8îÎš‚2J$3a0eba88-f028-40a8-8235-10098965b11f
+java:S1186A"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(áÛÇ£üÿÿÿÿ8¤ÈÔ‚2J$41183672-45ab-4ef6-9c6a-18925b2e9e9c
 y
-java:S1172"1Remove this unused method parameter "mouseEvent".(æóû–ıÿÿÿÿ8Æâ¡‘‚2J$93b58b99-2425-46eb-b3e7-7aa8b00cfb4a
+java:S1172#"1Remove this unused method parameter "mouseEvent".(æóû–ıÿÿÿÿ8­ÈÔ‚2J$d4326852-7e9d-4852-b5cf-066915a35034
 t
-java:S1172"1Remove this unused method parameter "mouseEvent".(Ì´•£8Èâ¡‘‚2J$6a699b9e-b10e-4d5a-af8d-b0350c90c20a
+java:S1172'"1Remove this unused method parameter "mouseEvent".(Ì´•£8®ÈÔ‚2J$0cd18fe3-5ec8-4465-9855-ef0519f96934
 t
-java:S1172""1Remove this unused method parameter "mouseEvent".(¶ŸÎ€8Êâ¡‘‚2J$9f99bc52-b104-44fa-bf2e-f9d453ded540
+java:S1172+"1Remove this unused method parameter "mouseEvent".(¶ŸÎ€8¯ÈÔ‚2J$905fbe7e-4ba0-4312-91a5-f8f18ec9f8d7
 y
-java:S1172&"1Remove this unused method parameter "mouseEvent".(Ñ¡Ÿ şÿÿÿÿ8Œƒ¢‘‚2J$2fda58d3-e149-44b1-be35-f273b45c4507
+java:S1172/"1Remove this unused method parameter "mouseEvent".(Ñ¡Ÿ şÿÿÿÿ8±ÈÔ‚2J$fdf752e1-6c21-4006-b8ed-9661293efe89

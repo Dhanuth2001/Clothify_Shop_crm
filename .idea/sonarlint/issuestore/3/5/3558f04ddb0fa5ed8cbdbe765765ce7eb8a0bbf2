@@ -1,59 +1,67 @@
 
 w
-java:S3740"/Provide the parametrized type for this generic.(•“Ä®ÿÿÿÿÿ8åóÅş2J$e696c3fb-b3e6-40cb-8060-f917c58d9edf
+java:S3740#"/Provide the parametrized type for this generic.(°Äˆ´ÿÿÿÿÿ8Û„‚Û‚2J$4479a23b-9ca1-463a-b05b-9f8fad06d6c5
 w
-java:S3740"/Provide the parametrized type for this generic.(°Äˆ´ÿÿÿÿÿ8½±Æş2J$7dabca70-a7d4-44b0-a638-39d3b449599c
+java:S3740$"/Provide the parametrized type for this generic.(ëèÆ¥ıÿÿÿÿ8Û„‚Û‚2J$d39938a8-0f23-41ee-882c-ceed89641ad1
+r
+java:S3740%"/Provide the parametrized type for this generic.(¯ÿı°8Û„‚Û‚2J$bf70321f-5342-45d6-8bba-1e1d2a0d2e0a
+r
+java:S3740&"/Provide the parametrized type for this generic.(ƒäÆ8Û„‚Û‚2J$e4e42124-ae9b-4cf0-9bcc-43be186ca2ee
+r
+java:S3740'"/Provide the parametrized type for this generic.(ÕÿàÙ8Û„‚Û‚2J$2fff0a3e-c5ff-42cf-9854-db7e7edb7ec2
 w
-java:S3740"/Provide the parametrized type for this generic.(ëèÆ¥ıÿÿÿÿ8ÔÍÆş2J$75e952db-07f5-4a57-8e18-45a7d89ece43
+java:S3740+"/Provide the parametrized type for this generic.(›¿ùğùÿÿÿÿ8Û„‚Û‚2J$08d5effc-9efe-41d5-be0f-f6aef6173315
 r
-java:S3740"/Provide the parametrized type for this generic.(¯ÿı°8îÿÆş2J$3b617a4c-36f8-4022-91e6-199b5836fcea
-r
-java:S3740"/Provide the parametrized type for this generic.(ƒäÆ8ÊÇş2J$d1fce3a4-968c-45e2-a58b-89dd19e9b39b
-r
-java:S3740"/Provide the parametrized type for this generic.(ÕÿàÙ8³»Çş2J$8631cd07-8eae-436d-ad79-049556573850
+java:S3740,"/Provide the parametrized type for this generic.(“ĞÃâ8Û„‚Û‚2J$031e0e68-ea82-4428-a001-541764083336
+
+java:S1192M"FDefine a constant instead of duplicating this literal "Error" 8 times.(ÜÍß˜üÿÿÿÿ8İ„‚Û‚2J$14f8960d-b386-4470-9895-1968514d17a5
+‹
+java:S1192w"HDefine a constant instead of duplicating this literal "Success" 3 times.(æ§ìı8İ„‚Û‚2J$a679d011-f7e5-48c8-9fdb-f97d5b4de8ad
 œ
-java:S1104"YMake txtSupplierId a static final constant or non-public and provide accessors if needed.(ßšÜ 8ÛÂÁş2J$bb702f5f-1351-472e-b17c-9da8716df18b
+java:S1104"YMake txtSupplierId a static final constant or non-public and provide accessors if needed.(ßšÜ 8à„‚Û‚2J$46fc4bbf-7a3e-4ae6-a222-da86737339a3
 ¦
-java:S1104"^Make txtSupplierCompany a static final constant or non-public and provide accessors if needed.(è¬øÿÿÿÿ8”óÁş2J$0df5d725-505d-4ad6-8c97-5b4873bf8dbf
-£
-java:S1104	"`Make txtSupplierAddedDate a static final constant or non-public and provide accessors if needed.(•Ü¸à8Â˜Âş2J$a3c953c5-7817-4155-8d56-60a4524c4cff
+java:S1104"^Make txtSupplierCompany a static final constant or non-public and provide accessors if needed.(è¬øÿÿÿÿ8à„‚Û‚2J$1ef61223-3c3d-489b-a2df-0ccaf30d70ce
 œ
-java:S1104
-"TMake txtEmail a static final constant or non-public and provide accessors if needed.(„Å«ıÿÿÿÿ8‹éÂş2J$e946d6e7-8d83-4847-89e0-e0fe90354860
+java:S1104"TMake txtEmail a static final constant or non-public and provide accessors if needed.(„Å«ıÿÿÿÿ8à„‚Û‚2J$a39ab396-005e-4967-a396-1982af8aab58
  
-java:S1104"XMake txtContactNo a static final constant or non-public and provide accessors if needed.(¿ıµÁÿÿÿÿÿ8Ğ†Ãş2J$77620572-b66e-4239-80d1-2ec15a4ad181
+java:S1104"XMake txtContactNo a static final constant or non-public and provide accessors if needed.(¿ıµÁÿÿÿÿÿ8à„‚Û‚2J$657f8705-2eac-4ba9-8dc3-b1825c91beec
 ¦
-java:S1104"^Make txtSupplierAddress a static final constant or non-public and provide accessors if needed.(Ÿ·úõÿÿÿÿÿ8¸¤Ãş2J$cb12febf-5dc7-49ec-97c7-3637a1ae5db4
+java:S1104"^Make txtSupplierAddress a static final constant or non-public and provide accessors if needed.(Ÿ·úõÿÿÿÿÿ8à„‚Û‚2J$9ac07a8e-036f-4a2c-a67a-0e2fd4342185
 ˜
-java:S1104"UMake btnSearch a static final constant or non-public and provide accessors if needed.(É¹ŠÄ8ÙÂÃş2J$f3db9f89-e663-4e50-b269-3e013732c97b
+java:S1104"UMake btnSearch a static final constant or non-public and provide accessors if needed.(É¹ŠÄ8à„‚Û‚2J$e80e1c22-7e59-400f-b697-11f4a67abafa
 •
-java:S1104"RMake btnAdd a static final constant or non-public and provide accessors if needed.(‰ÂÈ8ˆ¨Äş2J$8c228d55-f4da-4537-ab8a-784cfe62e30d
+java:S1104 "RMake btnAdd a static final constant or non-public and provide accessors if needed.(‰ÂÈ8à„‚Û‚2J$8683192b-9138-48f1-82d2-bd905bf630a5
 
-java:S1104"UMake btnUpdate a static final constant or non-public and provide accessors if needed.(”ƒ³Šÿÿÿÿÿ8»âÄş2J$66b91e52-d0a5-433f-95fc-16f27d888074
+java:S1104!"UMake btnUpdate a static final constant or non-public and provide accessors if needed.(”ƒ³Šÿÿÿÿÿ8à„‚Û‚2J$e57efa37-e6b7-4471-8a88-f5dcc2a2a49c
 ˜
-java:S1104"UMake btnDelete a static final constant or non-public and provide accessors if needed.(ˆªü›8ŸÅş2J$455a45f0-0bdc-404a-a081-8a184d06c1b8
-™
-java:S1104"QMake ColId a static final constant or non-public and provide accessors if needed.(•“Ä®ÿÿÿÿÿ8èóÅş2J$adf9a3d7-a3ee-4ab4-8b8a-180cb101f32f
+java:S1104""UMake btnDelete a static final constant or non-public and provide accessors if needed.(ˆªü›8à„‚Û‚2J$3656106a-316a-402c-93fd-7d3ba7c47d9c
 
-java:S1104"VMake colCompany a static final constant or non-public and provide accessors if needed.(°Äˆ´ÿÿÿÿÿ8¿±Æş2J$80d1e6d7-5b98-44a5-a438-83e87253f033
+java:S1104#"VMake colCompany a static final constant or non-public and provide accessors if needed.(°Äˆ´ÿÿÿÿÿ8à„‚Û‚2J$d58283a4-6b27-4997-995c-a6abc334af5c
  
-java:S1104"XMake colDateAdded a static final constant or non-public and provide accessors if needed.(ëèÆ¥ıÿÿÿÿ8ÙÍÆş2J$db66062b-7dca-439b-871c-931c823fbcba
+java:S1104$"XMake colDateAdded a static final constant or non-public and provide accessors if needed.(ëèÆ¥ıÿÿÿÿ8à„‚Û‚2J$2f990ce7-9970-46cb-856c-4fb75df5c538
 ™
-java:S1104"VMake colAddress a static final constant or non-public and provide accessors if needed.(¯ÿı°8ğÿÆş2J$5ce5c25b-efab-4ebe-8d8a-81e81d01aeca
+java:S1104%"VMake colAddress a static final constant or non-public and provide accessors if needed.(¯ÿı°8à„‚Û‚2J$1ccb2bf4-e48f-40bf-a439-614d47bf516b
 —
-java:S1104"TMake colEmail a static final constant or non-public and provide accessors if needed.(ƒäÆ8ÍÇş2J$b634d0a5-4737-4b9c-a712-997e114bcdc0
+java:S1104&"TMake colEmail a static final constant or non-public and provide accessors if needed.(ƒäÆ8à„‚Û‚2J$0115808b-e265-4448-8d08-e2226e462399
 ›
-java:S1104"XMake colContactNo a static final constant or non-public and provide accessors if needed.(ÕÿàÙ8µ»Çş2J$e66d0c09-7211-4697-a6f7-3648b743993c
+java:S1104'"XMake colContactNo a static final constant or non-public and provide accessors if needed.(ÕÿàÙ8à„‚Û‚2J$bc197bb7-26f9-4114-a0bf-691191530a61
 ›
-java:S1104"SMake txtTime a static final constant or non-public and provide accessors if needed.(İ—’Ùÿÿÿÿÿ8®ØÇş2J$1d469c25-1b5c-442a-84b4-74fe1dc40cb8
-u
-java:S1104"SMake txtDate a static final constant or non-public and provide accessors if needed.(˜º©²ùÿÿÿÿ8·€Èş2
-—	java:S116"PRename this field "ColId" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•“Ä®ÿÿÿÿÿ8ùóÅş2J$b8fc7f51-c45a-4867-8622-6580e207e06f
-Ä
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(áÄ´ü8¬áÃş2J$09fe6c60-8eb2-4b62-b783-fb2c0a71d1d8
-É
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(»…ä«ùÿÿÿÿ8„ÈÄş2J$ec984fa0-823a-46ad-904e-6a80b2bcbccd
-É
-java:S1186 "€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¿˜å•øÿÿÿÿ8öÿÄş2J$a5724b0c-04ca-4274-b3de-d70bf42ab813
-Ä
-java:S1186#"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Œ“‘8±ÀÅş2J$428c6fb3-53c3-4d1d-b347-7292af7e9ae7
+java:S1104("SMake txtTime a static final constant or non-public and provide accessors if needed.(İ—’Ùÿÿÿÿÿ8à„‚Û‚2J$d168ced6-7b81-402f-9773-1dd21bedd31a
+›
+java:S1104)"SMake txtDate a static final constant or non-public and provide accessors if needed.(˜º©²ùÿÿÿÿ8à„‚Û‚2J$a029a9c0-9313-4622-96b8-8086de916f04
+œ
+java:S1104*"TMake btnClear a static final constant or non-public and provide accessors if needed.(¸¹„üÿÿÿÿ8á„‚Û‚2J$a4aad37e-f1f7-4a88-8fc3-47a278cf480c
+¡
+java:S1104+"YMake supplierTable a static final constant or non-public and provide accessors if needed.(›¿ùğùÿÿÿÿ8á„‚Û‚2J$572dcfcf-808e-4b39-ba8a-0fe4bd9c46b9
+”
+java:S1104,"QMake colId a static final constant or non-public and provide accessors if needed.(“ĞÃâ8á„‚Û‚2J$081a9b60-39eb-4131-a2c7-365c6f4439ac
+€
+java:S4973’"<Strings and Boxed types should be compared using "equals()".(’È­‚8ã„‚Û‚2J$2205aa74-d2c1-41ea-a522-ffa105d0c885
+›
+java:S3776€"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(¿˜å•øÿÿÿÿ8¶…‚Û‚2J$f274b82a-12ab-469e-9302-9cdd7b03f389
+v
+java:S1172ß"2Remove this unused method parameter "actionEvent".(ŠÜÎ£8Í…‚Û‚2J$3d89844c-80a5-4fe2-95e3-c502e02626ae
+v
+java:S1128".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ8ÊÊ‚Û‚2J$15352169-0d53-43fc-94de-381b482dd860
+r
+java:S1128"*Remove this unused import 'java.util.Map'.(¼è½Òşÿÿÿÿ8ËÊ‚Û‚2J$56c8fac2-c568-41c9-8454-983aed3451ee

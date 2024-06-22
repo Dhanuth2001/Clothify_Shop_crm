@@ -55,7 +55,7 @@
          </cursor>
       </Button>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="46.0" layoutX="57.0" layoutY="15.0" stroke="WHITE" strokeType="INSIDE" width="46.0" />
-      <Label fx:id="lblName" layoutX="119.0" layoutY="37.0" onMouseClicked="#lblHomeOnClick" text="Saman Fernando" textFill="#aeaeae">
+      <Label fx:id="lblLoggedUserName" layoutX="119.0" layoutY="37.0" onMouseClicked="#lblHomeOnClick" text="Saman Fernando" textFill="#aeaeae">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -71,5 +71,13 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </ImageView>
+      <Label fx:id="lblWelcome" layoutX="109.0" layoutY="13.0" onMouseClicked="#lblHomeOnClick" style="-fx-effect: dropshadow(gaussian, rgba(0, 150, 255, 0.5), 5, 0.5, 2, 2)" text="WELCOME BACK!" textFill="#0096ff">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
    </children>
 </AnchorPane>

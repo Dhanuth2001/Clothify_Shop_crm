@@ -12,11 +12,11 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Employee {
-    private String id;
+    private Integer id;
+    private String role;
     private String name;
     private LocalDate dob;
     private LocalDate doJoin;
-    private String role;
     private String address;
     private String email;
     private String contactNo;

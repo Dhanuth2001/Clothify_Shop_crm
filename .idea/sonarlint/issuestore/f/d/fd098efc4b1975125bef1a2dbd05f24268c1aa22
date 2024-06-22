@@ -1,0 +1,6 @@
+
+r	java:S106\"+Replace this use of System.out by a logger.(Ã›¥üÿÿÿÿ8ì•äâƒ2J$b22e10f4-8558-46c4-8988-fc92bdc33f14
+€
+java:S1128"8Remove this unused import 'edu.icet.crm.model.Supplier'.(ã¸«İşÿÿÿÿ8ü±îâƒ2J$b261d2c3-a6f3-4850-b485-4c213a2d4f4e
+†
+java:S1128">Remove this unused import 'javafx.collections.ObservableList'.(ÄÜ€éüÿÿÿÿ8ü±îâƒ2J$da90b55e-2e7a-4d56-982f-927db989f17d

@@ -1,5 +1,6 @@
 package edu.icet.crm.controller;
 
+import edu.icet.crm.service.DashboardService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -9,6 +10,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class EmployeeDashboardController {
     public Label lblHome;
@@ -17,10 +19,17 @@ public class EmployeeDashboardController {
     public Label lblSupplier;
     public AnchorPane contentPane;
     public Button btnLogOut;
-    public Label lblName;
 
+    public Label lblLoggedUserName;
+
+    private DashboardService employeeDashboardService;
+
+    public EmployeeDashboardController() throws SQLException, ClassNotFoundException {
+        this.employeeDashboardService = new DashboardService();
+
+    }
     public void initialize() throws IOException {
-
+        loadUserName();
         loadFXML("/view/EmployeeHomePage.fxml");
     }
     public void lblHomeOnClick(MouseEvent mouseEvent) throws IOException {
@@ -54,5 +63,14 @@ public class EmployeeDashboardController {
     }
 
     public void profileOnClick(MouseEvent mouseEvent) {
+    }
+
+    private void loadUserName(){
+        String loggedUserEmail = LoginPageController.getLoggedInEmployeeEmail();
+        String username = employeeDashboardService.getUsernameByEmail(loggedUserEmail);
+        if(loggedUserEmail.isEmpty()){
+            lblLoggedUserName.setText("No user");
+        }
+        lblLoggedUserName.setText(username);
     }
 }

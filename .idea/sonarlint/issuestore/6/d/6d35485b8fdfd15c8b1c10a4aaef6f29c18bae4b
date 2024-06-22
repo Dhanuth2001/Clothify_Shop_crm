@@ -1,33 +1,36 @@
 
 ›
-java:S1104"SMake lblHome a static final constant or non-public and provide accessors if needed.(Øğ³ÿÿÿÿÿ8´Ü•â2J$109960f5-e391-4ee4-bf84-a9a8ef5c0124
+java:S1104"SMake lblHome a static final constant or non-public and provide accessors if needed.(Øğ³ÿÿÿÿÿ8·‘£Õ‚2J$0875adff-7fa1-4eaf-ba2d-5ccebee2299e
 š
-java:S1104"WMake lblEmployee a static final constant or non-public and provide accessors if needed.(¨Ì‹î8 ˜÷â2J$6b18a0a0-51d7-4a58-8c09-3aa89c34da1e
+java:S1104"WMake lblEmployee a static final constant or non-public and provide accessors if needed.(¨Ì‹î8·‘£Õ‚2J$0f4d8b1a-9cb6-454b-b048-34e0d22b59d1
 š
-java:S1104"WMake lblProducts a static final constant or non-public and provide accessors if needed.(Ç«è¯8»‘øâ2J$11929a94-cef0-4e55-9959-ee6baa0ccef5
+java:S1104"WMake lblProducts a static final constant or non-public and provide accessors if needed.(Ç«è¯8·‘£Õ‚2J$b90c51e6-116c-463c-bf0e-56d379bd0d32
 š
-java:S1104"WMake lblSupplier a static final constant or non-public and provide accessors if needed.(À½Ùò8‹®øâ2J$44189912-0f45-4507-9b30-122d6322ee46
+java:S1104"WMake lblSupplier a static final constant or non-public and provide accessors if needed.(À½Ùò8·‘£Õ‚2J$a7be0471-1223-4708-b1e8-d0ea6447a36b
 Ÿ
-java:S1104"WMake contentPane a static final constant or non-public and provide accessors if needed.(è×¸øÿÿÿÿ8µØÖã2J$64611f60-95ae-4f9f-a76a-a6fd4c80eea3
-›
-java:S1104"SMake lblName a static final constant or non-public and provide accessors if needed.(½Ï®·ıÿÿÿÿ8¯¦¢ç2J$220bdd60-7701-42e5-bbc5-6cde5c0688c5
+java:S1104"WMake contentPane a static final constant or non-public and provide accessors if needed.(è×¸øÿÿÿÿ8·‘£Õ‚2J$b2d2af46-5b99-416d-ad8f-9097258b4cc1
 
-java:S1104"UMake btnLogOut a static final constant or non-public and provide accessors if needed.(æ÷Ëúùÿÿÿÿ8Äü¤ç2J$3cc740bc-aff5-42d5-a9b6-2f572a5a08a4
+java:S1104"UMake btnLogOut a static final constant or non-public and provide accessors if needed.(æ÷Ëúùÿÿÿÿ8·‘£Õ‚2J$a9bfd2ad-8fa2-47c4-aef7-03e33a9b2085
 
-java:S1104"UMake lblOrders a static final constant or non-public and provide accessors if needed.(øĞ½›úÿÿÿÿ8ÅÒÊ‘‚2J$f21669ce-8304-4dac-9ae2-239b2849e8b4
-x
-java:S1104"VMake lblWelcome a static final constant or non-public and provide accessors if needed.(ñø×‘øÿÿÿÿ8ÆÏø‘‚2
+java:S1104"UMake lblOrders a static final constant or non-public and provide accessors if needed.(øĞ½›úÿÿÿÿ8¸‘£Õ‚2J$cb2cacbd-ff2e-4f57-8b3a-f67ab8f27944
+
+java:S1104"VMake lblWelcome a static final constant or non-public and provide accessors if needed.(ñø×‘øÿÿÿÿ8¸‘£Õ‚2J$3898304d-2ae1-4564-b7fa-48647a5e843c
+¥
+java:S1104"]Make lblLoggedUserName a static final constant or non-public and provide accessors if needed.(©Ş„ìùÿÿÿÿ8¸‘£Õ‚2J$f1a1b532-4571-4570-995c-94c0c525a4ae
 É
-java:S1186?"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(áÛÇ£üÿÿÿÿ8òä£ç2J$793bfe1b-09a8-488d-a97e-01b25e466fba
+java:S1186H"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(áÛÇ£üÿÿÿÿ8ï‘£Õ‚2J$1ba0dfdd-ca3a-4a2a-9eb5-359b1fd7c31a
 Ä
-java:S1186B"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ù³¶­8ÓØ¤ç2J$93823642-3abd-49d4-bfe6-14995793c39a
+java:S1186K"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ù³¶­8ï‘£Õ‚2J$83b80e62-c173-4a29-85df-2d97e1d270fa
 y
-java:S1172!"1Remove this unused method parameter "mouseEvent".(æóû–ıÿÿÿÿ8éêßã2J$d3af1762-2ab7-449f-96b6-30d96ce5b769
+java:S1172*"1Remove this unused method parameter "mouseEvent".(æóû–ıÿÿÿÿ8ø‘£Õ‚2J$c0055ae7-460b-4682-b139-8f03d8d06f69
 y
-java:S1172&"1Remove this unused method parameter "mouseEvent".(ôÓƒÿÿÿÿÿÿ8ó½ÿé2J$d9a58d6b-86db-47cd-8e73-ce08cd4c477d
+java:S1172/"1Remove this unused method parameter "mouseEvent".(ôÓƒÿÿÿÿÿÿ8ú‘£Õ‚2J$cfda940f-0be7-49f9-9155-c3a3bce0fdbe
 t
-java:S1172+"1Remove this unused method parameter "mouseEvent".(¶ŸÎ€8ÌĞÿé2J$3caf09a6-df6b-4afc-9693-a60a4f5ac80d
+java:S11724"1Remove this unused method parameter "mouseEvent".(¶ŸÎ€8û‘£Õ‚2J$e5c1b099-6212-4e6e-b429-4e7c1392bae6
 y
-java:S11720"1Remove this unused method parameter "mouseEvent".(Ñ¡Ÿ şÿÿÿÿ8…ğÿé2J$f9fe44f5-be06-4149-80ca-2757c897d263
+java:S11729"1Remove this unused method parameter "mouseEvent".(Ñ¡Ÿ şÿÿÿÿ8ü‘£Õ‚2J$1063e866-06de-4f96-a6e9-57b477952c79
 t
-java:S1172E"1Remove this unused method parameter "mouseEvent".(Ì´•£8„®Í‘‚2J$62d2332a-61e1-42b3-9f60-b395a58f569e
+java:S1172N"1Remove this unused method parameter "mouseEvent".(Ì´•£8Œ’£Õ‚2J$3f858e5d-d697-4535-add0-c3ef4f73c747
+~	java:S125S"<This block of commented-out lines of code should be removed.(şÃ¿’8’£Õ‚2J$f8326875-7889-4826-ace9-2b180f9c7b42
+
+java:S1068"9Remove this unused "adminDashboardService" private field.(ÊõèÚıÿÿÿÿ8‘’£Õ‚2J$da7d9993-6980-4c90-a06e-446e35b00460

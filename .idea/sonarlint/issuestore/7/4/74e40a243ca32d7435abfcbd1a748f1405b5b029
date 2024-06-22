@@ -1,3 +1,105 @@
 
-d
-java:S2094"BRemove this empty class, write its code or make it an "interface".(§¥ññÿÿÿÿÿ8öß¡‚2
+w
+java:S3740"/Provide the parametrized type for this generic.(É±şıÿÿÿÿ8å–Äóƒ2J$9ed52ea9-984c-4d56-8a4e-1f61b49eff72
+w
+java:S3740	"/Provide the parametrized type for this generic.(º°Çşûÿÿÿÿ8ï·Äóƒ2J$f78a9783-a87a-4b6b-aa4b-3cdab7e729b8
+r
+java:S3740
+"/Provide the parametrized type for this generic.(«–Ê8êÔÄóƒ2J$74da36d7-40a0-4614-8ed3-028ec56266a1
+w
+java:S3740"/Provide the parametrized type for this generic.(ıàİËşÿÿÿÿ8êóÄóƒ2J$de6af358-f8e3-40a7-a5ca-2e44b539c8c6
+r
+java:S3740"/Provide the parametrized type for this generic.(Õ…¼í8Â’Åóƒ2J$1bd2b903-bcdb-4016-9c1b-39a94cf179f1
+r
+java:S3740"/Provide the parametrized type for this generic.(èË8Ö¯Åóƒ2J$e98e174a-422d-4ddd-813d-4bf60d563a5d
+w
+java:S3740"/Provide the parametrized type for this generic.(¨°ì øÿÿÿÿ8Ù¬Çóƒ2J$965d9627-7298-4ca3-9de4-9f8bd0015736
+q
+java:S3740"/Provide the parametrized type for this generic.(ËÖ´8ÜãÉóƒ2J$ea738b87-5b55-47a1-ae83-82cd8b917d91
+q
+java:S3740"/Provide the parametrized type for this generic.(çÒúo8µÊóƒ2J$616c13a2-b4d8-43b7-9993-c4f01d9ecd66
+r
+java:S3740"/Provide the parametrized type for this generic.(ÿñšï8õ³Êóƒ2J$f8a098a2-6d3c-4633-b588-8fbb0f2a52dc
+w
+java:S3740"/Provide the parametrized type for this generic.(Ú‚–Âûÿÿÿÿ8Ëóƒ2J$2980a44f-a5e6-4e20-ab02-b20884da921e
+£
+java:S1104"[Make btnDropFromCart a static final constant or non-public and provide accessors if needed.(ğä©üüÿÿÿÿ8»àÃóƒ2J$315da821-0d4d-400f-b39e-bb49232b3dc8
+œ
+java:S1104"TMake tblOrder a static final constant or non-public and provide accessors if needed.(É±şıÿÿÿÿ8è–Äóƒ2J$c68c7fb4-ef75-4511-8290-a1d0563dd9b6
+ 
+java:S1104	"XMake colProductId a static final constant or non-public and provide accessors if needed.(º°Çşûÿÿÿÿ8ò·Äóƒ2J$45103170-9e39-4582-9f2b-e5a9bb78f7d0
+–
+java:S1104
+"SMake colSize a static final constant or non-public and provide accessors if needed.(«–Ê8íÔÄóƒ2J$9595b069-562e-422e-b5c7-c8d1305036cd
+Ÿ
+java:S1104"WMake colQuantity a static final constant or non-public and provide accessors if needed.(ıàİËşÿÿÿÿ8íóÄóƒ2J$2acdf845-fbeb-49a7-9d3c-2f117e9b52ba
+›
+java:S1104"XMake colUnitPrice a static final constant or non-public and provide accessors if needed.(Õ…¼í8Æ’Åóƒ2J$e29c16f8-4ac6-4591-88be-e86f1ae7aded
+–
+java:S1104"SMake colCost a static final constant or non-public and provide accessors if needed.(èË8ß¯Åóƒ2J$f2f4b866-4378-4f96-a63d-6d6de55c5675
+›
+java:S1104"SMake txtTime a static final constant or non-public and provide accessors if needed.(İ—’Ùÿÿÿÿÿ8˜ÁÆóƒ2J$4d702408-4bb8-4b96-a5df-b5805906b0eb
+›
+java:S1104"SMake txtDate a static final constant or non-public and provide accessors if needed.(˜º©²ùÿÿÿÿ8†ñÆóƒ2J$4f7520e1-a680-4b00-b0d8-804704a7b9da
+¢
+java:S1104"ZMake comboProductID a static final constant or non-public and provide accessors if needed.(¨°ì øÿÿÿÿ8ß¬Çóƒ2J$36fcc1b2-7fc3-4152-a4fb-ed145a154778
+š
+java:S1104"WMake txtDiscount a static final constant or non-public and provide accessors if needed.(­ä‚š8·ÉÇóƒ2J$17847c9b-3e62-439b-aa26-6effcc9ca295
+›
+java:S1104"XMake btnAddToCart a static final constant or non-public and provide accessors if needed.(ÏÏ¹8—æÇóƒ2J$7a18f75a-4d9d-4212-a55e-6bd56744df14
+£
+java:S1104"`Make btnClearOtherDetails a static final constant or non-public and provide accessors if needed.(½·à˜8ÚçÈóƒ2J$3e3b8f77-6717-4e77-8b3f-959176f3b85f
+©
+java:S1104"aMake btnSelectOtherDetails a static final constant or non-public and provide accessors if needed.(àò’ÿÿÿÿÿ8ÚˆÉóƒ2J$473e005d-9f0f-429f-a2d4-1dfb5d432d4b
+›
+java:S1104"SMake btnLoad a static final constant or non-public and provide accessors if needed.(ƒ«ƒ™üÿÿÿÿ8Ø¶Éóƒ2J$5671770e-6c00-4274-bfb9-2377161d038f
+
+java:S1104"\Make comboCustomerIDs a static final constant or non-public and provide accessors if needed.(ËÖ´8áãÉóƒ2J$8e6430a6-afd1-4561-ade5-4278056d0d2a
+
+java:S1104"\Make comboPaymentType a static final constant or non-public and provide accessors if needed.(çÒúo8ºÊóƒ2J$3a666efd-a644-423e-bede-fd310f1495ed
+˜
+java:S1104"UMake comboSize a static final constant or non-public and provide accessors if needed.(ÿñšï8û³Êóƒ2J$98ec9f09-c65a-4c35-9930-4023460167f3
+
+java:S1104"VMake lblOrderId a static final constant or non-public and provide accessors if needed.(¢–ñ¯ıÿÿÿÿ8ÖÎÊóƒ2J$90223b0e-f94d-4374-bbdb-6890cfe9defb
+š
+java:S1104"XMake lblUnitPrice a static final constant or non-public and provide accessors if needed.(°„«8€îÊóƒ2J$1ac2f509-ce49-436b-b651-df3324e37b35
+ 
+java:S1104"XMake spinQuantity a static final constant or non-public and provide accessors if needed.(Ú‚–Âûÿÿÿÿ8¬Ëóƒ2J$3745b6fb-c045-4587-b756-7c37264db948
+
+java:S1104"ZMake lblTotalAmount a static final constant or non-public and provide accessors if needed.(°¢ïş8¥ãÔóƒ2J$442afe43-cebb-47f8-b592-1c73682095ea
+Ÿ
+java:S1104"\Make lblDiscountGiven a static final constant or non-public and provide accessors if needed.(‘ßØ¿8ß¢Õóƒ2J$7f2a7264-1c4e-46fd-8a67-7cd0d928a710
+ 
+java:S1104"XMake lblNetAmount a static final constant or non-public and provide accessors if needed.(Åæôúüÿÿÿÿ8–¾Õóƒ2J$8eaafc74-cf42-4460-8941-09f87f45a3c5
+¢
+java:S1104"ZMake btnCancelOrder a static final constant or non-public and provide accessors if needed.(¯±Š§øÿÿÿÿ8çæÕóƒ2J$9ba64833-430a-4070-94b2-b9eb3c2754ec
+œ
+java:S1104 "YMake btnPlaceOrder a static final constant or non-public and provide accessors if needed.(¢ü¿8œˆÖóƒ2J$7e914416-5818-4409-a3ac-ce01278c8e17
+œ
+java:S1104!"YMake txtCustomerId a static final constant or non-public and provide accessors if needed.(Çéİ8Õ¸Öóƒ2J$59e07fdb-17a0-4afc-a914-9c2575438cc6
+
+java:S1104""[Make txtCustomerName a static final constant or non-public and provide accessors if needed.(ß©Ÿ	8üÒÖóƒ2J$82396738-7bd4-4508-85f7-fe2eb7fce690
+
+java:S1104#"ZMake txtCustomerDob a static final constant or non-public and provide accessors if needed.(å²¤§8æûÖóƒ2J$87881b9b-9035-4eef-8041-fb90787b8de8
+œ
+java:S1104$"TMake txtEmail a static final constant or non-public and provide accessors if needed.(„Å«ıÿÿÿÿ8Û™×óƒ2J$91c0f15d-7406-4f0b-91ec-cc975a9c3d68
+ 
+java:S1104%"XMake txtContactNo a static final constant or non-public and provide accessors if needed.(¿ıµÁÿÿÿÿÿ8Ú¿×óƒ2J$cb23a283-bb8b-4f17-9476-05e9ed7a51cd
+
+java:S1104&"ZMake btnAddCustomer a static final constant or non-public and provide accessors if needed.(ó†À®8Ù×óƒ2J$fb3c7501-8837-4183-b975-572b5a98344a
+Ä
+java:S1186("€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(µå´÷8ÏæÅóƒ2J$6e3abec5-6181-4986-8796-72bf47e75ecb
+É
+java:S1186+"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Š²Ô¢úÿÿÿÿ8ÀŠÈóƒ2J$abca00d2-ac31-4d0b-9021-0050c78c61e9
+É
+java:S1186."€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÜÃèåøÿÿÿÿ8÷‹Øóƒ2J$271b9077-b43d-413d-b0e0-4f6b460ddce8
+É
+java:S11861"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(—²Üğøÿÿÿÿ8„òáóƒ2J$0102d9b7-28dd-45f1-9537-8b39ec5c55a0
+É
+java:S11864"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(†µı°şÿÿÿÿ8å§äóƒ2J$ce06b82e-a6da-4b8b-806b-c8ba3d2f7917
+Ä
+java:S11867"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‹ŞíŸ8å§äóƒ2J$3a9146e1-59d3-4f17-8d57-6d06c245fad2
+É
+java:S1186:"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÿŒÏÕúÿÿÿÿ8å§äóƒ2J$8ec3e63d-7136-4e9c-9736-fcd025ac86a1
+É
+java:S1186="€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«Î‡¼ÿÿÿÿÿ8å§äóƒ2J$dfd8f14e-d3f9-4317-9f3b-94e2c9f92e31
