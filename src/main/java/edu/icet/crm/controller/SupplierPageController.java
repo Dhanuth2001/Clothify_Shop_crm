@@ -1,7 +1,9 @@
 package edu.icet.crm.controller;
 
-import edu.icet.crm.model.Supplier;
-import edu.icet.crm.service.SupplierService;
+import edu.icet.crm.bo.BoFactory;
+import edu.icet.crm.bo.custom.SupplierBo;
+import edu.icet.crm.dto.Supplier;
+import edu.icet.crm.util.BoType;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -18,9 +20,9 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class SupplierPageController {
     public TextField txtSupplierId;
@@ -41,13 +43,14 @@ public class SupplierPageController {
     public Label txtDate;
     public Button btnClear;
     public TableView supplierTable;
+    private SupplierBo supplierBo;
     public TableColumn colId;
 
-    private SupplierService supplierService;
+
     private ObservableList<Supplier> supplierList;
 
     public SupplierPageController() throws SQLException, ClassNotFoundException {
-        this.supplierService = new SupplierService();
+        this.supplierBo = BoFactory.getInstance().getBo(BoType.SUPPLIER);
         this.supplierList = FXCollections.observableArrayList();
     }
 
@@ -69,7 +72,7 @@ public class SupplierPageController {
     }
 
     private void loadSuppliersTable() {
-        List<Supplier> suppliers = supplierService.getAllSuppliers();
+        List<Supplier> suppliers = supplierBo.getAllSuppliers();
         if (suppliers != null && !suppliers.isEmpty()) {
             supplierList.clear();
             supplierList.addAll(suppliers);
@@ -86,7 +89,7 @@ public class SupplierPageController {
             return;
         }
 
-        Supplier supplier = supplierService.getSupplierById(supplierId);
+        Supplier supplier = supplierBo.getSupplierById(supplierId);
         if (supplier != null) {
             populateSupplierDetails(supplier);
         } else {
@@ -113,7 +116,7 @@ public class SupplierPageController {
                     txtEmail.getText(),
                     LocalDate.now()
             );
-            boolean success = supplierService.addSupplier(supplier);
+            boolean success = supplierBo.addSupplier(supplier);
             if (success) {
                 supplierList.add(supplier);
                 showAlert(Alert.AlertType.INFORMATION, "Success", "Supplier added successfully.");
@@ -135,7 +138,7 @@ public class SupplierPageController {
                     txtEmail.getText(),
                     LocalDate.now()
             );
-            boolean success = supplierService.updateSupplier(supplier);
+            boolean success = supplierBo.updateSupplier(supplier);
             if (success) {
                 int selectedIndex = supplierTable.getSelectionModel().getSelectedIndex();
                 if (selectedIndex != -1) {
@@ -159,14 +162,14 @@ public class SupplierPageController {
     }
 
     @FXML
-    public void btnDeleteOnAction(ActionEvent actionEvent) {
+    public void btnDeleteOnAction(ActionEvent actionEvent) throws SQLException {
         Integer supplierId = Integer.parseInt(txtSupplierId.getText());
         if (supplierId == null) {
             showAlert(Alert.AlertType.ERROR, "Error", "Please enter a supplier ID.");
             return;
         }
 
-        boolean success = supplierService.deleteSupplier(supplierId);
+        boolean success = supplierBo.deleteSupplier(supplierId);
         if (success) {
             supplierList.removeIf(supplier -> supplier.getSupplierID().equals(supplierId));
             showAlert(Alert.AlertType.INFORMATION, "Success", "Supplier deleted successfully.");
@@ -185,7 +188,31 @@ public class SupplierPageController {
             showAlert(Alert.AlertType.ERROR, "Error", "Please fill all required fields.");
             return false;
         }
+        if (!isValidEmail(txtEmail.getText())) {
+            showAlert(Alert.AlertType.ERROR, "Error", "Please enter a valid email address.");
+            return false;
+        }
+
+        if (!isValidPhoneNumber(txtContactNo.getText())) {
+            showAlert(Alert.AlertType.ERROR, "Error", "Please enter a valid phone number that starts with 0 and has 10 digits.");
+            return false;
+        }
+
         return true;
+    }
+
+    private boolean isValidEmail(String email) {
+        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
+        Pattern pattern = Pattern.compile(emailRegex);
+        Matcher matcher = pattern.matcher(email);
+        return matcher.matches();
+    }
+
+    private boolean isValidPhoneNumber(String phoneNumber) {
+        String phoneRegex = "^0\\d{9}$";
+        Pattern pattern = Pattern.compile(phoneRegex);
+        Matcher matcher = pattern.matcher(phoneNumber);
+        return matcher.matches();
     }
 
     private void clearFields() {

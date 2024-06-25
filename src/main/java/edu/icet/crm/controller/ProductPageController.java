@@ -1,13 +1,11 @@
 package edu.icet.crm.controller;
 
-import edu.icet.crm.model.Employee;
-import edu.icet.crm.model.Product;
-import edu.icet.crm.model.Role;
-import edu.icet.crm.model.Supplier;
-import edu.icet.crm.service.EmployeeService;
-import edu.icet.crm.service.ProductService;
-import edu.icet.crm.service.RoleService;
-import edu.icet.crm.service.SupplierService;
+import edu.icet.crm.bo.BoFactory;
+import edu.icet.crm.bo.custom.ProductBo;
+import edu.icet.crm.bo.custom.SupplierBo;
+import edu.icet.crm.dto.Product;
+import edu.icet.crm.dto.Supplier;
+import edu.icet.crm.util.BoType;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -24,9 +22,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class ProductPageController {
     public TextField txtProductId;
@@ -58,14 +54,14 @@ public class ProductPageController {
     public ComboBox comboSupplierID;
     public TextField txtProductQuantity;
 
-    private ProductService productService;
-    private SupplierService supplierService;
+    private ProductBo productBo;
+    private SupplierBo supplierBo;
     private ObservableList<Product> productList;
 
 
     public ProductPageController() throws SQLException, ClassNotFoundException {
-        this.productService = new ProductService();
-        this.supplierService = new SupplierService();
+        this.productBo = BoFactory.getInstance().getBo(BoType.PRODUCT);
+        this.supplierBo = BoFactory.getInstance().getBo(BoType.SUPPLIER);
         this.productList = FXCollections.observableArrayList();
 
     }
@@ -81,7 +77,7 @@ public class ProductPageController {
     }
 
     private void loadSupplierIDs() throws SQLException, ClassNotFoundException {
-        List<Supplier> allSuppliers = supplierService.getAllSuppliers();
+        List<Supplier> allSuppliers = supplierBo.getAllSuppliers();
 
         ObservableList ids = FXCollections.observableArrayList();
 
@@ -108,7 +104,7 @@ public class ProductPageController {
     }
 
     private void loadProductsTable() {
-        List<Product> products = productService.getAllProducts();
+        List<Product> products = productBo.getAllProducts();
         if (products != null && !products.isEmpty()) {
             productList.clear();
             productList.addAll(products);
@@ -118,12 +114,12 @@ public class ProductPageController {
     }
 
     private void loadCategories() {
-        List<String> categories = productService.getProductCategories();
+        ObservableList<Object> cat = FXCollections.observableArrayList();
+        cat.add("MEN");
+        cat.add("WOMEN");
+        cat.add("KID");
 
-
-        ObservableList<String> observableCategories = FXCollections.observableArrayList(categories);
-
-        comboProductCategory.setItems(observableCategories);
+        comboProductCategory.setItems(cat);
     }
 
     private void loadSizes() {
@@ -147,7 +143,7 @@ public class ProductPageController {
             return;
         }
 
-        Product product = productService.getProductById(productId);
+        Product product = productBo.getProductById(productId);
         if (product != null) {
             populateProductDetails(product);
         } else {
@@ -178,7 +174,7 @@ public class ProductPageController {
                     Integer.valueOf(txtProductQuantity.getText()),
                     Integer.valueOf(comboSupplierID.getValue().toString())
             );
-            boolean success = productService.addProduct(product);
+            boolean success = productBo.addProduct(product);
             System.out.println(success);
             if (success) {
                 productList.add(product);
@@ -204,7 +200,7 @@ public class ProductPageController {
                     Integer.valueOf(comboSupplierID.getValue().toString())
             );
 
-            boolean success = productService.updateProduct(product);
+            boolean success = productBo.updateProduct(product);
             if (success) {
                 int selectedIndex = productTable.getSelectionModel().getSelectedIndex();
                 if (selectedIndex != -1) {
@@ -228,14 +224,14 @@ public class ProductPageController {
     }
 
     @FXML
-    public void btnDeleteOnAction(ActionEvent actionEvent) {
+    public void btnDeleteOnAction(ActionEvent actionEvent) throws SQLException {
         Integer productId = Integer.parseInt(txtProductId.getText());
         if (productId==null) {
             showAlert(Alert.AlertType.ERROR, "Error", "Please enter an employee ID.");
             return;
         }
 
-        boolean success = productService.deleteProduct(productId);
+        boolean success = productBo.deleteProduct(productId);
         if (success) {
             productList.removeIf(product -> product.getProductID().equals(productId));
             showAlert(Alert.AlertType.INFORMATION, "Success", "Employee deleted successfully.");

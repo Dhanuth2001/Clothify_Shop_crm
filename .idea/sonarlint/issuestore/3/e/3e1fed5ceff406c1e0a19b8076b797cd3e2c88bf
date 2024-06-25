@@ -1,0 +1,27 @@
+
+Ž	java:S112Ñ"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8à£÷ý„2J$335a7be8-ef1c-4aef-90e3-88269521fc4e
+©
+java:S1488F"fImmediately return this expression instead of assigning it to the temporary variable "employeeEntity".(¬Œ°Æ8ã£÷ý„2J$35a95b0b-1e8f-4f0b-bd2d-8c1ef98ce9dc
+~	java:S125-"<This block of commented-out lines of code should be removed.(™¡öÙ8þ£÷ý„2J$a8d18c1e-010e-415c-9068-2c27c9dfe770
+ƒ	java:S125M"<This block of commented-out lines of code should be removed.(»»Ý¤ÿÿÿÿÿ8ƒ¤÷ý„2J$b062bd25-c95c-4459-b88f-dd18611d4876
+~	java:S125^"<This block of commented-out lines of code should be removed.(¡©œË8ƒ¤÷ý„2J$aabe1e76-d280-4518-9fbe-abd15ed66a1a
+ƒ	java:S125s"<This block of commented-out lines of code should be removed.(»»Ý¤ÿÿÿÿÿ8†¤÷ý„2J$1f8f1da9-766d-41fd-a9f2-485bfa08f68e
+„	java:S125„"<This block of commented-out lines of code should be removed.(¿—ÉÖúÿÿÿÿ8†¤÷ý„2J$39665b37-3846-4c8c-a53c-1d6309229e0d
+„	java:S125—"<This block of commented-out lines of code should be removed.(»»Ý¤ÿÿÿÿÿ8ˆ¤÷ý„2J$70e43a36-60bf-4e63-91b1-b055a129e654
+„	java:S125±"<This block of commented-out lines of code should be removed.(»»Ý¤ÿÿÿÿÿ8Š¤÷ý„2J$483a9ca9-2fa0-4821-91c0-af03265b2d72
+„	java:S125ã"<This block of commented-out lines of code should be removed.(»»Ý¤ÿÿÿÿÿ8¤÷ý„2J$bd9dccb7-812a-40f7-8591-0eab2b6aa39f
+„	java:S125ÿ"<This block of commented-out lines of code should be removed.(»»Ý¤ÿÿÿÿÿ8¤÷ý„2J$627cd2cf-805b-4400-84de-cb75178d2aec
+„	java:S125›"<This block of commented-out lines of code should be removed.(»»Ý¤ÿÿÿÿÿ8’¤÷ý„2J$b7223fde-215a-4b1b-a4d2-c296041535bc
+„	java:S125¶"<This block of commented-out lines of code should be removed.(»»Ý¤ÿÿÿÿÿ8”¤÷ý„2J$7e376c3b-7b2e-4db8-b963-88067c748dbf
+„	java:S125Ô"<This block of commented-out lines of code should be removed.(»»Ý¤ÿÿÿÿÿ8–¤÷ý„2J$72925905-99d7-428d-a861-bb592fa08cdb
+u
+java:S1128"2Remove this unused import 'edu.icet.crm.dto.Role'.(¾Í‚Ò8ÅÂ¨…2J$cb8a9484-0db0-45d4-a0ff-c646c8bf4170
+~
+java:S1128
+"<Remove this unused import 'edu.icet.crm.util.HibernateUtil'.(éÂ’$8ÅÂ¨…2J$246d6ccb-98bc-40bc-a3f3-f22512f0c189
+z
+java:S1128"2Remove this unused import 'org.hibernate.Session'.(È¹›§ùÿÿÿÿ8ÅÂ¨…2J$51ec672b-3298-4e12-a51e-61e0e8818480
+y
+java:S1128"6Remove this unused import 'org.hibernate.Transaction'.(ìÌè³8ÅÂ¨…2J$580ec20e-067c-416f-9491-9ccb5efdc62a
+m
+java:S1068"*Remove this unused "roleBo" private field.(Ñ…ÑË8š¤÷ý„2J$9971e29e-8de5-4a90-a269-ef3eb2a63e97

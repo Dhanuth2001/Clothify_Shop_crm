@@ -1,0 +1,8 @@
+
+	java:S112F"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8°»×„2J$3dfaaf59-aa84-4f44-9e9c-eb713e7ca97e
+	java:S112O"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8°»×„2J$acfebc3f-afb7-40e7-8fc0-e6ca04f0b227
+	java:S112X"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Áê×„2J$cf0b73cc-9ffb-4b81-8d52-4f3963c84f79
+|
+java:S1128"4Remove this unused import 'edu.icet.crm.bo.SuperBo'.(„›Í½úÿÿÿÿ8¨±Õý„2J$08791f26-41f2-4cd6-af01-20793aa73c21
+†
+java:S1128">Remove this unused import 'edu.icet.crm.bo.custom.CustomerBo'.(ªÿê÷ûÿÿÿÿ8¨±Õý„2J$f970b624-b240-4bc6-ab28-9ef62770c85d

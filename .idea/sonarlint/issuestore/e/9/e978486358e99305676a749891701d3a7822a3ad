@@ -1,0 +1,71 @@
+
+r
+java:S3740#"/Provide the parametrized type for this generic.(Å½«œ8Ô¿¼Ù„2J$9a1c813a-9da3-4204-b84b-577c8b20a232
+r
+java:S3740$"/Provide the parametrized type for this generic.(ƒäÆ8ıÛ¼Ù„2J$eb319f8b-899c-414d-9d8e-3a2c056f5c52
+r
+java:S3740%"/Provide the parametrized type for this generic.(§³¸İ8µı¼Ù„2J$946f2962-1021-4ee2-9fda-102aad2f1804
+w
+java:S3740&"/Provide the parametrized type for this generic.(ÊÚÎ¨ùÿÿÿÿ8÷—½Ù„2J$5ab59e9c-b617-4d0b-9aa4-44e7bb66a4e4
+r
+java:S3740'"/Provide the parametrized type for this generic.(“ĞÃâ8ï²½Ù„2J$ff125e81-2368-4439-add8-40cf08a6e3e1
+r
+java:S3740("/Provide the parametrized type for this generic.(âˆÅ˜8šÍÚÙ„2J$b4e3a2d4-b01e-4e7d-bd87-1ef4030db6c5
+
+java:S1192M"GDefine a constant instead of duplicating this literal "Error" 11 times.(õù¤Éüÿÿÿÿ8œÍÚÙ„2J$c55696ab-101d-43fd-b32a-20d8ef9ce344
+‹
+java:S1192^"HDefine a constant instead of duplicating this literal "Success" 3 times.(–ò„Œ8œÍÚÙ„2J$acd64736-cbfc-4c81-af17-be7ee5d61167
+œ
+java:S1104"YMake txtCustomerId a static final constant or non-public and provide accessors if needed.(Çéİ8¹À¸Ù„2J$43d658e7-d52e-4bc6-98d7-a6030dbcc6ce
+
+java:S1104"[Make txtCustomerName a static final constant or non-public and provide accessors if needed.(ß©Ÿ	8á¹Ù„2J$7d8866ff-e77d-419d-87fd-b48fe812912f
+
+java:S1104"ZMake txtCustomerDob a static final constant or non-public and provide accessors if needed.(å²¤§8À¬¹Ù„2J$ce807cf5-7859-4a91-8de6-ef182fe6c4cb
+œ
+java:S1104"TMake txtEmail a static final constant or non-public and provide accessors if needed.(„Å«ıÿÿÿÿ8èá¹Ù„2J$59720787-e4ce-4a73-ab87-54e33754893e
+ 
+java:S1104"XMake txtContactNo a static final constant or non-public and provide accessors if needed.(¿ıµÁÿÿÿÿÿ8ïÿ¹Ù„2J$92094ec2-00bd-4d1b-a5cc-f27815491af6
+
+java:S1104 "ZMake btnAddCustomer a static final constant or non-public and provide accessors if needed.(ó†À®8„™ºÙ„2J$4949f9fa-2a7c-434c-b9ad-59f5768df768
+›
+java:S1104!"SMake txtDate a static final constant or non-public and provide accessors if needed.(˜º©²ùÿÿÿÿ8¬…¼Ù„2J$9c445320-89be-42d8-ba56-22e6ea8e0e04
+›
+java:S1104""SMake txtTime a static final constant or non-public and provide accessors if needed.(İ—’Ùÿÿÿÿÿ8£¼Ù„2J$c925def0-75e6-437f-a95b-8e167d9e2ee0
+Ÿ
+java:S1104#"\Make colContactNumber a static final constant or non-public and provide accessors if needed.(Å½«œ8Õ¿¼Ù„2J$e7d24cc5-501d-4525-90e5-bff4c478ead5
+—
+java:S1104$"TMake colEmail a static final constant or non-public and provide accessors if needed.(ƒäÆ8şÛ¼Ù„2J$0d61f7ca-08a8-4e76-bb5d-167d15af81ac
+•
+java:S1104%"RMake colDob a static final constant or non-public and provide accessors if needed.(§³¸İ8¶ı¼Ù„2J$be2ebdac-1595-4394-a547-bb65a851854f
+›
+java:S1104&"SMake colName a static final constant or non-public and provide accessors if needed.(ÊÚÎ¨ùÿÿÿÿ8ø—½Ù„2J$a43d9014-6063-4685-8b59-0cf09953d902
+”
+java:S1104'"QMake colId a static final constant or non-public and provide accessors if needed.(“ĞÃâ8ó²½Ù„2J$4d4bf632-4943-45de-850b-b3f5adc77413
+œ
+java:S1104("YMake customerTable a static final constant or non-public and provide accessors if needed.(âˆÅ˜8•à½Ù„2J$45c85223-9258-495e-b72c-dee350664c53
+œ
+java:S1104)"TMake btnClear a static final constant or non-public and provide accessors if needed.(¸¹„üÿÿÿÿ8£ü½Ù„2J$5a3ea37e-bfc1-4c2c-ad80-7f159237fa4a
+˜
+java:S1104*"UMake btnDelete a static final constant or non-public and provide accessors if needed.(ˆªü›8ã˜¾Ù„2J$a29dc61e-fa96-486d-8bbf-093fd84b0a08
+
+java:S1104+"UMake btnUpdate a static final constant or non-public and provide accessors if needed.(”ƒ³Šÿÿÿÿÿ8Ÿ»¾Ù„2J$7b868a72-48f6-4dc1-8be2-1478095e1287
+˜
+java:S1104,"UMake btnSearch a static final constant or non-public and provide accessors if needed.(É¹ŠÄ8ŸÍÚÙ„2J$472d2c1c-26a8-4d6c-9661-6b2921cb9bbe
+…
+java:S4973"<Strings and Boxed types should be compared using "equals()".(ÿÃ©‘üÿÿÿÿ8íñŞü„2J$8507cc57-82dd-4936-a148-bac4f232c5f0
+¶
+java:S1130G"nRemove the declaration of thrown exception 'java.sql.SQLException', as it cannot be thrown from method's body.(î¸ï­úÿÿÿÿ8‚ôŞü„2J$184b64cc-d7e2-48d4-b63f-0e70a2f951b8
+Á
+java:S1130G"yRemove the declaration of thrown exception 'java.lang.ClassNotFoundException', as it cannot be thrown from method's body.(î¸ï­úÿÿÿÿ8‚ôŞü„2J$fff9f9c1-ef3b-4718-81e0-8e50fe376896
+¶
+java:S1130R"nRemove the declaration of thrown exception 'java.sql.SQLException', as it cannot be thrown from method's body.(¤·ØÊøÿÿÿÿ8…ôŞü„2J$f38d1341-aa5a-4348-bea7-4a604e69bcc4
+Á
+java:S1130R"yRemove the declaration of thrown exception 'java.lang.ClassNotFoundException', as it cannot be thrown from method's body.(¤·ØÊøÿÿÿÿ8†ôŞü„2J$3a84fa1d-9743-4628-807e-1f4e2e8b7a2a
+±
+java:S1130g"nRemove the declaration of thrown exception 'java.sql.SQLException', as it cannot be thrown from method's body.(İ÷˜ã8ŠôŞü„2J$2fea069f-4272-4466-aff8-eade59ec7a39
+¼
+java:S1130g"yRemove the declaration of thrown exception 'java.lang.ClassNotFoundException', as it cannot be thrown from method's body.(İ÷˜ã8ŠôŞü„2J$77548183-b032-4460-8fbf-f0ec4908c606
+š
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(ø´ÜÖøÿÿÿÿ8ßÍÚÙ„2J$d009f5fe-2734-4f93-b9f7-ca44e42cff89
+
+java:S5998Ì"LRefactor this repetition that can lead to a stack overflow for large inputs.(õæˆB8­˜Ñï„2J$7eac7c5f-adc3-4bde-b990-876e0c77a9f0

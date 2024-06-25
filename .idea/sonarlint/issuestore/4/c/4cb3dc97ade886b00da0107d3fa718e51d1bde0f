@@ -1,0 +1,19 @@
+
+ƒ	java:S125+"<This block of commented-out lines of code should be removed.(ª‚…Ìıÿÿÿÿ8°Ë¦ş„2J$3d3e44f2-11dd-4c10-9ab4-d6d63232a4d0
+ƒ	java:S125S"<This block of commented-out lines of code should be removed.(»»İ¤ÿÿÿÿÿ8´Ë¦ş„2J$2c9d4ed7-aa00-4c5d-ac0f-1a5aa42ed5f4
+ƒ	java:S125s"<This block of commented-out lines of code should be removed.(»»İ¤ÿÿÿÿÿ8¸Ë¦ş„2J$0f9d187a-66a4-4f5e-b3ff-15b53b9ec437
+„	java:S125”"<This block of commented-out lines of code should be removed.(»»İ¤ÿÿÿÿÿ8»Ë¦ş„2J$9ca024f8-71a8-41ab-a3e0-41b568c1d8d8
+„	java:S125¯"<This block of commented-out lines of code should be removed.(»»İ¤ÿÿÿÿÿ8¾Ë¦ş„2J$69192f82-239d-49ce-9d5e-5e3a8a4f6b11
+X
+java:S1128"6Remove this unused import 'edu.icet.crm.bo.BoFactory'.(Òï÷¤úÿÿÿÿ8Ş™ış„2
+X
+java:S1128"6Remove this unused import 'edu.icet.crm.dto.Supplier'.(«¨Ş²ıÿÿÿÿ8Ş™ış„2
+R
+java:S1128"5Remove this unused import 'edu.icet.crm.util.BoType'.(ú®é8Ş™ış„2
+X
+java:S1128	"<Remove this unused import 'edu.icet.crm.util.HibernateUtil'.(éÂ’$8Ş™ış„2
+T
+java:S1128
+"2Remove this unused import 'org.hibernate.Session'.(È¹›§ùÿÿÿÿ8ß™ış„2
+S
+java:S1128"6Remove this unused import 'org.hibernate.Transaction'.(ìÌè³8ß™ış„2

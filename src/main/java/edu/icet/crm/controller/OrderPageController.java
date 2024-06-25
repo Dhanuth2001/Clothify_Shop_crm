@@ -1,7 +1,10 @@
 package edu.icet.crm.controller;
 
-import edu.icet.crm.model.*;
+import edu.icet.crm.bo.BoFactory;
+import edu.icet.crm.bo.custom.*;
+import edu.icet.crm.dto.*;
 import edu.icet.crm.service.*;
+import edu.icet.crm.util.BoType;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -17,11 +20,12 @@ import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 public class OrderPageController {
+    private ObservableList<OrderDetails> tempOrderDetailsList = FXCollections.observableArrayList();
+
     public TextField txtOrderId;
     public Button btnSearch;
 
@@ -48,26 +52,32 @@ public class OrderPageController {
     public Button btnDeleteOrder;
     public Button btnUpdateOrder;
     public Button btnLoad;
-    public ComboBox comboEmployeeIDs;
+
     public ComboBox comboCustomerIDs;
     public ComboBox comboPaymentType;
     public TableView tblOrder;
     public ComboBox comboSize;
-    private OrderService orderService;
-    private CustomerService customerService;
-    private ProductService productService;
-    private EmployeeService employeeService;
-    private OrderDetailsService orderDetailsService;
+    public Spinner spinQuantity;
+    public Button btnChangeOrderDetails;
+    public Button btnDropOrderDetail;
+
+    private CustomerBo customerBo;
+
+    private UserBo userBo;
+
+    private OrderBo orderBo;
+    private ProductBo productBo;
+    private OrderDetailBo orderDetailsBo;
     private ObservableList<Order> orderList = FXCollections.observableArrayList();
 
     @FXML
     public void initialize() {
         try {
-            orderService = new OrderService();
-            customerService = new CustomerService();
-            employeeService = new EmployeeService();
-            productService = new ProductService();
-            orderDetailsService = new OrderDetailsService();
+            orderBo = BoFactory.getInstance().getBo(BoType.ORDER);
+            customerBo = BoFactory.getInstance().getBo(BoType.CUSTOMER);
+            productBo = BoFactory.getInstance().getBo(BoType.PRODUCT);
+            orderDetailsBo = BoFactory.getInstance().getBo(BoType.ORDERDETAILS);
+            userBo = BoFactory.getInstance().getBo(BoType.USER);
 
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
@@ -76,8 +86,8 @@ public class OrderPageController {
         loadDateAndTime();
         initializeTable();
         loadOrdersTable();
-        loadEmployeeIDs();
-        loadSizes();
+
+
         loadCustomerIDs();
         loadPaymentType();
     }
@@ -95,17 +105,12 @@ public class OrderPageController {
 
     private void loadCustomerIDs() {
 
-        List<Integer> productIDs = customerService.getCustomerIDs();
+        List<Integer> productIDs = customerBo.getCustomerIDs();
         ObservableList<Integer> observableProductIDs = FXCollections.observableArrayList(productIDs);
         comboCustomerIDs.setItems(observableProductIDs);
     }
 
-    private void loadEmployeeIDs() {
 
-        List<Integer> productIDs = employeeService.getEmployeeIDs();
-        ObservableList<Integer> observableProductIDs = FXCollections.observableArrayList(productIDs);
-        comboEmployeeIDs.setItems(observableProductIDs);
-    }
 
     private void initializeTable() {
         colId.setCellValueFactory(new PropertyValueFactory<>("orderID"));
@@ -121,20 +126,21 @@ public class OrderPageController {
 
     private void loadProductIDs(Integer orderId) {
 
-        List<Integer> productIDs = orderDetailsService.getProductIDsByOrderID(orderId);
+        List<Integer> productIDs = orderDetailsBo.getProductIDsByOrderID(orderId);
         ObservableList<Integer> observableProductIDs = FXCollections.observableArrayList(productIDs);
         comboProductID.setItems(observableProductIDs);
     }
 
     public void btnSearchOnAction(ActionEvent actionEvent) {
         Integer orderId = Integer.valueOf(txtOrderId.getText());
+        loadOrderDetails(orderId);
         loadProductIDs(orderId);
         if (orderId==null) {
             showAlert(Alert.AlertType.ERROR, "Error", "Please enter an employee ID.");
             return;
         }
 
-        Order order = orderService.getOrderById(orderId);
+        Order order = orderBo.getOrderById(orderId);
         if (order != null) {
             populateOrder(order);
         } else {
@@ -144,7 +150,7 @@ public class OrderPageController {
     }
 
     private void loadOrdersTable() {
-        List<Order> orders = orderService.getAllOrders();
+        List<Order> orders = orderBo.getAllOrders();
         if (orders != null && !orders.isEmpty()) {
             orderList.clear();
             orderList.addAll(orders);
@@ -155,7 +161,7 @@ public class OrderPageController {
 
     private void populateOrder(Order order) {
         comboCustomerIDs.setValue(order.getCustomerID());
-        comboEmployeeIDs.setValue(order.getEmployeeID());
+
         comboPaymentType.setValue(order.getPaymentType());
         txtDiscount.setText(order.getDiscount().toString());
     }
@@ -163,10 +169,10 @@ public class OrderPageController {
     private void clearFields() {
         txtOrderId.clear();
         comboCustomerIDs.setValue(null);
-        comboEmployeeIDs.setValue(null);
+
         comboPaymentType.setValue(null);
         txtDiscount.clear();
-        txtQuantity.clear();
+        spinQuantity.getValueFactory().setValue(null);
         txtUnitPrice.clear();
         comboSize.setValue(null);
         comboProductID.setValue(null);
@@ -180,14 +186,14 @@ public class OrderPageController {
         alert.showAndWait();
     }
 
-    public void btnOrderDeleteOnAction(ActionEvent actionEvent) {
+    public void btnOrderDeleteOnAction(ActionEvent actionEvent) throws SQLException {
         Integer orderId = Integer.parseInt(txtOrderId.getText());
         if (orderId==null) {
             showAlert(Alert.AlertType.ERROR, "Error", "Please enter an order ID.");
             return;
         }
 
-        boolean success = orderService.deleteOrder(orderId);
+        boolean success = orderBo.deleteOrder(orderId);
         if (success) {
             orderList.removeIf(order -> order.getOrderID().equals(orderId));
             showAlert(Alert.AlertType.INFORMATION, "Success", "Order deleted successfully.");
@@ -212,79 +218,60 @@ public class OrderPageController {
         Integer orderId = Integer.parseInt(txtOrderId.getText());
         Integer productId = Integer.parseInt(comboProductID.getValue().toString());
 
-        OrderDetails orderDetailsByOrderIDandProductID = orderDetailsService.
+        loadSizesByProductId(productId);
+        limitQuantitySpinner(productId);
+
+        OrderDetails orderDetailsByOrderIDandProductID = orderDetailsBo.
                 getOrderDetailsByOrderIDandProductID(orderId, productId);
 
         comboSize.setValue(orderDetailsByOrderIDandProductID.getSizes());
-        txtQuantity.setText(orderDetailsByOrderIDandProductID.getQuantity().toString());
+        spinQuantity.getValueFactory().setValue(orderDetailsByOrderIDandProductID.getQuantity());
         txtUnitPrice.setText(orderDetailsByOrderIDandProductID.getUnitPrice().toString());
 
 
     }
 
     public void btnUpdateOrderOnAction(ActionEvent actionEvent) {
-        Integer orderId = null;
-
-        try {
-            orderId = Integer.parseInt(txtOrderId.getText());
-        } catch (NumberFormatException e) {
-            showAlert(Alert.AlertType.ERROR, "Error", "Please enter a valid order ID.");
-            return;
-        }
-
         if (isValidOrder()) {
-            // Create a new Order object and set its attributes
-            Order newOrder = new Order();
-            newOrder.setOrderID(orderId);
-            newOrder.setCustomerID(Integer.parseInt(comboCustomerIDs.getValue().toString()));
-            newOrder.setEmployeeID(Integer.parseInt(comboEmployeeIDs.getValue().toString()));
-            newOrder.setDiscount(Double.parseDouble(txtDiscount.getText()));
-            newOrder.setPaymentType(comboPaymentType.getValue().toString());
-            newOrder.setDatePlaced(LocalDate.now());
+            try {
+                // Create a new Order object with updated details
+                Integer orderId = Integer.parseInt(txtOrderId.getText());
+                String employeeEmail = LoginPageController.getLoggedInEmployeeEmail();
 
-            // Retrieve the previous discount percentage
-            Double previousDiscount = orderService.getDiscountByOrderID(orderId);
+                Integer employeeID = userBo.getEmployeeIdByEmail(employeeEmail);
+                Integer customerID = Integer.parseInt(comboCustomerIDs.getValue().toString());
+                String paymentType = comboPaymentType.getValue().toString();
+                Double discount = Double.parseDouble(txtDiscount.getText());
+                LocalDate datePlaced = LocalDate.now();
 
-            if (previousDiscount == null) {
-                showAlert(Alert.AlertType.ERROR, "Error", "Failed to retrieve original discount.");
-                return;
-            }
+                // Calculate total cost
+                double totalCost = tempOrderDetailsList.stream()
+                        .mapToDouble(orderDetail -> orderDetail.getQuantity() * orderDetail.getUnitPrice())
+                        .sum();
 
-            // Check if the discount has changed
-            if (!previousDiscount.equals(newOrder.getDiscount())) {
-                // Retrieve the original total cost
-                Double originalTotalCost = orderService.getTotalCostByOrderID(orderId);
-                if (originalTotalCost == null) {
-                    showAlert(Alert.AlertType.ERROR, "Error", "Failed to retrieve original total cost.");
-                    return;
-                }
+                Order updatedOrder = new Order();
+                updatedOrder.setOrderID(orderId);
+                updatedOrder.setEmployeeID(employeeID);
+                updatedOrder.setCustomerID(customerID);
+                updatedOrder.setDiscount(discount);
+                updatedOrder.setTotalCost(totalCost);
+                updatedOrder.setPaymentType(paymentType);
+                updatedOrder.setDatePlaced(datePlaced);
+                updatedOrder.setOrderDetailList(tempOrderDetailsList);
 
-                // Calculate the new total cost after applying the discount
-                Double discountedTotalCost = Math.round((originalTotalCost - (originalTotalCost * newOrder.getDiscount() / 100)) * 100.0) / 100.0;
-                newOrder.setTotalCost(discountedTotalCost);
-            } else {
-                // If the discount hasn't changed, retain the original total cost
-                newOrder.setTotalCost(orderService.getTotalCostByOrderID(orderId));
-            }
+                // Call service to update the order
+                boolean success = orderBo.updateOrder(updatedOrder);
 
-            boolean success = orderService.updateOrder(newOrder);
-            if (success) {
-                // Update the table view with the new order details
-                int selectedIndex = tblOrder.getSelectionModel().getSelectedIndex();
-                if (selectedIndex != -1) {
-                    tblOrder.getItems().set(selectedIndex, newOrder);
+                if (success) {
+                    showAlert(Alert.AlertType.INFORMATION, "Order Updated", "Order updated successfully.");
+                    loadOrdersTable();
+                    clearFields();
+                    tempOrderDetailsList.clear();
                 } else {
-                    for (int i = 0; i < orderList.size(); i++) {
-                        if (orderList.get(i).getOrderID().equals(newOrder.getOrderID())) {
-                            orderList.set(i, newOrder);
-                            break;
-                        }
-                    }
+                    showAlert(Alert.AlertType.ERROR, "Update Failed", "Failed to update order.");
                 }
-                showAlert(Alert.AlertType.INFORMATION, "Success", "Order updated successfully.");
-                loadOrdersTable();
-                clearFields();
-            } else {
+            } catch (Exception e) {
+                e.printStackTrace();
                 showAlert(Alert.AlertType.ERROR, "Error", "Failed to update order.");
             }
         }
@@ -292,123 +279,21 @@ public class OrderPageController {
 
 
 
-    public void btnUpdateOrderDetailOnAction(ActionEvent actionEvent) {
-        Integer orderId = null;
-        Integer productId = null;
-        try {
-            orderId = Integer.parseInt(txtOrderId.getText());
-            productId = Integer.parseInt(comboProductID.getValue().toString());
-        } catch (NumberFormatException e) {
-            showAlert(Alert.AlertType.ERROR, "Error", "Please enter valid order and product IDs.");
-            return;
-        }
-
-        if (isValidOrderDetails()) {
-            int newQuantity = Integer.parseInt(txtQuantity.getText());
-
-            OrderDetails oldOrderDetails = orderDetailsService.getOrderDetailsByOrderIDandProductID(orderId, productId);
-            if (oldOrderDetails == null) {
-                showAlert(Alert.AlertType.ERROR, "Error", "Order details not found.");
-                return;
-            }
-
-            int oldQuantity = oldOrderDetails.getQuantity();
-            int quantityDifference = newQuantity - oldQuantity;
-
-            // Check if there's enough quantity on hand
-            int currentProductQuantity = productService.getProductQuantityById(productId);
-            if (currentProductQuantity < quantityDifference) {
-                showAlert(Alert.AlertType.ERROR, "Error", "Not enough quantity on hand.");
-                return;
-            }
-
-            OrderDetails orderDetails = new OrderDetails(
-                    orderId,
-                    productId,
-                    newQuantity,
-                    String.valueOf(comboSize.getValue()),
-                    Double.valueOf(txtUnitPrice.getText())
-            );
-
-            boolean success = orderDetailsService.updateOrderDetail(orderDetails);
-            if (success) {
-                int selectedIndex = tblOrder.getSelectionModel().getSelectedIndex();
-                if (selectedIndex != -1) {
-                    tblOrder.getItems().set(selectedIndex, orderDetails);
-                } else {
-                    for (int i = 0; i < orderList.size(); i++) {
-                        Order order = orderList.get(i);
-                        if (order.getOrderID().equals(orderDetails.getOrderID())) {
-                            List<OrderDetails> orderDetailsList = order.getOrderDetailList();
-                            for (int j = 0; j < orderDetailsList.size(); j++) {
-                                if (orderDetailsList.get(j).getProductID().equals(orderDetails.getProductID())) {
-                                    orderDetailsList.set(j, orderDetails);
-                                    break;
-                                }
-                            }
-                            break;
-                        }
-                    }
-                }
-
-                // Update product quantity in the products table
-                boolean productUpdateSuccess = productService.updateProductQuantity(productId, quantityDifference);
-                if (!productUpdateSuccess) {
-                    showAlert(Alert.AlertType.ERROR, "Error", "Failed to update product quantity.");
-                    return;
-                }
-
-                // Recalculate and update the total cost in the orders table
-                updateOrderTotalCost(orderId);
-
-                showAlert(Alert.AlertType.INFORMATION, "Success", "Order updated successfully.");
-                loadOrdersTable();
-                clearFields();
-            } else {
-                showAlert(Alert.AlertType.ERROR, "Error", "Failed to update order.");
-            }
-        }
+    private void loadSizesByProductId(int productId) {
+        List<String> sizes = productBo.getSizesByProductId(productId);
+        ObservableList<String> observableSizes = FXCollections.observableArrayList(sizes);
+        comboSize.setItems(observableSizes);
     }
 
-
-
-    private void updateOrderTotalCost(Integer orderId) {
-        // Retrieve updated list of OrderDetails
-        List<OrderDetails> orderDetailsList = orderDetailsService.getOrderDetailsByOrderId(orderId);
-        if (orderDetailsList == null) {
-            showAlert(Alert.AlertType.ERROR, "Error", "Failed to retrieve order details.");
-            return;
-        }
-
-        // Calculate new total cost
-        double totalCost = 0;
-        for (OrderDetails details : orderDetailsList) {
-            totalCost += details.getQuantity() * details.getUnitPrice();
-        }
-        totalCost = Math.round(totalCost * 100.0) / 100.0; // Round to two decimal places
-
-        // Update total cost in orders table
-        boolean success = orderService.updateTotalCost(orderId, totalCost);
-        if (!success) {
-            showAlert(Alert.AlertType.ERROR, "Error", "Failed to update order total cost.");
-        }
+    private void limitQuantitySpinner(int productId) {
+        int availableQuantity = productBo.getAvailableQuantityByProductId(productId);
+        SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, availableQuantity);
+        spinQuantity.setValueFactory(valueFactory);
     }
 
-    private void loadSizes() {
-        ObservableList<Object> sizes = FXCollections.observableArrayList();
-        sizes.add("XS");
-        sizes.add("S");
-        sizes.add("M");
-        sizes.add("L");
-        sizes.add("XL");
-        sizes.add("XXL");
-        sizes.add("XXXL");
-
-        comboSize.setItems(sizes);
-    }
     private boolean isValidOrder() {
         if (txtOrderId.getText().isEmpty() ||
-                comboEmployeeIDs.getValue().toString().isEmpty() ||
+
                 comboPaymentType.getValue().toString().isEmpty() ||
                 txtDiscount.getText().isEmpty())
                 {
@@ -422,7 +307,7 @@ public class OrderPageController {
         if (txtOrderId.getText().isEmpty() ||
                 comboSize.getValue().toString().isEmpty() ||
                 comboProductID.getValue().toString().isEmpty() ||
-                comboEmployeeIDs.getValue().toString().isEmpty() ||
+
                 comboPaymentType.getValue().toString().isEmpty()||
 
                 txtQuantity.getText().isEmpty() ||
@@ -431,24 +316,6 @@ public class OrderPageController {
             return false;
         }
         return true;
-    }
-
-    public void btnDeleteOrderDetailOnAction(ActionEvent actionEvent){
-        Integer orderId = Integer.parseInt(txtOrderId.getText());
-        Integer productId = Integer.parseInt(comboProductID.getValue().toString());
-        if (orderId==null) {
-            showAlert(Alert.AlertType.ERROR, "Error", "Please enter an order ID.");
-            return;
-        }
-
-        boolean success = orderDetailsService.deleteOrderDetail(orderId,productId);
-        if (success) {
-            orderList.removeIf(order -> order.getOrderID().equals(orderId));
-            showAlert(Alert.AlertType.INFORMATION, "Success", "Order deleted successfully.");
-            clearFields();
-        } else {
-            showAlert(Alert.AlertType.ERROR, "Error", "Failed to delete order.");
-        }
     }
 
     private void loadDateAndTime() {
@@ -466,5 +333,47 @@ public class OrderPageController {
         );
         timeline.setCycleCount(Animation.INDEFINITE);
         timeline.play();
+    }
+    public void loadOrderDetails(Integer orderId) {
+        List<OrderDetails> orderDetailsList = orderDetailsBo.getOrderDetailsByOrderId(orderId);
+        if (orderDetailsList != null && !orderDetailsList.isEmpty()) {
+            tempOrderDetailsList.setAll(orderDetailsList);
+        } else {
+            showAlert(Alert.AlertType.ERROR, "Error", "Failed to load order details.");
+        }
+    }
+    public void btnChangeOrderDetailOnAction(ActionEvent actionEvent) {
+        try {
+            Integer orderId = Integer.parseInt(txtOrderId.getText());
+            Integer productId = Integer.parseInt(comboProductID.getValue().toString());
+            Integer quantity = Integer.parseInt(spinQuantity.getValue().toString());
+            Double unitPrice = Double.parseDouble(txtUnitPrice.getText());
+            String size = comboSize.getValue().toString();
+
+            OrderDetails orderDetails = new OrderDetails();
+            orderDetails.setOrderID(orderId);
+            orderDetails.setProductID(productId);
+            orderDetails.setQuantity(quantity);
+            orderDetails.setUnitPrice(unitPrice);
+            orderDetails.setSizes(size);
+
+            // Remove existing detail for the product and add updated detail
+            tempOrderDetailsList.removeIf(od -> od.getProductID().equals(productId));
+            tempOrderDetailsList.add(orderDetails);
+
+            showAlert(Alert.AlertType.INFORMATION, "Success", "Order detail recorded. You can now update the order.");
+        } catch (NumberFormatException e) {
+            showAlert(Alert.AlertType.ERROR, "Error", "Invalid input. Please check the order details.");
+        }
+    }
+
+    public void btnDropOrderDetailOnAction(ActionEvent actionEvent) {
+        try {
+            Integer productId = Integer.parseInt(comboProductID.getValue().toString());
+            tempOrderDetailsList.removeIf(od -> od.getProductID().equals(productId));
+            showAlert(Alert.AlertType.INFORMATION, "Success", "Order detail removed.");
+        } catch (NumberFormatException e) {
+            showAlert(Alert.AlertType.ERROR, "Error", "Invalid input. Please check the order details.");
+        }
     }
 }

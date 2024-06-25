@@ -1,0 +1,29 @@
+
+	java:S112?"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8•¯ş„2J$1d9bbe76-8554-40a9-b0be-92af5b4364ac
+	java:S112 "FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8•¯ş„2J$5007b530-2e48-4eb0-9e1a-6a9d6ed115ea
+	java:S112°"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8•¯ş„2J$11ec6525-248c-472f-89f1-4439f80b5933
+	java:S112Ù"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8•¯ş„2J$c87e6df1-7d79-4399-ad03-373b72de553c
+	java:S112û"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8é°ş„2J$d987d252-c44e-4f92-bf81-8b7f16e0a093
+n
+java:S1168&"+Return an empty collection instead of null.(¥¹ï8Ê¯ş„2J$f6737b4b-3864-4ebd-aff8-158d03f7f785
+~	java:S125 "<This block of commented-out lines of code should be removed.(ü–ÃŒ8Ş¯ş„2J$aa5e23c1-1294-4ff6-83c9-96118e64a5ff
+~	java:S125+"<This block of commented-out lines of code should be removed.(ü–ÃŒ8à¯ş„2J$b51cd6dd-ce4e-4542-8613-e5c08321560d
+ƒ	java:S125A"<This block of commented-out lines of code should be removed.(»»İ¤ÿÿÿÿÿ8Ñ¯ş„2J$cfdae816-0904-4250-9d90-e79120924c9b
+ƒ	java:S125S"<This block of commented-out lines of code should be removed.(»»İ¤ÿÿÿÿÿ8Ò¯ş„2J$384484ff-78a1-4ae8-b506-72ce056047c6
+ƒ	java:S125e"<This block of commented-out lines of code should be removed.(»»İ¤ÿÿÿÿÿ8Û¯ş„2J$f2a1a980-6331-4fea-b158-5ad3f7e15f5e
+„	java:S125³"<This block of commented-out lines of code should be removed.(»»İ¤ÿÿÿÿÿ8°ş„2J$f831db3c-6f21-4635-bd8e-04ba136a0ba0
+	java:S125Ü"<This block of commented-out lines of code should be removed.(ü–ÃŒ8ğó¯ş„2J$7622a328-5a24-4412-a278-6bed1075553d
+	java:S125ş"<This block of commented-out lines of code should be removed.(ü–ÃŒ8ì²ş„2J$42d380bd-b773-422a-8da1-c5741345ed9c
+T
+java:S1128"2Remove this unused import 'edu.icet.crm.dto.User'.(©óó©úÿÿÿÿ8”ˆış„2
+X
+java:S1128	"<Remove this unused import 'edu.icet.crm.util.HibernateUtil'.(éÂ’$8”ˆış„2
+T
+java:S1128
+"2Remove this unused import 'org.hibernate.Session'.(È¹›§ùÿÿÿÿ8•ˆış„2
+S
+java:S1128"6Remove this unused import 'org.hibernate.Transaction'.(ìÌè³8•ˆış„2
+m
+java:S1068"*Remove this unused "roleBo" private field.(¸İ­Ø8â¯ş„2J$0d60e078-f499-42bc-b284-c1ce947450f7
+q
+java:S1068".Remove this unused "employeeBo" private field.(ªâáü8â¯ş„2J$016abbb1-65f5-4a50-9a25-8fe54e4d8533

@@ -1,0 +1,53 @@
+
+š
+java:S1104"RMake txtBio a static final constant or non-public and provide accessors if needed.(œ½ªìşÿÿÿÿ8—‹Åÿ„2J$9229be18-b402-43ca-8bd2-6378dee5d9fc
+ 
+java:S1104"]Make lblActualDaySales a static final constant or non-public and provide accessors if needed.(Ú¡„á8—‹Åÿ„2J$5ec43aab-290c-474b-8735-6d4d825c4066
+¥
+java:S1104"]Make txtDaySalesTarget a static final constant or non-public and provide accessors if needed.(‡ùã‚ùÿÿÿÿ8—‹Åÿ„2J$f9337eb2-b2dc-426c-9a7e-540f0a832321
+¡
+java:S1104"^Make myPerformanceChart a static final constant or non-public and provide accessors if needed.(”Øµ‰8—‹Åÿ„2J$158dc4bb-b96c-49e5-a86c-2f7186f29aac
+¯
+java:S1104!"gMake lblSalesTargetProgressMonth a static final constant or non-public and provide accessors if needed.(¹Í«éøÿÿÿÿ8—‹Åÿ„2J$e34aedb3-edbe-41e6-98de-9bc8eee6d67f
+¨
+java:S1104""eMake lblSalesTargetProgressDay a static final constant or non-public and provide accessors if needed.(ÑÔ8—‹Åÿ„2J$61205a01-6d5c-4cf7-b7f4-0a745be201e6
+§
+java:S1104#"_Make lblActualSalesMonth a static final constant or non-public and provide accessors if needed.(Æ¬×Üşÿÿÿÿ8—‹Åÿ„2J$0e645c1f-8161-4937-a53c-3c32b9d0846f
+¢
+java:S1104$"_Make txtSalesTargetMonth a static final constant or non-public and provide accessors if needed.(ÿìÏç8˜‹Åÿ„2J$50d1f2e4-f83e-4c59-a1ee-d0a84b353e65
+›
+java:S1104%"SMake txtDate a static final constant or non-public and provide accessors if needed.(˜º©²ùÿÿÿÿ8˜‹Åÿ„2J$9a77fb7a-bbbf-44a1-a295-80abeafa37f1
+›
+java:S1104&"SMake txtTime a static final constant or non-public and provide accessors if needed.(İ—’Ùÿÿÿÿÿ8˜‹Åÿ„2J$34f7b178-3eb0-4191-96d2-0b11d6c8fae4
+–
+java:S1104'"SMake txtName a static final constant or non-public and provide accessors if needed.(°îÂÚ8˜‹Åÿ„2J$cd84fa2a-10b0-4bc3-afb0-53eaaab3d845
+š
+java:S1104("RMake txtDob a static final constant or non-public and provide accessors if needed.(“õ´âøÿÿÿÿ8˜‹Åÿ„2J$a7777f04-2e06-4265-90c9-9c6da191d1e5
+›
+java:S1104)"SMake txtRole a static final constant or non-public and provide accessors if needed.(—ëäøÿÿÿÿ8˜‹Åÿ„2J$600e1245-77f6-4aa3-b7e2-330194ec41c0
+™
+java:S1104*"VMake txtAddress a static final constant or non-public and provide accessors if needed.(ŠéÒÚ8˜‹Åÿ„2J$66113330-4c9d-43f6-b7b1-3188aad0f7bf
+œ
+java:S1104+"TMake txtEmail a static final constant or non-public and provide accessors if needed.(´Æ¤òÿÿÿÿÿ8˜‹Åÿ„2J$44716c25-e1a9-4a2c-bde2-2b56e6c50d80
+œ
+java:S1104,"YMake txtContanctNo a static final constant or non-public and provide accessors if needed.(’ğäç8˜‹Åÿ„2J$0274b5a6-7bec-4dc4-b231-2aa2ec49a808
+›
+java:S1104-"SMake hyperOk a static final constant or non-public and provide accessors if needed.(™ûÓúÿÿÿÿ8˜‹Åÿ„2J$bd7b5bcf-9d66-4e30-88a2-87c80cb18f63
+
+java:S1104."UMake hyperEdit a static final constant or non-public and provide accessors if needed.(Şšš¿şÿÿÿÿ8˜‹Åÿ„2J$ec123482-975b-4b0b-b956-5e56665fa97a
+r	java:S106L"+Replace this use of System.out by a logger.(ãêÙùÿÿÿÿ8’ŒÅÿ„2J$b49de815-aadb-4f88-9279-b38fd00b01b3
+m	java:S106N"+Replace this use of System.out by a logger.(äÆ‚§8“ŒÅÿ„2J$bd97c254-f39d-4e9d-b514-44928678517d
+ƒ	java:S125Y"<This block of commented-out lines of code should be removed.(ÓˆµÆÿÿÿÿÿ8€û…2J$2b741208-50a1-4c54-ad07-09cd7309ff0b
+}
+java:S1854x":Remove this useless assignment to local variable "newBio".(ï¯á†8—ŒÅÿ„2J$42a19821-4241-4c62-afb5-4a4132bdcd3d
+z
+java:S1172t"2Remove this unused method parameter "actionEvent".(Àì™Ïøÿÿÿÿ8˜ŒÅÿ„2J$4db35a13-dd39-4883-8911-d4a82bb6adca
+n
+java:S1481x"+Remove this unused "newBio" local variable.(ï¯á†8šŒÅÿ„2J$15879cab-0954-4698-b7e9-b1552dde5e1b
+ƒ	java:S125y"<This block of commented-out lines of code should be removed.(Ø¦Ëòÿÿÿÿÿ8›ŒÅÿ„2J$c48ba579-4979-4c7d-a5ed-ced119914de3
+v
+java:S1172ƒ"2Remove this unused method parameter "actionEvent".(“´©¢8œŒÅÿ„2J$ad4f6cb8-447f-4d94-99b8-45c0d6d18b46
+†
+java:S1128	">Remove this unused import 'edu.icet.crm.service.EmailService'.(×–¡‰şÿÿÿÿ8Éåù€…2J$1229ff56-0c0d-466d-b6ee-40f7e31e4ad3
+…
+java:S1144`"=Remove this unused private "fetchAndDisplaySalesData" method.(Šèı™ÿÿÿÿÿ8û…2J$bbb00a6a-7192-4137-b27b-c0940943fbdd

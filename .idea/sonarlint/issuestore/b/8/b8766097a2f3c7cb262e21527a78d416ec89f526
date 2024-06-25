@@ -1,0 +1,19 @@
+
+®
+java:S1488B"fImmediately return this expression instead of assigning it to the temporary variable "customerEntity".(Â¡íÓÿÿÿÿÿ8Ô—èü„2J$a248d527-9968-4ccb-9f72-433bca380e86
+ƒ	java:S125("<This block of commented-out lines of code should be removed.(£…òêøÿÿÿÿ8ñ—èü„2J$fc66976f-9540-44f2-b558-8488840e78b0
+~	java:S125I"<This block of commented-out lines of code should be removed.(ü–ÃŒ8ó—èü„2J$5f3772be-2348-4e88-a7ac-af7d88a239bd
+ƒ	java:S125T"<This block of commented-out lines of code should be removed.(‚‰Ÿšûÿÿÿÿ8ô—èü„2J$e26c638d-47ac-41c2-aa6e-10df49ce0ecf
+ƒ	java:S125Z"<This block of commented-out lines of code should be removed.(‚‰Ÿšûÿÿÿÿ8ý—èü„2J$eb0f0b2a-539d-4b0e-9788-95a386f83f09
+„	java:S125"<This block of commented-out lines of code should be removed.(‚‰Ÿšûÿÿÿÿ8æ¤ðü„2J$f6f4dedb-2b35-4862-8d8a-60d1f2609d56
+„	java:S125«"<This block of commented-out lines of code should be removed.(‚‰Ÿšûÿÿÿÿ8²äµý„2J$2d2869c2-4dbc-4ef3-827f-e0c78edf7e32
+„	java:S125Õ"<This block of commented-out lines of code should be removed.(“ºÈ±ÿÿÿÿÿ8ÿ—èü„2J$9069aa2c-8bbf-41c8-b236-1e5faf89d656
+	java:S125ï"<This block of commented-out lines of code should be removed.(ü–ÃŒ8˜èü„2J$1dd4afee-7c3e-439f-8fe9-55d1b38a05ae
+a
+java:S1128"?Remove this unused import 'edu.icet.crm.entity.EmployeeEntity'.(„Ÿ¤ºûÿÿÿÿ8ñŠýþ„2
+X
+java:S1128"<Remove this unused import 'edu.icet.crm.util.HibernateUtil'.(éÂ’$8ñŠýþ„2
+T
+java:S1128"2Remove this unused import 'org.hibernate.Session'.(È¹›§ùÿÿÿÿ8òŠýþ„2
+S
+java:S1128	"6Remove this unused import 'org.hibernate.Transaction'.(ìÌè³8óŠýþ„2

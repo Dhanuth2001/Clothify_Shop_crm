@@ -14,7 +14,7 @@
 
 <AnchorPane prefHeight="580.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.crm.controller.EmployeeHomePageController">
    <children>
-      <Label layoutX="66.0" layoutY="60.0" text="Order ID">
+      <Label layoutX="66.0" layoutY="60.0" text="Order ID :">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -49,12 +49,12 @@
          </columns>
       </TableView>
       <Separator layoutX="396.0" layoutY="81.0" orientation="VERTICAL" prefHeight="418.0" prefWidth="6.0" />
-      <Label fx:id="txtTime" layoutX="1037.0" layoutY="65.0" text="08.30">
+      <Label fx:id="txtTime" layoutX="1037.0" layoutY="65.0">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="txtDate" layoutX="1137.0" layoutY="65.0" text="2023-08-25">
+      <Label fx:id="txtDate" layoutX="1137.0" layoutY="65.0">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -81,16 +81,6 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Button fx:id="btnClearOtherDetails" layoutX="262.0" layoutY="486.0" mnemonicParsing="false" onAction="#btnClearOtherDetailsOnAction" prefHeight="32.0" prefWidth="79.0" style="-fx-background-color: black; -fx-background-radius: 5px;" text="CLEAR" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Button>
-      <Button fx:id="btnSelectOtherDetails" layoutX="170.0" layoutY="486.0" mnemonicParsing="false" onAction="#btnSelectOtherDetailsOnAction" prefHeight="32.0" prefWidth="79.0" style="-fx-background-color: black; -fx-background-radius: 5px;" text="SELECT" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Button>
       <Button fx:id="btnLoad" layoutX="290.0" layoutY="160.0" mnemonicParsing="false" onAction="#btnLoadOrderDetailsOnAction" prefHeight="25.0" prefWidth="51.0" style="-fx-background-color: black; -fx-background-radius: 5px;" text="LOAD" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
@@ -108,18 +98,18 @@
       </Label>
       <ComboBox fx:id="comboCustomerIDs" layoutX="192.0" layoutY="373.0" prefWidth="150.0" />
       <ComboBox fx:id="comboPaymentType" layoutX="192.0" layoutY="409.0" prefWidth="150.0" />
-      <ComboBox fx:id="comboSize" layoutX="193.0" layoutY="194.0" prefWidth="150.0" />
-      <Label fx:id="lblOrderId" layoutX="191.0" layoutY="60.0" text="Order ID">
+      <ComboBox fx:id="comboSize" layoutX="192.0" layoutY="194.0" prefWidth="150.0" />
+      <Label fx:id="lblOrderId" layoutX="159.0" layoutY="60.0">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="lblUnitPrice" layoutX="194.0" layoutY="263.0" text="Order ID">
+      <Label fx:id="lblUnitPrice" layoutX="194.0" layoutY="263.0">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Spinner fx:id="spinQuantity" layoutX="193.0" layoutY="229.0" />
+      <Spinner fx:id="spinQuantity" layoutX="192.0" layoutY="229.0" />
       <Separator layoutX="888.0" layoutY="87.0" orientation="VERTICAL" prefHeight="418.0" prefWidth="6.0" />
       <Label layoutX="473.0" layoutY="324.0" text="Total Amount   :">
          <font>
@@ -131,7 +121,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="lblTotalAmount" layoutX="617.0" layoutY="326.0" text="Amount">
+      <Label fx:id="lblTotalAmount" layoutX="617.0" layoutY="326.0">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -146,7 +136,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="lblDiscountGiven" layoutX="617.0" layoutY="360.0" text="Amount">
+      <Label fx:id="lblDiscountGiven" layoutX="617.0" layoutY="360.0">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -161,7 +151,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="lblNetAmount" layoutX="617.0" layoutY="395.0" text="Amount">
+      <Label fx:id="lblNetAmount" layoutX="617.0" layoutY="395.0">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>

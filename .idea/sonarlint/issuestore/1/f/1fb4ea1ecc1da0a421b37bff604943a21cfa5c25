@@ -1,0 +1,8 @@
+
+g	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Ý¬°Ý„2
+G	java:S1066"+Replace this use of System.out by a logger.(ñ»¾“8ò¬°Ý„2
+F	java:S106?"+Replace this use of System.out by a logger.(Íð±8ô¬°Ý„2
+b
+java:S1128"@Remove this unused import 'edu.icet.crm.dao.custom.SupplierDao'.(ìªï¾ùÿÿÿÿ8ö¬°Ý„2
+a
+java:S1128"?Remove this unused import 'edu.icet.crm.entity.EmployeeEntity'.(„Ÿ¤ºûÿÿÿÿ8ö¬°Ý„2

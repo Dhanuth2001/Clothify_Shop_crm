@@ -1,27 +1,33 @@
 
 ›
-java:S1104"SMake lblHome a static final constant or non-public and provide accessors if needed.(Øğ³ÿÿÿÿÿ8ìŒÈÔ‚2J$44a1b727-35bc-4d46-8332-45f344395d22
+java:S1104"SMake lblHome a static final constant or non-public and provide accessors if needed.(Øğ³ÿÿÿÿÿ8¾…¤ü„2J$c8674c7d-e600-49c3-a632-2499ce167170
 
-java:S1104"UMake lblOrders a static final constant or non-public and provide accessors if needed.(øĞ½›úÿÿÿÿ8ìŒÈÔ‚2J$b94f25db-d9e7-4b38-9558-e6b53fada344
+java:S1104"UMake lblOrders a static final constant or non-public and provide accessors if needed.(øĞ½›úÿÿÿÿ8¿…¤ü„2J$06cc6421-4f14-436e-b549-13c5dafc82e6
 š
-java:S1104"WMake lblProducts a static final constant or non-public and provide accessors if needed.(Ç«è¯8ìŒÈÔ‚2J$e64087c8-855a-4297-84f5-9c894125e154
+java:S1104"WMake lblProducts a static final constant or non-public and provide accessors if needed.(Ç«è¯8¿…¤ü„2J$a955c4da-a65d-4771-9164-e1027dd6397a
 š
-java:S1104"WMake lblSupplier a static final constant or non-public and provide accessors if needed.(À½Ùò8ìŒÈÔ‚2J$8cf3660b-6b66-4526-9a52-2d9e9c3d1db2
+java:S1104"WMake lblSupplier a static final constant or non-public and provide accessors if needed.(À½Ùò8¿…¤ü„2J$cb4615e3-8c38-446a-98b7-a257f3d5cc17
 Ÿ
-java:S1104"WMake contentPane a static final constant or non-public and provide accessors if needed.(è×¸øÿÿÿÿ8ìŒÈÔ‚2J$b156f38b-befd-41c0-873b-cf481a258629
+java:S1104"WMake contentPane a static final constant or non-public and provide accessors if needed.(è×¸øÿÿÿÿ8¿…¤ü„2J$64cc3b30-27cc-41c9-a8bc-2b0b2ede2e25
 
-java:S1104"UMake btnLogOut a static final constant or non-public and provide accessors if needed.(æ÷Ëúùÿÿÿÿ8ìŒÈÔ‚2J$5fc42066-368a-4f3f-960d-e7dc89392c0b
+java:S1104"UMake btnLogOut a static final constant or non-public and provide accessors if needed.(æ÷Ëúùÿÿÿÿ8¿…¤ü„2J$75e37463-0f18-48dd-a9be-8a8b5668a911
 ¥
-java:S1104"]Make lblLoggedUserName a static final constant or non-public and provide accessors if needed.(©Ş„ìùÿÿÿÿ8ìŒÈÔ‚2J$bcea1cce-2005-44e9-be9b-176182c4b86d
-Ä
-java:S1186>"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ù³¶­8¤ÈÔ‚2J$15d132d3-7534-4762-8ecb-4a2d05bf6037
-É
-java:S1186A"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(áÛÇ£üÿÿÿÿ8¤ÈÔ‚2J$41183672-45ab-4ef6-9c6a-18925b2e9e9c
+java:S1104 "]Make lblLoggedUserName a static final constant or non-public and provide accessors if needed.(©Ş„ìùÿÿÿÿ8¿…¤ü„2J$776a5195-1b60-431b-adc3-06e16a901d63
+š
+java:S1104!"WMake lblCustomer a static final constant or non-public and provide accessors if needed.(ï•ùä8¿…¤ü„2J$dc97d6c8-fea1-46b3-8598-094a981a6b74
 y
-java:S1172#"1Remove this unused method parameter "mouseEvent".(æóû–ıÿÿÿÿ8­ÈÔ‚2J$d4326852-7e9d-4852-b5cf-066915a35034
+java:S1172-"1Remove this unused method parameter "mouseEvent".(æóû–ıÿÿÿÿ8†¤ü„2J$fe61350c-89b8-49e7-8238-6a4214d5b212
 t
-java:S1172'"1Remove this unused method parameter "mouseEvent".(Ì´•£8®ÈÔ‚2J$0cd18fe3-5ec8-4465-9855-ef0519f96934
+java:S11721"1Remove this unused method parameter "mouseEvent".(Ì´•£8‚†¤ü„2J$f970cee7-3750-4dc3-9adb-77edfa46f517
 t
-java:S1172+"1Remove this unused method parameter "mouseEvent".(¶ŸÎ€8¯ÈÔ‚2J$905fbe7e-4ba0-4312-91a5-f8f18ec9f8d7
+java:S11725"1Remove this unused method parameter "mouseEvent".(¶ŸÎ€8‚†¤ü„2J$f75ff5c9-1129-40b9-b306-2b8756bb836a
 y
-java:S1172/"1Remove this unused method parameter "mouseEvent".(Ñ¡Ÿ şÿÿÿÿ8±ÈÔ‚2J$fdf752e1-6c21-4006-b8ed-9661293efe89
+java:S11729"1Remove this unused method parameter "mouseEvent".(Ñ¡Ÿ şÿÿÿÿ8„†¤ü„2J$ac39d263-ea14-4710-ba24-92a70cb45aea
+‰
+java:S1075T"ARefactor your code to get this URI from a customizable parameter.(È£Ÿåøÿÿÿÿ8˜†¤ü„2J$5a300e35-d134-4b51-b829-321e0ac3bdb4
+y
+java:S1172b"1Remove this unused method parameter "mouseEvent".(š·ğØûÿÿÿÿ8¦†¤ü„2J$0669741b-4285-4b35-9fdd-90e4951da869
+y
+java:S1172o"1Remove this unused method parameter "mouseEvent".(ÕÌ¸üÿÿÿÿ8Ò×ıÿ„2J$d0e8e5f1-33f8-4fa4-9497-c46cad1d2a11
+‚
+java:S1128":Remove this unused import 'edu.icet.crm.bo.custom.UserBo'.(šÄ¸ªùÿÿÿÿ8¨†¤ü„2J$b6878f82-0f37-4c34-9027-520d6ed96bc6

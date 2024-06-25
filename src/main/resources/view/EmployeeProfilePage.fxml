@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="580.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.crm.controller.EmployeeProfilePageController">
+   <children>
+      <Label layoutX="370.0" layoutY="117.0" text="Name :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="370.0" layoutY="152.0" text="Date of birth :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="370.0" layoutY="189.0" text="Role :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="370.0" layoutY="227.0" text="Address :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="370.0" layoutY="267.0" text="Email :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="370.0" layoutY="305.0" text="Contact No. :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="217.0" fitWidth="217.0" layoutX="94.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/3.png" />
+         </image>
+      </ImageView>
+      <TextArea fx:id="txtBio" layoutX="78.0" layoutY="379.0" prefHeight="145.0" prefWidth="723.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eeeeee" height="108.0" layoutX="880.0" layoutY="55.0" stroke="#d0d0d0" strokeType="INSIDE" width="319.0" />
+      <Label layoutX="905.0" layoutY="66.0" text="Day Sales Target">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Separator layoutX="905.0" layoutY="95.0" prefHeight="1.0" prefWidth="141.0" />
+      <Label fx:id="lblSalesTargetProgressDay" layoutX="924.0" layoutY="115.0" text="53.6%">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="1035.0" layoutY="105.0" text="Sales Target :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="1036.0" layoutY="130.0" text="Actual Sales :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblActualDaySales" layoutX="1127.0" layoutY="130.0" text="70">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDaySalesTarget" layoutX="1120.0" layoutY="103.0" prefHeight="20.0" prefWidth="54.0" promptText="20000" text="120">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <PieChart fx:id="myPerformanceChart" layoutX="880.0" layoutY="301.0" prefHeight="223.0" prefWidth="319.0" title="MY PERFORMANCE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eeeeee" height="108.0" layoutX="880.0" layoutY="178.0" stroke="#d0d0d0" strokeType="INSIDE" width="319.0" />
+      <Label layoutX="905.0" layoutY="189.0" text="Monthly Sales Target">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Separator layoutX="905.0" layoutY="218.0" prefHeight="1.0" prefWidth="141.0" />
+      <Label fx:id="lblSalesTargetProgressMonth" layoutX="924.0" layoutY="238.0" text="53.6%">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="1035.0" layoutY="228.0" text="Sales Target :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="1036.0" layoutY="253.0" text="Actual Sales :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblActualSalesMonth" layoutX="1127.0" layoutY="253.0" text="1700">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSalesTargetMonth" layoutX="1120.0" layoutY="226.0" prefHeight="30.0" prefWidth="54.0" text="2000">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label fx:id="txtDate" layoutX="79.0" layoutY="36.0" text="Date">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtTime" layoutX="78.0" layoutY="67.0" text="Time">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtName" layoutX="484.0" layoutY="118.0" text="Name :" textFill="#654949">
+         <font>
+            <Font name="Tahoma Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtDob" layoutX="484.0" layoutY="153.0" text="Date of birth :" textFill="#654949">
+         <font>
+            <Font name="Tahoma Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtRole" layoutX="484.0" layoutY="190.0" text="Role :" textFill="#654949">
+         <font>
+            <Font name="Tahoma Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtAddress" layoutX="484.0" layoutY="228.0" text="Address :" textFill="#654949">
+         <font>
+            <Font name="Tahoma Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtEmail" layoutX="484.0" layoutY="268.0" text="Email :" textFill="#654949">
+         <font>
+            <Font name="Tahoma Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtContanctNo" layoutX="484.0" layoutY="306.0" text="Contact No. :" textFill="#654949">
+         <font>
+            <Font name="Tahoma Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="79.0" layoutY="350.0" text="BIO :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Hyperlink fx:id="hyperOk" layoutX="824.0" layoutY="464.0" onAction="#hyperOkOnAction" text="OK" />
+      <Hyperlink fx:id="hyperEdit" layoutX="821.0" layoutY="501.0" onAction="#hyperEditOnAction" text="EDIT" textFill="RED" />
+   </children>
+</AnchorPane>

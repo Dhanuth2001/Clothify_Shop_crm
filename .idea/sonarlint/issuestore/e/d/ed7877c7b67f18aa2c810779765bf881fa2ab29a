@@ -1,0 +1,18 @@
+
+
+java:S1192"JDefine a constant instead of duplicating this literal "productID" 3 times.(å°…Ê8‘Ò‘ş„2J$b6432ac1-0192-44c2-9e3a-7f53952de698
+n
+java:S1168&"+Return an empty collection instead of null.(áĞÈ¼8ÅÒ‘ş„2J$66e095c2-a5f6-48d0-b429-5babbdf1bb89
+~	java:S125!"<This block of commented-out lines of code should be removed.(ü–ÃŒ8ÆÒ‘ş„2J$5a639fb0-3087-46b3-ba71-551e8b8f6466
+~	java:S125+"<This block of commented-out lines of code should be removed.(ü–ÃŒ8ÆÒ‘ş„2J$6d379d2d-d220-4b14-b42b-b82390a4240b
+t
+java:S18748",Remove this use of "save"; it is deprecated.(ç ³„ÿÿÿÿÿ8ÈÒ‘ş„2J$521ecf7f-4c0e-4026-8671-3ad956937b73
+v
+java:S1874I".Remove this use of "update"; it is deprecated.(¥·òÂøÿÿÿÿ8ÊÒ‘ş„2J$0bd92331-aff5-42e1-b639-2b023e40ff7c
+ƒ	java:S125a"<This block of commented-out lines of code should be removed.(»»İ¤ÿÿÿÿÿ8ËÒ‘ş„2J$a070d9fc-bd22-48dc-ac42-5e8821a12dac
+n	java:S106ˆ"+Replace this use of System.out by a logger.(Èì³Ş8ÏÒ‘ş„2J$568ace8b-86ec-475d-ad82-1616fc3c0f9d
+	java:S125‹"<This block of commented-out lines of code should be removed.(ü–ÃŒ8ĞÒ‘ş„2J$09f39e9a-8a2d-4a1c-a905-dc9768fe42f7
+	java:S125©"<This block of commented-out lines of code should be removed.(ü–ÃŒ8ÒÒ‘ş„2J$c7235e11-bd74-4864-98de-1f89dc4c9681
+	java:S125Ë"<This block of commented-out lines of code should be removed.(ü–ÃŒ8ÔÒ‘ş„2J$32da7c5d-e544-4bbd-b2d7-a1f721799094
+„	java:S125ğ"<This block of commented-out lines of code should be removed.(»»İ¤ÿÿÿÿÿ8ÖÒ‘ş„2J$405bb269-d716-4346-91d0-c19464eb3a35
+	java:S125˜"<This block of commented-out lines of code should be removed.(ü–ÃŒ8ÚÒ‘ş„2J$ee8fd5ae-da89-4fea-a1be-95ff03b014c5
