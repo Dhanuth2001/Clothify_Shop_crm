@@ -54,7 +54,7 @@ public class AdminHomePageController {
         }
         txtCustomerTarget.setEditable(false);
         txtSalesTarget.setEditable(false);
-        //populateSalesOverTimeChart();
+        populateSalesOverTimeChart();
         populateSalesByCategoryChart();
         populateTopSellingProductsChart();
         calculateAndUpdateCustomerProgress();

@@ -147,3 +147,13 @@ Y
 0src/main/java/edu/icet/crm/dto/OrderDetails.java,3\e\3eeb935993c39d1dbd373a00ecb27b5206503990
 [
 +src/main/java/edu/icet/crm/dto/Product.java,f\0\f03527b571f507c5be5f92ad81b2d26ab0617f2f
+a
+1src/main/java/edu/icet/crm/util/CategoryType.java,e\6\e64776a06e675d9349c6cdbbdd3ccabdef768887
+]
+-src/main/java/edu/icet/crm/util/SizeType.java,c\2\c2322ddb5305fbd0677fcf040d74125e905f3c12
+Q
+!src/main/java/AppInitializer.java,d\8\d8724d5ff68b00b1e87def6fac487d03194f989f
+d
+4src/main/java/edu/icet/crm/util/DataInitializer.java,8\a\8a9416c764b37feebb67bd4ba4501f2812a21931
+`
+0src/main/java/edu/icet/crm/config/AppConfig.java,d\5\d57556a301df0f00c75f9bd9a5fd419b4f0ee984

@@ -79,7 +79,11 @@ public class CreateAccountPageController {
 
         try {
             String encryptedPassword = EncryptionUtil.encrypt(password);
-            User user = new User(1, email, encryptedPassword, roleID, Integer.parseInt(employeeID));
+            User user = new User();
+            user.setEmployeeID(Integer.parseInt(employeeID));
+            user.setEmail(email);
+            user.setPassword(encryptedPassword);
+            user.setRoleID(roleID);
 
             boolean success = userBo.createUser(user);
             if (success) {

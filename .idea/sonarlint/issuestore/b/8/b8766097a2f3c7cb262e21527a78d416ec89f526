@@ -1,19 +1,22 @@
 
-®
-java:S1488B"fImmediately return this expression instead of assigning it to the temporary variable "customerEntity".(Â¡íÓÿÿÿÿÿ8Ô—èü„2J$a248d527-9968-4ccb-9f72-433bca380e86
-ƒ	java:S125("<This block of commented-out lines of code should be removed.(£…òêøÿÿÿÿ8ñ—èü„2J$fc66976f-9540-44f2-b558-8488840e78b0
-~	java:S125I"<This block of commented-out lines of code should be removed.(ü–ÃŒ8ó—èü„2J$5f3772be-2348-4e88-a7ac-af7d88a239bd
-ƒ	java:S125T"<This block of commented-out lines of code should be removed.(‚‰Ÿšûÿÿÿÿ8ô—èü„2J$e26c638d-47ac-41c2-aa6e-10df49ce0ecf
-ƒ	java:S125Z"<This block of commented-out lines of code should be removed.(‚‰Ÿšûÿÿÿÿ8ı—èü„2J$eb0f0b2a-539d-4b0e-9788-95a386f83f09
-„	java:S125"<This block of commented-out lines of code should be removed.(‚‰Ÿšûÿÿÿÿ8æ¤ğü„2J$f6f4dedb-2b35-4862-8d8a-60d1f2609d56
-„	java:S125«"<This block of commented-out lines of code should be removed.(‚‰Ÿšûÿÿÿÿ8²äµı„2J$2d2869c2-4dbc-4ef3-827f-e0c78edf7e32
-„	java:S125Õ"<This block of commented-out lines of code should be removed.(“ºÈ±ÿÿÿÿÿ8ÿ—èü„2J$9069aa2c-8bbf-41c8-b236-1e5faf89d656
-	java:S125ï"<This block of commented-out lines of code should be removed.(ü–ÃŒ8˜èü„2J$1dd4afee-7c3e-439f-8fe9-55d1b38a05ae
-a
-java:S1128"?Remove this unused import 'edu.icet.crm.entity.EmployeeEntity'.(„Ÿ¤ºûÿÿÿÿ8ñŠış„2
-X
-java:S1128"<Remove this unused import 'edu.icet.crm.util.HibernateUtil'.(éÂ’$8ñŠış„2
-T
-java:S1128"2Remove this unused import 'org.hibernate.Session'.(È¹›§ùÿÿÿÿ8òŠış„2
-S
-java:S1128	"6Remove this unused import 'org.hibernate.Transaction'.(ìÌè³8óŠış„2
+ƒ	java:S125"<This block of commented-out lines of code should be removed.(£…òêøÿÿÿÿ8î©ë£†2J$a21efcb0-3a13-4e99-a0bc-1d50a8067a5c
+ƒ	java:S125G"<This block of commented-out lines of code should be removed.(¬ı°¨ÿÿÿÿÿ8ó©ë£†2J$2cdfd77c-73d6-4443-866a-8cdef4bc061d
+ƒ	java:S125j"<This block of commented-out lines of code should be removed.(Íõùşÿÿÿÿ8ô©ë£†2J$d76890f4-148d-4971-96fd-f5c88693892d
+„	java:S125‚"<This block of commented-out lines of code should be removed.(ÒÆÕÑıÿÿÿÿ8÷©ë£†2J$fbedcc92-a4f5-4c49-8a25-fe7894bcb21a
+	java:S125"<This block of commented-out lines of code should be removed.(ŞÎÂÚ8÷©ë£†2J$0b0eec4c-c980-4349-a7f4-b58fc537b870
+„	java:S125•"<This block of commented-out lines of code should be removed.(û×†Óÿÿÿÿÿ8ø©ë£†2J$1a8b6b8b-a460-45d0-bdcb-b8aa9ec8c7ba
+w
+java:S1874©".Remove this use of "update"; it is deprecated.(¥·òÂøÿÿÿÿ8ú©ë£†2J$8969e620-66ad-42ec-b748-71c068343944
+„	java:S125¹"<This block of commented-out lines of code should be removed.(ÌÊ¾Âùÿÿÿÿ8ş©ë£†2J$23a78a95-ba3d-4a43-a88b-6b95930954ae
+r
+java:S1874Ç".Remove this use of "delete"; it is deprecated.(×ÇÚó8€ªë£†2J$b241f357-c95c-4d8a-ad4e-d1f4cd71859c
+„	java:S125Ú"<This block of commented-out lines of code should be removed.(“ºÈ±ÿÿÿÿÿ8ƒªë£†2J$134f648c-db46-4b9c-aa12-7bf9e9c63bbd
+„	java:S125"<This block of commented-out lines of code should be removed.(ğïÁØøÿÿÿÿ8…ªë£†2J$d3d37296-6ab0-412b-ad9a-02bbc2408c62
+‡
+java:S1128"?Remove this unused import 'edu.icet.crm.entity.EmployeeEntity'.(„Ÿ¤ºûÿÿÿÿ8…‰”¤†2J$156e95af-6d82-48a8-ac22-6ae8fe7cd89b
+
+java:S1128">Remove this unused import 'edu.icet.crm.entity.ProductEntity'.(„µÿş8…‰”¤†2J$eb355c46-5d95-4974-9718-bcb574b14670
+v
+java:S1068".Remove this unused "connection" private field.(·ãÛöûÿÿÿÿ8‘¬¤†2J$196af8de-46e6-433b-b488-d4cf689130af
+|
+java:S1144;"4Remove this unused private "extractCustomer" method.(ÒÀ‚Ôıÿÿÿÿ8‘¬¤†2J$f0e1f8b5-386c-412f-ac4c-872f9cb07cbe

@@ -1,29 +1,35 @@
 
-	java:S112?"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8•¯ş„2J$1d9bbe76-8554-40a9-b0be-92af5b4364ac
-	java:S112 "FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8•¯ş„2J$5007b530-2e48-4eb0-9e1a-6a9d6ed115ea
-	java:S112°"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8•¯ş„2J$11ec6525-248c-472f-89f1-4439f80b5933
-	java:S112Ù"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8•¯ş„2J$c87e6df1-7d79-4399-ad03-373b72de553c
-	java:S112û"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8é°ş„2J$d987d252-c44e-4f92-bf81-8b7f16e0a093
+
+java:S1192’"FDefine a constant instead of duplicating this literal "Email" 3 times.(½ÀÒ°ûÿÿÿÿ8Ş™íª†2J$3e6e3e6b-7a43-4c1f-83f0-b8d8e8c0a4a4
 n
-java:S1168&"+Return an empty collection instead of null.(¥¹ï8Ê¯ş„2J$f6737b4b-3864-4ebd-aff8-158d03f7f785
-~	java:S125 "<This block of commented-out lines of code should be removed.(ü–ÃŒ8Ş¯ş„2J$aa5e23c1-1294-4ff6-83c9-96118e64a5ff
-~	java:S125+"<This block of commented-out lines of code should be removed.(ü–ÃŒ8à¯ş„2J$b51cd6dd-ce4e-4542-8613-e5c08321560d
-ƒ	java:S125A"<This block of commented-out lines of code should be removed.(»»İ¤ÿÿÿÿÿ8Ñ¯ş„2J$cfdae816-0904-4250-9d90-e79120924c9b
-ƒ	java:S125S"<This block of commented-out lines of code should be removed.(»»İ¤ÿÿÿÿÿ8Ò¯ş„2J$384484ff-78a1-4ae8-b506-72ce056047c6
-ƒ	java:S125e"<This block of commented-out lines of code should be removed.(»»İ¤ÿÿÿÿÿ8Û¯ş„2J$f2a1a980-6331-4fea-b158-5ad3f7e15f5e
-„	java:S125³"<This block of commented-out lines of code should be removed.(»»İ¤ÿÿÿÿÿ8°ş„2J$f831db3c-6f21-4635-bd8e-04ba136a0ba0
-	java:S125Ü"<This block of commented-out lines of code should be removed.(ü–ÃŒ8ğó¯ş„2J$7622a328-5a24-4412-a278-6bed1075553d
-	java:S125ş"<This block of commented-out lines of code should be removed.(ü–ÃŒ8ì²ş„2J$42d380bd-b773-422a-8da1-c5741345ed9c
-T
-java:S1128"2Remove this unused import 'edu.icet.crm.dto.User'.(©óó©úÿÿÿÿ8”ˆış„2
-X
-java:S1128	"<Remove this unused import 'edu.icet.crm.util.HibernateUtil'.(éÂ’$8”ˆış„2
-T
-java:S1128
-"2Remove this unused import 'org.hibernate.Session'.(È¹›§ùÿÿÿÿ8•ˆış„2
-S
-java:S1128"6Remove this unused import 'org.hibernate.Transaction'.(ìÌè³8•ˆış„2
-m
-java:S1068"*Remove this unused "roleBo" private field.(¸İ­Ø8â¯ş„2J$0d60e078-f499-42bc-b284-c1ce947450f7
+java:S1168&"+Return an empty collection instead of null.(¥¹ï8¥šíª†2J$b68bff0e-3919-4288-a7a1-0c3e32e308ec
+~	java:S125 "<This block of commented-out lines of code should be removed.(ü–ÃŒ8¥šíª†2J$b1ee9a97-cc4e-48bb-95df-81aa19b1344d
+~	java:S125+"<This block of commented-out lines of code should be removed.(ü–ÃŒ8¦šíª†2J$8a226df6-1cdc-4bfd-8be7-cb66d737446c
+}	java:S1256"<This block of commented-out lines of code should be removed.(Î±8§šíª†2J$3a240542-92ee-49f4-8ebe-591409de9dc0
+ƒ	java:S125V"<This block of commented-out lines of code should be removed.(»»İ¤ÿÿÿÿÿ8ªšíª†2J$3383cd3c-b4c1-40e5-b432-2439df5b2215
+ƒ	java:S125h"<This block of commented-out lines of code should be removed.(»»İ¤ÿÿÿÿÿ8«šíª†2J$87e88a15-5aa3-4415-bf0e-f4599c3a687b
+~	java:S125"<This block of commented-out lines of code should be removed.(è¶Û8«šíª†2J$64b19364-fc25-47ee-a42c-f236e755a446
+	java:S125¡"<This block of commented-out lines of code should be removed.(ı††±8­šíª†2J$493b65aa-565e-4305-b4a6-fce90fd298e3
+|
+java:S1874°"3Remove this use of "createQuery"; it is deprecated.(¬µÚµıÿÿÿÿ8¯šíª†2J$602630e3-587e-4a54-86be-0a927b13b7eb
+	java:S125Â"<This block of commented-out lines of code should be removed.(®¶°8°šíª†2J$0aebb335-0443-4dfb-af08-4d3fd9171541
+|
+java:S1874Ó"3Remove this use of "createQuery"; it is deprecated.(¬µÚµıÿÿÿÿ8¶šíª†2J$334e2e12-6877-4bd0-ab87-2d7b00746fa1
+n	java:S106×"+Replace this use of System.out by a logger.(¨ıÌÏ8³šíª†2J$bfd29949-85a3-431e-ab28-c3c865c5be38
+„	java:S125æ"<This block of commented-out lines of code should be removed.(Üì½àûÿÿÿÿ8´šíª†2J$a034f39e-8f38-4dc6-83b1-b59818cd1208
+|
+java:S1874÷"3Remove this use of "createQuery"; it is deprecated.(œ–Áùÿÿÿÿ8“·îª†2J$ef2d0c79-ad12-43e9-8914-c2791107cec8
+	java:S125‹"<This block of commented-out lines of code should be removed.(úÏ¨Ì8·šíª†2J$83fc378c-00ff-4fe8-9c77-a3e9495d88b3
+	java:S125¶"<This block of commented-out lines of code should be removed.(–ô÷Õ8¹šíª†2J$2c2b0dc5-a7d6-4bb8-85b5-2d43f6550e54
+z
+java:S1128"2Remove this unused import 'edu.icet.crm.dto.User'.(©óó©úÿÿÿÿ8Øœôª†2J$a1133d9b-2e53-4557-8570-a62aaf15f042
+
+java:S1128"7Remove this unused import 'java.sql.PreparedStatement'.(òÄ™ƒÿÿÿÿÿ8Øœôª†2J$2ef53c0c-e998-4075-ad1c-962477e0f9e9
 q
-java:S1068".Remove this unused "employeeBo" private field.(ªâáü8â¯ş„2J$016abbb1-65f5-4a50-9a25-8fe54e4d8533
+java:S1128"/Remove this unused import 'java.sql.ResultSet'.(ˆóÚw8Øœôª†2J$52a0af0c-59c6-4795-98e0-6f9a98af6408
+v
+java:S1068".Remove this unused "connection" private field.(·ãÛöûÿÿÿÿ8¾šíª†2J$4232d566-4297-41d9-ace7-c274c93e124d
+m
+java:S1068"*Remove this unused "roleBo" private field.(¸İ­Ø8¾šíª†2J$8f4bb260-9996-49bf-bc82-94685ecef743
+q
+java:S1068".Remove this unused "employeeBo" private field.(ªâáü8¾šíª†2J$fbf944b8-0214-47b0-b816-49e87ce43286

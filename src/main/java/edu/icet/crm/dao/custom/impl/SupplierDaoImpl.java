@@ -4,6 +4,7 @@ import edu.icet.crm.bo.BoFactory;
 import edu.icet.crm.dao.custom.SupplierDao;
 import edu.icet.crm.db.DbConnection;
 import edu.icet.crm.dto.Supplier;
+import edu.icet.crm.entity.ProductEntity;
 import edu.icet.crm.entity.SupplierEntity;
 import edu.icet.crm.util.BoType;
 import edu.icet.crm.util.HibernateUtil;
@@ -26,33 +27,37 @@ public class SupplierDaoImpl implements SupplierDao {
     }
     @Override
     public List<SupplierEntity> getAll() {
-        List<SupplierEntity> supplierEntities = new ArrayList<>();
-        String query = "SELECT supplierID, company, address, contactNumber, email ,dateAdded FROM Supplier";
-        try (
-                PreparedStatement preparedStatement = connection.prepareStatement(query);
-                ResultSet resultSet = preparedStatement.executeQuery()) {
-            while (resultSet.next()) {
-                SupplierEntity supplierEntity = extractSupplier(resultSet);
-                supplierEntities.add(supplierEntity);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return supplierEntities;
+//        List<SupplierEntity> supplierEntities = new ArrayList<>();
+//        String query = "SELECT supplierID, company, address, contactNumber, email ,dateAdded FROM Supplier";
+//        try (
+//                PreparedStatement preparedStatement = connection.prepareStatement(query);
+//                ResultSet resultSet = preparedStatement.executeQuery()) {
+//            while (resultSet.next()) {
+//                SupplierEntity supplierEntity = extractSupplier(resultSet);
+//                supplierEntities.add(supplierEntity);
+//            }
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//        return supplierEntities;
 
-       /* List<SupplierEntity> supplierEntities = null;
+        List<SupplierEntity> supplierEntities = null;
+        Session session = HibernateUtil.getSession();
+
         Transaction transaction = null;
-        try (Session session = HibernateUtil.getSession()) {
+        try {
             transaction = session.beginTransaction();
-            supplierEntities = session.createQuery("FROM Supplier", SupplierEntity.class).list();
+            supplierEntities = session.createQuery("FROM SupplierEntity", SupplierEntity.class).list();
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {
                 transaction.rollback();
             }
             e.printStackTrace();
+        }finally {
+            session.close();
         }
-        return supplierEntities;*/
+        return supplierEntities;
     }
 
     private SupplierEntity extractSupplier(ResultSet resultSet) throws SQLException {
@@ -68,21 +73,24 @@ public class SupplierDaoImpl implements SupplierDao {
 
     @Override
     public SupplierEntity getById(Integer id) {
-        String query = "SELECT supplierID, company, address, contactNumber, email ,dateAdded FROM Supplier WHERE supplierID = ?";
-        try (
-                PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-            preparedStatement.setInt(1, id);
-            ResultSet resultSet = preparedStatement.executeQuery();
-            if (resultSet.next()) {
-                return extractSupplier(resultSet);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
-        /*Transaction transaction = null;
+//        String query = "SELECT supplierID, company, address, contactNumber, email ,dateAdded FROM Supplier WHERE supplierID = ?";
+//        try (
+//                PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+//            preparedStatement.setInt(1, id);
+//            ResultSet resultSet = preparedStatement.executeQuery();
+//            if (resultSet.next()) {
+//                return extractSupplier(resultSet);
+//            }
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//        return null;
+
         SupplierEntity supplierEntity = null;
-        try (Session session = HibernateUtil.getSession()) {
+        Session session = HibernateUtil.getSession();
+        Transaction transaction = null;
+
+        try  {
             transaction = session.beginTransaction();
             supplierEntity = session.get(SupplierEntity.class, id);
             transaction.commit();
@@ -91,13 +99,15 @@ public class SupplierDaoImpl implements SupplierDao {
                 transaction.rollback();
             }
             e.printStackTrace();
+        }finally {
+            session.close();
         }
-        return supplierEntity;*/
+        return supplierEntity;
     }
 
     @Override
     public boolean add(SupplierEntity entity) {
-        String query = "INSERT INTO Supplier (supplierID, company, address, contactNumber, email ,dateAdded ) VALUES (?, ?, ?, ?, ?, ?)";
+        /*String query = "INSERT INTO Supplier (supplierID, company, address, contactNumber, email ,dateAdded ) VALUES (?, ?, ?, ?, ?, ?)";
         try (
                 PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setInt(1, entity.getSupplierID());
@@ -110,12 +120,12 @@ public class SupplierDaoImpl implements SupplierDao {
             return preparedStatement.executeUpdate() > 0;
         } catch (SQLException e) {
             e.printStackTrace();
-        }
-        return false;
-        /*Transaction transaction = null;
-        try (Session session = HibernateUtil.getSession()) {
+        }*/
+        Session session = HibernateUtil.getSession();
+        Transaction transaction = null;
+        try {
             transaction = session.beginTransaction();
-            session.save(entity);
+            session.persist(entity);
             transaction.commit();
             return true;
         } catch (Exception e) {
@@ -124,29 +134,32 @@ public class SupplierDaoImpl implements SupplierDao {
             }
             e.printStackTrace();
             return false;
-        }*/
+        }finally {
+            session.close();
+        }
     }
 
     @Override
     public boolean update(SupplierEntity entity) {
-        String query = "UPDATE Supplier SET company = ?, address = ?, contactNumber = ?, email = ? ,dateAdded = ? WHERE supplierID = ?";
-        try (
-                PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-
-            preparedStatement.setString(1, entity.getCompany());
-            preparedStatement.setString(2, entity.getAddress());
-            preparedStatement.setString(3, entity.getContactNumber());
-            preparedStatement.setString(4, entity.getEmail());
-            preparedStatement.setDate(5, Date.valueOf(entity.getDate()));
-            preparedStatement.setInt(6, entity.getSupplierID());
-
-            return preparedStatement.executeUpdate() > 0;
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return false;
-        /*Transaction transaction = null;
-        try (Session session = HibernateUtil.getSession()) {
+//        String query = "UPDATE Supplier SET company = ?, address = ?, contactNumber = ?, email = ? ,dateAdded = ? WHERE supplierID = ?";
+//        try (
+//                PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+//
+//            preparedStatement.setString(1, entity.getCompany());
+//            preparedStatement.setString(2, entity.getAddress());
+//            preparedStatement.setString(3, entity.getContactNumber());
+//            preparedStatement.setString(4, entity.getEmail());
+//            preparedStatement.setDate(5, Date.valueOf(entity.getDate()));
+//            preparedStatement.setInt(6, entity.getSupplierID());
+//
+//            return preparedStatement.executeUpdate() > 0;
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//        return false;
+        Session session = HibernateUtil.getSession();
+        Transaction transaction = null;
+        try {
             transaction = session.beginTransaction();
             session.update(entity);
             transaction.commit();
@@ -157,23 +170,26 @@ public class SupplierDaoImpl implements SupplierDao {
             }
             e.printStackTrace();
             return false;
-        }*/
+        }finally {
+            session.close();
+        }
     }
 
     @Override
     public boolean delete(Integer id) {
-        String query = "DELETE FROM Supplier WHERE supplierID = ?";
-        try (
-                PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-            preparedStatement.setInt(1, id);
-            return preparedStatement.executeUpdate() > 0;
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return false;
+//        String query = "DELETE FROM Supplier WHERE supplierID = ?";
+//        try (
+//                PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+//            preparedStatement.setInt(1, id);
+//            return preparedStatement.executeUpdate() > 0;
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//        return false;
 
-        /*Transaction transaction = null;
-        try (Session session = HibernateUtil.getSession()) {
+        Session session = HibernateUtil.getSession();
+        Transaction transaction = null;
+        try {
             transaction = session.beginTransaction();
             SupplierEntity supplierEntity = session.get(SupplierEntity.class, id);
             if (supplierEntity != null) {
@@ -188,6 +204,8 @@ public class SupplierDaoImpl implements SupplierDao {
             }
             e.printStackTrace();
             return false;
-        }*/
+        }finally {
+            session.close();
+        }
     }
 }

@@ -1,8 +1,8 @@
 
-g	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8İ¬°İ„2
-G	java:S1066"+Replace this use of System.out by a logger.(ñ»¾“8ò¬°İ„2
-F	java:S106?"+Replace this use of System.out by a logger.(Íğ±8ô¬°İ„2
-b
-java:S1128"@Remove this unused import 'edu.icet.crm.dao.custom.SupplierDao'.(ìªï¾ùÿÿÿÿ8ö¬°İ„2
-a
-java:S1128"?Remove this unused import 'edu.icet.crm.entity.EmployeeEntity'.(„Ÿ¤ºûÿÿÿÿ8ö¬°İ„2
+	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8İ¬°İ„2J$caed2b22-93cc-4d2f-a787-bd3cc4c87a89
+m	java:S1066"+Replace this use of System.out by a logger.(ñ»¾“8ò¬°İ„2J$85098e8c-9c18-44e6-9ec4-8b386b3cb608
+l	java:S106?"+Replace this use of System.out by a logger.(Íğ±8ô¬°İ„2J$63df0f29-29ed-4442-aac8-891dc20c4276
+ˆ
+java:S1128"@Remove this unused import 'edu.icet.crm.dao.custom.SupplierDao'.(ìªï¾ùÿÿÿÿ8ö¬°İ„2J$91d850fc-3798-4591-b539-ff9200743dce
+‡
+java:S1128"?Remove this unused import 'edu.icet.crm.entity.EmployeeEntity'.(„Ÿ¤ºûÿÿÿÿ8ö¬°İ„2J$4f57d002-717a-44e6-8b8d-fa4c81279a50

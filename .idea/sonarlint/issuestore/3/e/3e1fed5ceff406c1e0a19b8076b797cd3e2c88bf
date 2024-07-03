@@ -1,27 +1,44 @@
 
-Ž	java:S112Ñ"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8à£÷ý„2J$335a7be8-ef1c-4aef-90e3-88269521fc4e
-©
-java:S1488F"fImmediately return this expression instead of assigning it to the temporary variable "employeeEntity".(¬Œ°Æ8ã£÷ý„2J$35a95b0b-1e8f-4f0b-bd2d-8c1ef98ce9dc
-~	java:S125-"<This block of commented-out lines of code should be removed.(™¡öÙ8þ£÷ý„2J$a8d18c1e-010e-415c-9068-2c27c9dfe770
-ƒ	java:S125M"<This block of commented-out lines of code should be removed.(»»Ý¤ÿÿÿÿÿ8ƒ¤÷ý„2J$b062bd25-c95c-4459-b88f-dd18611d4876
-~	java:S125^"<This block of commented-out lines of code should be removed.(¡©œË8ƒ¤÷ý„2J$aabe1e76-d280-4518-9fbe-abd15ed66a1a
-ƒ	java:S125s"<This block of commented-out lines of code should be removed.(»»Ý¤ÿÿÿÿÿ8†¤÷ý„2J$1f8f1da9-766d-41fd-a9f2-485bfa08f68e
-„	java:S125„"<This block of commented-out lines of code should be removed.(¿—ÉÖúÿÿÿÿ8†¤÷ý„2J$39665b37-3846-4c8c-a53c-1d6309229e0d
-„	java:S125—"<This block of commented-out lines of code should be removed.(»»Ý¤ÿÿÿÿÿ8ˆ¤÷ý„2J$70e43a36-60bf-4e63-91b1-b055a129e654
-„	java:S125±"<This block of commented-out lines of code should be removed.(»»Ý¤ÿÿÿÿÿ8Š¤÷ý„2J$483a9ca9-2fa0-4821-91c0-af03265b2d72
-„	java:S125ã"<This block of commented-out lines of code should be removed.(»»Ý¤ÿÿÿÿÿ8¤÷ý„2J$bd9dccb7-812a-40f7-8591-0eab2b6aa39f
-„	java:S125ÿ"<This block of commented-out lines of code should be removed.(»»Ý¤ÿÿÿÿÿ8¤÷ý„2J$627cd2cf-805b-4400-84de-cb75178d2aec
-„	java:S125›"<This block of commented-out lines of code should be removed.(»»Ý¤ÿÿÿÿÿ8’¤÷ý„2J$b7223fde-215a-4b1b-a4d2-c296041535bc
-„	java:S125¶"<This block of commented-out lines of code should be removed.(»»Ý¤ÿÿÿÿÿ8”¤÷ý„2J$7e376c3b-7b2e-4db8-b963-88067c748dbf
-„	java:S125Ô"<This block of commented-out lines of code should be removed.(»»Ý¤ÿÿÿÿÿ8–¤÷ý„2J$72925905-99d7-428d-a861-bb592fa08cdb
+
+java:S1192½"KDefine a constant instead of duplicating this literal "employeeId" 4 times.(œ¾8çÂ”«†2J$ea04fc9e-5e02-473c-bfcb-8baad9a79ca1
+ƒ	java:S125!"<This block of commented-out lines of code should be removed.(ôðÛßùÿÿÿÿ8áÃ”«†2J$fa6e4ab4-d212-4f41-9095-9af674227ca5
+ƒ	java:S125C"<This block of commented-out lines of code should be removed.(Šœ”Éüÿÿÿÿ8åÃ”«†2J$fe9a10b2-a749-4629-9752-a0872161d5e5
+~	java:S125d"<This block of commented-out lines of code should be removed.(¡©œË8êÃ”«†2J$896e8ed9-4e75-49c3-bfc6-b2c9660e9364
+ƒ	java:S125x"<This block of commented-out lines of code should be removed.(‚‰Ÿšûÿÿÿÿ8êÃ”«†2J$f7b92d00-2217-4f0c-8b5a-64e13cb41716
+~	java:S125~"<This block of commented-out lines of code should be removed.(ž±Ü’8“ÉÈ¬†2J$d9630bf4-f299-42de-906a-f986dfdaa5ed
+„	java:S125§"<This block of commented-out lines of code should be removed.(¿—ÉÖúÿÿÿÿ8ŸÈ¬†2J$d6a3dbac-83ac-4269-a71f-151ea2b86ab0
+	java:S125«"<This block of commented-out lines of code should be removed.(‡¯Åå8íÃ”«†2J$12154ad3-f7a3-4ffb-a1f1-3fc8b1959eb1
+„	java:S125º"<This block of commented-out lines of code should be removed.(»»Ý¤ÿÿÿÿÿ8íÃ”«†2J$500e41c2-8b74-4fdd-bbe8-1c1bffba344d
+r
+java:S1874Ë".Remove this use of "update"; it is deprecated.(¨Òü8îÃ”«†2J$7b7faf16-884f-47fc-adad-d1940eda379b
+„	java:S125Û"<This block of commented-out lines of code should be removed.(©Â¬®ûÿÿÿÿ8õÃ”«†2J$84205078-a87d-435e-8f9c-5dac8059d9d4
+„	java:S125ä"<This block of commented-out lines of code should be removed.(»»Ý¤ÿÿÿÿÿ8õÃ”«†2J$8981d0c4-3577-478e-97bf-8f2035f1880c
+w
+java:S1874ü".Remove this use of "delete"; it is deprecated.(ïƒÚ‹ýÿÿÿÿ8÷Ã”«†2J$240137b7-cd10-42dc-a7af-1509d899d23b
+~	java:S125Ÿ"<This block of commented-out lines of code should be removed.(ð®ôG8‚Ä”«†2J$08ed099a-8629-415b-86fc-2fbb98ca4b55
+w
+java:S1874´"3Remove this use of "createQuery"; it is deprecated.(°’¸8¢Ä”«†2J$18822899-f163-4026-bd1c-c5b259a4ed25
+w
+java:S1874»"3Remove this use of "createQuery"; it is deprecated.(˜ù°à8©Ä”«†2J$6094b05d-370d-44ad-a30e-53b310bd15e9
+	java:S125Í"<This block of commented-out lines of code should be removed.(ŽØà‡8ŽÄ”«†2J$9a5b2ee5-81fd-4874-aaa0-93cf19760cd1
+|
+java:S1874Û"3Remove this use of "createQuery"; it is deprecated.(¥—ìÊýÿÿÿÿ8×ëÅ­†2J$d19da927-4452-48d3-9dbb-c69d5811cef1
+	java:S125é"<This block of commented-out lines of code should be removed.(°Ýü8–Ä”«†2J$c1446cab-736f-44f3-9d91-cece84da4725
+|
+java:S1874ù"3Remove this use of "createQuery"; it is deprecated.(Þì¿œÿÿÿÿÿ8þËØ­†2J$824dace1-05aa-4add-bad6-f2961294647b
+	java:S125‰"<This block of commented-out lines of code should be removed.(´¥ß¸8 Ä”«†2J$c377c57c-7b82-4dfd-9290-9270e4e4184e
+v
+java:S1874˜"3Remove this use of "createQuery"; it is deprecated.(Îí—$8 …Þ­†2J$909152b9-3e99-406d-9f46-27ed5beb2266
+	java:S125©"<This block of commented-out lines of code should be removed.(øêùµ8§Ä”«†2J$3ec0e4db-55dd-4735-8d20-df6a9e68620f
+|
+java:S1874º"3Remove this use of "createQuery"; it is deprecated.(ðÊ‘¬þÿÿÿÿ8¤…Þ­†2J$e043150e-415f-42b2-969b-080234559674
 u
-java:S1128"2Remove this unused import 'edu.icet.crm.dto.Role'.(¾Í‚Ò8ÅÂ¨…2J$cb8a9484-0db0-45d4-a0ff-c646c8bf4170
-~
-java:S1128
-"<Remove this unused import 'edu.icet.crm.util.HibernateUtil'.(éÂ’$8ÅÂ¨…2J$246d6ccb-98bc-40bc-a3f3-f22512f0c189
-z
-java:S1128"2Remove this unused import 'org.hibernate.Session'.(È¹›§ùÿÿÿÿ8ÅÂ¨…2J$51ec672b-3298-4e12-a51e-61e0e8818480
-y
-java:S1128"6Remove this unused import 'org.hibernate.Transaction'.(ìÌè³8ÅÂ¨…2J$580ec20e-067c-416f-9491-9ccb5efdc62a
+java:S1128"2Remove this unused import 'edu.icet.crm.dto.Role'.(¾Í‚Ò8‚ÌØ­†2J$cd698806-cb5d-4c0b-9e5b-1035db282454
+
+java:S1128	">Remove this unused import 'edu.icet.crm.entity.ProductEntity'.(„µÿþ8‚ÌØ­†2J$8ba3933b-5bfa-4077-ad90-1ab5357e38d1
 m
-java:S1068"*Remove this unused "roleBo" private field.(Ñ…ÑË8š¤÷ý„2J$9971e29e-8de5-4a90-a269-ef3eb2a63e97
+java:S1068"*Remove this unused "roleBo" private field.(Ñ…ÑË8¯Ä”«†2J$11335d13-4122-450f-887d-35fde40e7ab2
+v
+java:S1068".Remove this unused "connection" private field.(·ãÛöûÿÿÿÿ8±Ä”«†2J$2183ee57-6e35-4fcb-9bdd-c5443b0e46b0
+}
+java:S1144Œ"4Remove this unused private "extractEmployee" method.(ˆ¬ ÷þÿÿÿÿ8²Ä”«†2J$f0fc6d0c-62ea-48d1-a0a0-ba02b431c052

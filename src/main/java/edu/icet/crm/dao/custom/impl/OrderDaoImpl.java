@@ -18,6 +18,7 @@ import edu.icet.crm.util.DaoType;
 import edu.icet.crm.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 
 import java.sql.*;
 import java.time.LocalDate;
@@ -31,18 +32,12 @@ public class OrderDaoImpl implements OrderDao {
 
     private final OrderDetailBo orderDetailsBo;
 
-    private final OrderDetailDao orderDetailDao;
-
-    private ProductDao productDao;
-
     private final ProductBo productBo;
 
     public OrderDaoImpl() throws SQLException, ClassNotFoundException {
         this.orderDetailsBo = BoFactory.getInstance().getBo(BoType.ORDERDETAILS);
         this.productBo = BoFactory.getInstance().getBo(BoType.PRODUCT);
 
-        this.orderDetailDao = DaoFactory.getInstance().getDao(DaoType.ORDERDETAILS);
-        this.productDao = DaoFactory.getInstance().getDao(DaoType.PRODUCT);
 
 
         this.connection = DbConnection.getInstance().getConnection();
@@ -50,36 +45,46 @@ public class OrderDaoImpl implements OrderDao {
     }
     @Override
     public List<OrderEntity> getAll() {
+//        List<OrderEntity> orderEntities = new ArrayList<>();
+//        String query = "SELECT orderID, employeeID, customerID,discount, totalCost, paymentType, datePlaced FROM orders";
+//        try (
+//                PreparedStatement preparedStatement = connection.prepareStatement(query);
+//                ResultSet resultSet = preparedStatement.executeQuery()) {
+//            while (resultSet.next()) {
+//
+//
+//
+//                OrderEntity orderEntity = extractOrder(resultSet);
+//                List<OrderDetails> orderDetailsList = orderDetailsBo.getOrderDetailsByOrderId(resultSet.getInt("orderID"));
+//                orderEntity.setOrderDetailList(orderDetailsList);
+//                orderEntities.add(orderEntity);
+//            }
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//        //System.out.println("this is order"+orderEntities);
+//        return orderEntities;
+
         List<OrderEntity> orderEntities = new ArrayList<>();
-        String query = "SELECT orderID, employeeID, customerID,discount, totalCost, paymentType, datePlaced FROM orders";
-        try (
-                PreparedStatement preparedStatement = connection.prepareStatement(query);
-                ResultSet resultSet = preparedStatement.executeQuery()) {
-            while (resultSet.next()) {
-
-
-
-                OrderEntity orderEntity = extractOrder(resultSet);
-                List<OrderDetails> orderDetailsList = orderDetailsBo.getOrderDetailsByOrderId(resultSet.getInt("orderID"));
-                orderEntity.setOrderDetailList(orderDetailsList);
-                orderEntities.add(orderEntity);
+        Session session = HibernateUtil.getSession();
+        Transaction transaction = null;
+        try {
+            transaction = session.beginTransaction();
+            orderEntities = session.createQuery("FROM OrderEntity", OrderEntity.class).list();
+            for (OrderEntity order : orderEntities) {
+                order.setOrderDetailList(orderDetailsBo.getOrderDetailsByOrderId(order.getOrderID()));
             }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        //System.out.println("this is order"+orderEntities);
-        return orderEntities;
+            transaction.commit();
 
-        /*try (Session session = HibernateUtil.getSession()) {
-            List<OrderEntity> orders = session.createQuery("FROM orders", OrderEntity.class).list();
-            for (OrderEntity order : orders) {
-                order.setOrderDetailList(orderDetailsBo.getOrderDetailsByOrderId(order.getId()));
-            }
-            return orders;
         } catch (Exception e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
             e.printStackTrace();
-            return null;
-        }*/
+        }finally {
+            session.close();
+        }
+        return orderEntities;
     }
 
     private OrderEntity extractOrder(ResultSet resultSet) throws SQLException {
@@ -96,37 +101,46 @@ public class OrderDaoImpl implements OrderDao {
 
     @Override
     public OrderEntity getById(Integer id) {
-        String query = "SELECT orderID, employeeID,customerID,discount, totalCost, paymentType, datePlaced FROM orders WHERE orderID = ? ";
-        try (
-                PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-            preparedStatement.setInt(1, id);
-            ResultSet resultSet = preparedStatement.executeQuery();
-            if (resultSet.next()) {
-                OrderEntity orderEntity = extractOrder(resultSet);
-                List<OrderDetails> orderDetailsList = orderDetailsBo.getOrderDetailsByOrderId(id);
-                orderEntity.setOrderDetailList(orderDetailsList);
-                return orderEntity;
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
+//        String query = "SELECT orderID, employeeID,customerID,discount, totalCost, paymentType, datePlaced FROM orders WHERE orderID = ? ";
+//        try (
+//                PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+//            preparedStatement.setInt(1, id);
+//            ResultSet resultSet = preparedStatement.executeQuery();
+//            if (resultSet.next()) {
+//                OrderEntity orderEntity = extractOrder(resultSet);
+//                List<OrderDetails> orderDetailsList = orderDetailsBo.getOrderDetailsByOrderId(id);
+//                orderEntity.setOrderDetailList(orderDetailsList);
+//                return orderEntity;
+//            }
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//        return null;
 
-       /* try (Session session = HibernateUtil.getSession()) {
-            OrderEntity order = session.get(OrderEntity.class, id);
+        Session session = HibernateUtil.getSession();
+        Transaction transaction = null;
+        OrderEntity order = null;
+        try {
+            transaction = session.beginTransaction();
+            order = session.get(OrderEntity.class, id);
             if (order != null) {
                 order.setOrderDetailList(orderDetailsBo.getOrderDetailsByOrderId(id));
             }
-            return order;
+            transaction.commit();
         } catch (Exception e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
             e.printStackTrace();
-            return null;
-        }*/
+        }finally {
+            session.close();
+        }
+        return order;
     }
 
     @Override
     public boolean add(OrderEntity entity) {
-        System.out.println(entity.getEmployeeID()+""+ entity.getOrderID());
+        /*System.out.println(entity.getEmployeeID()+""+ entity.getOrderID());
         String insertOrderQuery = "INSERT INTO orders (orderID, employeeID, customerID, discount, totalCost, paymentType, datePlaced) " +
                 "VALUES (?, ?, ?, ?, ?, ?, ?)";
         try {
@@ -177,14 +191,15 @@ public class OrderDaoImpl implements OrderDao {
             } catch (SQLException resetException) {
                 resetException.printStackTrace();
             }
-        }
+        }*/
 
-        /*Transaction transaction = null;
-        try (Session session = HibernateUtil.getSession()) {
+        Session session = HibernateUtil.getSession();
+        Transaction transaction = null;
+        try {
             transaction = session.beginTransaction();
 
             // Save the order entity
-            session.save(entity);
+            session.persist(entity);
 
             // Insert order details using OrderDetailsService
             boolean orderDetailsInserted = orderDetailsBo.addOrderDetails(entity.getOrderDetailList());
@@ -207,79 +222,82 @@ public class OrderDaoImpl implements OrderDao {
             }
             e.printStackTrace();
             return false;
-        }*/
+        }finally {
+            session.close();
+        }
     }
 
     @Override
     public boolean update(OrderEntity entity) {
-        String updateOrderQuery = "UPDATE orders SET employeeID = ?, customerID = ?, discount = ?, totalCost = ?, paymentType = ?, datePlaced = ? WHERE orderID = ?";
+//        String updateOrderQuery = "UPDATE orders SET employeeID = ?, customerID = ?, discount = ?, totalCost = ?, paymentType = ?, datePlaced = ? WHERE orderID = ?";
+//        try {
+//            // Start transaction
+//            connection.setAutoCommit(false);
+//
+//            // Update order in orders table
+//            try (PreparedStatement orderStatement = connection.prepareStatement(updateOrderQuery)) {
+//                orderStatement.setInt(1, entity.getEmployeeID());
+//                orderStatement.setInt(2, entity.getCustomerID());
+//                orderStatement.setDouble(3, entity.getDiscount());
+//                orderStatement.setDouble(4, entity.getTotalCost());
+//                orderStatement.setString(5, entity.getPaymentType());
+//                orderStatement.setDate(6, Date.valueOf(entity.getDatePlaced()));
+//                orderStatement.setInt(7, entity.getOrderID());
+//
+//                orderStatement.executeUpdate();
+//            }
+//            List<OrderDetails> deletedOrderDetailList = orderDetailsBo.getOrderDetailsByOrderId(entity.getOrderID());
+//            // Delete existing order details
+//            boolean orderDetailsDeleted = orderDetailsBo.deleteOrderDetails(entity.getOrderID());
+//
+//            boolean deletedProductsUpdated = productBo.restoreProductQuantities(deletedOrderDetailList);
+//
+//            // Insert new order details
+//            boolean orderDetailsInserted = orderDetailsBo.addOrderDetails(entity.getOrderDetailList());
+//
+//            // Update product quantities
+//            boolean addedProductsUpdated = productBo.updateProductQuantities(entity.getOrderDetailList());
+//
+//            if (orderDetailsDeleted && orderDetailsInserted && addedProductsUpdated && deletedProductsUpdated) {
+//                // Commit transaction if all operations succeed
+//                connection.commit();
+//                return true;
+//            } else {
+//                // Rollback transaction if any operation fails
+//                connection.rollback();
+//                return false;
+//            }
+//
+//        } catch (SQLException e) {
+//            // Rollback transaction on error
+//            try {
+//                connection.rollback();
+//            } catch (SQLException rollbackException) {
+//                rollbackException.printStackTrace();
+//            }
+//            e.printStackTrace();
+//            return false;
+//        } finally {
+//            try {
+//                connection.setAutoCommit(true); // Reset auto-commit mode
+//            } catch (SQLException resetException) {
+//                resetException.printStackTrace();
+//            }
+//        }
+
+        Session session = HibernateUtil.getSession();
+        Transaction transaction = null;
         try {
-            // Start transaction
-            connection.setAutoCommit(false);
-
-            // Update order in orders table
-            try (PreparedStatement orderStatement = connection.prepareStatement(updateOrderQuery)) {
-                orderStatement.setInt(1, entity.getEmployeeID());
-                orderStatement.setInt(2, entity.getCustomerID());
-                orderStatement.setDouble(3, entity.getDiscount());
-                orderStatement.setDouble(4, entity.getTotalCost());
-                orderStatement.setString(5, entity.getPaymentType());
-                orderStatement.setDate(6, Date.valueOf(entity.getDatePlaced()));
-                orderStatement.setInt(7, entity.getOrderID());
-
-                orderStatement.executeUpdate();
-            }
-            List<OrderDetails> deletedOrderDetailList = orderDetailsBo.getOrderDetailsByOrderId(entity.getOrderID());
-            // Delete existing order details
-            boolean orderDetailsDeleted = orderDetailsBo.deleteOrderDetails(entity.getOrderID());
-
-            boolean deletedProductsUpdated = productBo.restoreProductQuantities(deletedOrderDetailList);
-
-            // Insert new order details
-            boolean orderDetailsInserted = orderDetailsBo.addOrderDetails(entity.getOrderDetailList());
-
-            // Update product quantities
-            boolean addedProductsUpdated = productBo.updateProductQuantities(entity.getOrderDetailList());
-
-            if (orderDetailsDeleted && orderDetailsInserted && addedProductsUpdated && deletedProductsUpdated) {
-                // Commit transaction if all operations succeed
-                connection.commit();
-                return true;
-            } else {
-                // Rollback transaction if any operation fails
-                connection.rollback();
-                return false;
-            }
-
-        } catch (SQLException e) {
-            // Rollback transaction on error
-            try {
-                connection.rollback();
-            } catch (SQLException rollbackException) {
-                rollbackException.printStackTrace();
-            }
-            e.printStackTrace();
-            return false;
-        } finally {
-            try {
-                connection.setAutoCommit(true); // Reset auto-commit mode
-            } catch (SQLException resetException) {
-                resetException.printStackTrace();
-            }
-        }
-
-        /*Transaction transaction = null;
-        try (Session session = HibernateUtil.getSession()) {
             transaction = session.beginTransaction();
 
             // Update order in orders table
             session.update(entity);
 
             // Get existing order details
-            List<OrderDetails> deletedOrderDetailList = orderDetailsBo.getOrderDetailsByOrderId(entity.getId());
+            List<OrderDetails> deletedOrderDetailList = orderDetailsBo.getOrderDetailsByOrderId(entity.getOrderID());
 
             // Delete existing order details
-            boolean orderDetailsDeleted = orderDetailsBo.deleteOrderDetails(entity.getId());
+            boolean orderDetailsDeleted = orderDetailsBo.deleteOrderDetails(entity.getOrderID());
 
             // Restore product quantities for deleted order details
             boolean deletedProductsUpdated = productBo.restoreProductQuantities(deletedOrderDetailList);
@@ -304,66 +322,69 @@ public class OrderDaoImpl implements OrderDao {
             }
             e.printStackTrace();
             return false;
-        }*/
+        }finally {
+            session.close();
+        }
     }
 
     @Override
     public boolean delete(Integer id) {
-        List<OrderDetails> deletedOrderDetailList = orderDetailsBo.getOrderDetailsByOrderId(id);
-        String deleteOrderQuery = "DELETE FROM orders WHERE orderID = ?";
+//        List<OrderDetails> deletedOrderDetailList = orderDetailsBo.getOrderDetailsByOrderId(id);
+//        String deleteOrderQuery = "DELETE FROM orders WHERE orderID = ?";
+//
+//        try {
+//            // Start transaction
+//            connection.setAutoCommit(false);
+//
+//            // Restore product quantities for the deleted order details
+//            boolean productQuantitiesRestored = productBo.restoreProductQuantities(deletedOrderDetailList);
+//
+//            if (!productQuantitiesRestored) {
+//                connection.rollback();
+//                return false;
+//            }
+//
+//            // Delete order details
+//            boolean orderDetailsDeleted = orderDetailsBo.deleteOrderDetails(id);
+//
+//            if (!orderDetailsDeleted) {
+//                connection.rollback();
+//                return false;
+//            }
+//
+//            // Delete the order from orders table
+//            try (PreparedStatement preparedStatement = connection.prepareStatement(deleteOrderQuery)) {
+//                preparedStatement.setInt(1, id);
+//                int rowsAffected = preparedStatement.executeUpdate();
+//                if (rowsAffected == 0) {
+//                    connection.rollback();
+//                    return false;
+//                }
+//            }
+//
+//            // Commit transaction if all operations succeed
+//            connection.commit();
+//            return true;
+//        } catch (SQLException e) {
+//            // Rollback transaction on error
+//            try {
+//                connection.rollback();
+//            } catch (SQLException rollbackException) {
+//                rollbackException.printStackTrace();
+//            }
+//            e.printStackTrace();
+//            return false;
+//        } finally {
+//            try {
+//                connection.setAutoCommit(true); // Reset auto-commit mode
+//            } catch (SQLException resetException) {
+//                resetException.printStackTrace();
+//            }
+//        }
 
+        Session session = HibernateUtil.getSession();
+        Transaction transaction = null;
         try {
-            // Start transaction
-            connection.setAutoCommit(false);
-
-            // Restore product quantities for the deleted order details
-            boolean productQuantitiesRestored = productBo.restoreProductQuantities(deletedOrderDetailList);
-
-            if (!productQuantitiesRestored) {
-                connection.rollback();
-                return false;
-            }
-
-            // Delete order details
-            boolean orderDetailsDeleted = orderDetailsBo.deleteOrderDetails(id);
-
-            if (!orderDetailsDeleted) {
-                connection.rollback();
-                return false;
-            }
-
-            // Delete the order from orders table
-            try (PreparedStatement preparedStatement = connection.prepareStatement(deleteOrderQuery)) {
-                preparedStatement.setInt(1, id);
-                int rowsAffected = preparedStatement.executeUpdate();
-                if (rowsAffected == 0) {
-                    connection.rollback();
-                    return false;
-                }
-            }
-
-            // Commit transaction if all operations succeed
-            connection.commit();
-            return true;
-        } catch (SQLException e) {
-            // Rollback transaction on error
-            try {
-                connection.rollback();
-            } catch (SQLException rollbackException) {
-                rollbackException.printStackTrace();
-            }
-            e.printStackTrace();
-            return false;
-        } finally {
-            try {
-                connection.setAutoCommit(true); // Reset auto-commit mode
-            } catch (SQLException resetException) {
-                resetException.printStackTrace();
-            }
-        }
-
-        /*Transaction transaction = null;
-        try (Session session = HibernateUtil.getSession()) {
             transaction = session.beginTransaction();
 
             // Retrieve the order details for the specified order ID
@@ -401,31 +422,44 @@ public class OrderDaoImpl implements OrderDao {
             }
             e.printStackTrace();
             return false;
-        }*/
+        }finally {
+            session.close();
+        }
     }
 
     public Map<String, Double> getMonthlySalesData() throws SQLException {
-        /*try (Session session = HibernateUtil.getSession()) {
-            String hql = "SELECT MONTHNAME(o.datePlaced) AS month, SUM(o.totalCost) AS totalSales " +
-                    "FROM Orders o " +
-                    "GROUP BY MONTH(o.datePlaced)";
+        Map<String, Double> salesData = new HashMap<>();
+
+        Session session = HibernateUtil.getSession();
+        Transaction transaction = null;
+        try {
+            transaction = session.beginTransaction();
+
+            String hql = "SELECT MONTHNAME(o.datePlaced), SUM(o.totalCost) " +
+                    "FROM OrderEntity o " +
+                    "GROUP BY MONTHNAME(o.datePlaced)";
             List<Object[]> result = session.createQuery(hql, Object[].class).getResultList();
-            Map<String, Double> salesData = new HashMap<>();
+
             for (Object[] row : result) {
                 String month = (String) row[0];
                 Double totalSales = (Double) row[1];
                 salesData.put(month, totalSales);
             }
-            return salesData;
+
+            transaction.commit();
         } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-        }*/
-        return null;
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            e.printStackTrace();  // Consider using a logger here
+        } finally {
+            session.close();
+        }
+        return salesData;
     }
 
     public String generateOrderId() {
-        String newOrderId = "";
+       /* String newOrderId = "";
         try {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT COUNT(*) FROM orders");
@@ -449,7 +483,45 @@ public class OrderDaoImpl implements OrderDao {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+        return newOrderId;*/
+
+
+
+        String newOrderId = "";
+        Session session = HibernateUtil.getSession();
+        Transaction transaction = null;
+
+        try {
+            transaction = session.beginTransaction();
+
+            // Query to count orders
+            Long count = (Long) session.createQuery("SELECT COUNT(*) FROM OrderEntity").uniqueResult();
+            if (count == 0) {
+                return "4001";
+            }
+
+            // Query to get the last OrderID
+            String lastOrderId = String.valueOf(session.createQuery("SELECT o.orderID FROM OrderEntity o ORDER BY o.orderID DESC")
+                    .setMaxResults(1)
+                    .uniqueResult());
+            if (lastOrderId != null) {
+                int number = Integer.parseInt(lastOrderId);
+                number++;
+                newOrderId = String.valueOf(number);
+            }
+
+            transaction.commit();
+        } catch (Exception e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            throw new RuntimeException(e);
+        } finally {
+            session.close();
+        }
+
         return newOrderId;
+
     }
 
     @Override

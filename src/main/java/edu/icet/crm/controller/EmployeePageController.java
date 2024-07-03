@@ -148,18 +148,22 @@ public class EmployeePageController {
                     txtEmail.getText(),
                     txtContactNo.getText()
             );
+            System.out.println(employee.getEmployeeId()+""+employee.getRoleId());
             try {
-                System.out.println(employee);
+                System.out.println("Employee object created: " + employee);
                 boolean success = employeeBo.addEmployee(employee);
+                System.out.println("Employee add result: " + success);
                 if (success) {
                     showAlert(Alert.AlertType.INFORMATION, "Success", "Employee added successfully.");
                     loadEmployeeTable();
                     clearFields();
                 } else {
                     showAlert(Alert.AlertType.ERROR, "Error", "Failed to add employee.");
+                    System.out.println("Employee add result: " + success);
                 }
             } catch (Exception e) {
                 showAlert(Alert.AlertType.ERROR, "Error", "Failed to add employee.");
+
             }
         }
     }

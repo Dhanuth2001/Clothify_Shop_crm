@@ -1,9 +1,6 @@
 package edu.icet.crm.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,11 +10,12 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-/*@Entity
-@Table(name = "role")*/
+@Entity
+@Table(name = "role")
 public class RoleEntity {
-    /*@Id
-    @Column(name = "roleId")*/
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "roleId")
     private Integer roleId;
     private String roleName;
 

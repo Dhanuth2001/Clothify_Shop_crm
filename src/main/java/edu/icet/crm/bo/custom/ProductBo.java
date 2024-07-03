@@ -3,6 +3,7 @@ package edu.icet.crm.bo.custom;
 import edu.icet.crm.bo.SuperBo;
 import edu.icet.crm.dto.OrderDetails;
 import edu.icet.crm.dto.Product;
+import edu.icet.crm.util.SizeType;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -20,7 +21,7 @@ public interface ProductBo extends SuperBo {
 
     boolean deleteProduct(Integer productId) throws SQLException;
 
-    List<String> getSizesByProductId(int productId);
+    List<SizeType> getSizesByProductId(int productId);
 
     int getAvailableQuantityByProductId(int productId);
 

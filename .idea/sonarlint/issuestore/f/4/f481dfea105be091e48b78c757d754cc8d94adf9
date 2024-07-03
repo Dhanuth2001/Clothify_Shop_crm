@@ -1,36 +1,39 @@
 
-h	java:S112Â"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ê¿Õ€…2
-j
-java:S2095®"GUse try-with-resources or close this "Statement" in a "finally" clause.(é°Áµşÿÿÿÿ8ŞÀÕ€…2
-e
-java:S2095¸"GUse try-with-resources or close this "Statement" in a "finally" clause.(¶ñÓ8ŞÀÕ€…2
-X	java:S125F"<This block of commented-out lines of code should be removed.(ú¸İÚ8êÀÕ€…2
-X	java:S125I"<This block of commented-out lines of code should be removed.(ü–ÃŒ8êÀÕ€…2
-X	java:S125s"<This block of commented-out lines of code should be removed.(ü–ÃŒ8ïÀÕ€…2
-M	java:S106"+Replace this use of System.out by a logger.(Øæ·àÿÿÿÿÿ8ñÀÕ€…2
-^	java:S125¶"<This block of commented-out lines of code should be removed.(»»İ¤ÿÿÿÿÿ8õÀÕ€…2
-^	java:S125"<This block of commented-out lines of code should be removed.(»»İ¤ÿÿÿÿÿ8ıÀÕ€…2
-^	java:S125í"<This block of commented-out lines of code should be removed.(»»İ¤ÿÿÿÿÿ8ÁÕ€…2
-B
-java:S1168¨"$Return an empty map instead of null.(¥¹ï8‚ÁÕ€…2
-Y	java:S125˜"<This block of commented-out lines of code should be removed.(ü–ÃŒ8‚ÁÕ€…2
-I
-java:S1168É"+Return an empty collection instead of null.(¥¹ï8†ÁÕ€…2
-I
-java:S1168Î"+Return an empty collection instead of null.(¥¹ï8‡ÁÕ€…2
-P
-java:S1128"3Remove this unused import 'edu.icet.crm.dto.Order'.(½Åšã8‡ÁÕ€…2
-e
-java:S1128"CRemove this unused import 'edu.icet.crm.entity.OrderDetailsEntity'.(Åö³Ôûÿÿÿÿ8‡ÁÕ€…2
-X
-java:S1128"<Remove this unused import 'edu.icet.crm.util.HibernateUtil'.(éÂ’$8ˆÁÕ€…2
-T
-java:S1128"2Remove this unused import 'org.hibernate.Session'.(È¹›§ùÿÿÿÿ8ˆÁÕ€…2
-S
-java:S1128"6Remove this unused import 'org.hibernate.Transaction'.(ìÌè³8ˆÁÕ€…2
-P
-java:S1128".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ8ˆÁÕ€…2
-O
-java:S1068""2Remove this unused "orderDetailDao" private field.(İ¤Ùû8‰ÁÕ€…2
-K
-java:S1068$".Remove this unused "productDao" private field.(ºË°—8ŠÁÕ€…2
+	java:S112†"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8©×ğ¤†2J$721a76e9-61e7-42f9-ada3-e32eb8c184d9
+ƒ	java:S1250"<This block of commented-out lines of code should be removed.(°åÏ“ûÿÿÿÿ8ˆØğ¤†2J$e9a59986-9e0f-440b-b20a-6b9c82a4acda
+ƒ	java:S125h"<This block of commented-out lines of code should be removed.(©ÎĞ²şÿÿÿÿ8Øğ¤†2J$00ffc085-2387-4724-999d-d4d598cbc6e4
+„	java:S125"<This block of commented-out lines of code should be removed.(Á±èÒıÿÿÿÿ8‘Øğ¤†2J$d410a5cd-43d4-4df4-87b0-88c9aab91c46
+	java:S125è"<This block of commented-out lines of code should be removed.(¦÷§İ8êÿş¤†2J$462fde17-d322-4748-893d-045bfcada880
+w
+java:S1874¦".Remove this use of "update"; it is deprecated.(¥·òÂøÿÿÿÿ8ôª€¥†2J$c2332367-cd66-479c-8dfd-2b0556d42dff
+	java:S125Ì"<This block of commented-out lines of code should be removed.(ƒÇûÖ8¸¿ˆ¥†2J$302120ba-42c3-4f93-823e-7ab3f80a67ca
+r
+java:S1874œ".Remove this use of "delete"; it is deprecated.( Ø‘Ş8ßŸ‰¥†2J$5a8df715-2318-4ab8-a13c-4d00b59ace05
+	java:S125Î"<This block of commented-out lines of code should be removed.(ÁÎïÍ8¤Øğ¤†2J$1328e73a-4bb8-4ab7-bffc-c145c72e4779
+w
+java:S1874ò"3Remove this use of "createQuery"; it is deprecated.(˜«¿8¤Øğ¤†2J$11969179-c295-4c56-9d61-1ba7103e91c0
+|
+java:S1874ø"3Remove this use of "createQuery"; it is deprecated.(ï£†¿úÿÿÿÿ8¥Øğ¤†2J$cc66a7bb-039c-4625-bf23-52032b3c3b18
+o
+java:S1168‘"+Return an empty collection instead of null.(¥¹ï8¨Øğ¤†2J$91fbc2b1-b5a6-4ec6-ad7b-22418f4d107c
+o
+java:S1168–"+Return an empty collection instead of null.(¥¹ï8¨Øğ¤†2J$5b353ce8-c580-474d-878f-d4c544fbfa54
+€
+java:S1128"8Remove this unused import 'edu.icet.crm.dao.DaoFactory'.(€µš„ıÿÿÿÿ8ëç¥†2J$90bb90ca-cd83-4444-a770-de2ad483ee9a
+‹
+java:S1128	"CRemove this unused import 'edu.icet.crm.dao.custom.OrderDetailDao'.(ê°Û“ûÿÿÿÿ8ëç¥†2J$2a95f2f2-2c9c-4a2a-98c4-37d22a73f7f6
+‡
+java:S1128
+"?Remove this unused import 'edu.icet.crm.dao.custom.ProductDao'.(³–³ƒüÿÿÿÿ8ëç¥†2J$96c9d999-2c5a-4efb-a9dc-afc1ec6821cc
+v
+java:S1128"3Remove this unused import 'edu.icet.crm.dto.Order'.(½Åšã8ëç¥†2J$aa874cfe-1edf-4c71-9afb-bde4daee9659
+‹
+java:S1128"CRemove this unused import 'edu.icet.crm.entity.OrderDetailsEntity'.(Åö³Ôûÿÿÿÿ8ìç¥†2J$b983d649-ffb4-4f87-a0a8-441397ab4372
+~
+java:S1128"6Remove this unused import 'edu.icet.crm.util.DaoType'.(¾±èøÿÿÿÿ8ìç¥†2J$79e833cb-f528-4dfd-a732-190abded0052
+~
+java:S1128"6Remove this unused import 'org.hibernate.query.Query'.(¤— ´ûÿÿÿÿ8ìç¥†2J$8bfd43c2-3dee-4a86-a231-df9a6f6876ad
+v
+java:S1068".Remove this unused "connection" private field.(·ãÛöûÿÿÿÿ8Ú¿ˆ¥†2J$a5f5babb-50c1-4d84-bf72-dfdc03c2ba9e
+t
+java:S1144Z"1Remove this unused private "extractOrder" method.(Š‘Á€8ªØğ¤†2J$8a6c0650-4343-4b7f-91d1-c8bdb1fe0cdc

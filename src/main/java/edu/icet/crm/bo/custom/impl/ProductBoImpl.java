@@ -2,15 +2,13 @@ package edu.icet.crm.bo.custom.impl;
 
 import edu.icet.crm.bo.custom.ProductBo;
 import edu.icet.crm.dao.DaoFactory;
-import edu.icet.crm.dao.custom.EmployeeDao;
 import edu.icet.crm.dao.custom.ProductDao;
-import edu.icet.crm.dto.Employee;
 import edu.icet.crm.dto.OrderDetails;
 import edu.icet.crm.dto.Product;
-import edu.icet.crm.entity.EmployeeEntity;
 import edu.icet.crm.entity.OrderDetailsEntity;
 import edu.icet.crm.entity.ProductEntity;
 import edu.icet.crm.util.DaoType;
+import edu.icet.crm.util.SizeType;
 import org.modelmapper.ModelMapper;
 
 import java.sql.SQLException;
@@ -65,7 +63,7 @@ public class ProductBoImpl implements ProductBo {
     }
 
     @Override
-    public List<String> getSizesByProductId(int productId) {
+    public List<SizeType> getSizesByProductId(int productId) {
         return productDao.getSizesByProductId(productId);
     }
 

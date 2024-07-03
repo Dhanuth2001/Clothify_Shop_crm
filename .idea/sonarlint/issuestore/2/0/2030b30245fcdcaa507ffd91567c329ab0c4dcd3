@@ -1,11 +1,11 @@
 
 Ü
-java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(ÄßÜê8çä¥Ï„2J$80ca508b-f741-4363-9859-ade9a7a0b621
+java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(ÄßÜê8çä¥Ï„2J$6c13e3a8-1bf8-41dc-9fe6-140b45fad56b
 ~
-java:S1128"6Remove this unused import 'edu.icet.crm.bo.BoFactory'.(Òï÷¤úÿÿÿÿ8ý…ëÿ„2J$a3bf6805-d8b6-4edd-af13-d69269572829
+java:S1128"6Remove this unused import 'edu.icet.crm.bo.BoFactory'.(Òï÷¤úÿÿÿÿ8ý…ëÿ„2J$0a764f25-9984-450e-8dca-09a9735097e5
 |
-java:S1128"4Remove this unused import 'edu.icet.crm.bo.SuperBo'.(„›Í½úÿÿÿÿ8ý…ëÿ„2J$412bcf7a-e3a5-4f41-bd46-d5cef9ae6dae
+java:S1128"4Remove this unused import 'edu.icet.crm.bo.SuperBo'.(„›Í½úÿÿÿÿ8ý…ëÿ„2J$4fa4a309-0687-4682-9657-1bb9a4db16c0
 ‰
-java:S1128"GRemove this unused import 'edu.icet.crm.bo.custom.impl.CustomerBoImpl'.( ¸ÝN8þ…ëÿ„2J$5aac0e83-12df-4174-969e-c1dcf657cecd
+java:S1128"GRemove this unused import 'edu.icet.crm.bo.custom.impl.CustomerBoImpl'.( ¸ÝN8þ…ëÿ„2J$d20c1914-0cdd-45a6-8661-3803e2cd4f18
 x
-java:S1128"5Remove this unused import 'edu.icet.crm.util.BoType'.(Žú®é8þ…ëÿ„2J$8aa63714-1a1f-48b1-b4c5-a06093e29d33
+java:S1128"5Remove this unused import 'edu.icet.crm.util.BoType'.(Žú®é8þ…ëÿ„2J$84ff3635-bf2c-414d-b74a-1afc31b8fa2f

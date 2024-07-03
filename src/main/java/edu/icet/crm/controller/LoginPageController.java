@@ -14,21 +14,20 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.stage.Stage;
+import org.springframework.stereotype.Controller;
 
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
+@Controller
 public class LoginPageController {
     public JFXTextField userEmail;
     public Button btnLogin;
     public Hyperlink forgotPassword;
     public Hyperlink createAccount;
     public JFXPasswordField userPassword;
-
     private static String loggedInEmployeeEmail;
-
     private UserBo userBo;
 
     public LoginPageController() throws SQLException, ClassNotFoundException {
@@ -68,9 +67,9 @@ public class LoginPageController {
                 setLoggedInEmployeeId();
 
                 FXMLLoader loader;
-                if ("Admin".equalsIgnoreCase(userRole)) {
+                if ("1".equalsIgnoreCase(userRole)) {
                     loader = new FXMLLoader(getClass().getResource("/view/AdminDashboard.fxml"));
-                } else if ("Default".equalsIgnoreCase(userRole)) {
+                } else if ("2".equalsIgnoreCase(userRole)) {
                     loader = new FXMLLoader(getClass().getResource("/view/EmployeeDashboard.fxml"));
                 } else {
                     showAlert(Alert.AlertType.ERROR, "Invalid Role", "User role is not recognized.");

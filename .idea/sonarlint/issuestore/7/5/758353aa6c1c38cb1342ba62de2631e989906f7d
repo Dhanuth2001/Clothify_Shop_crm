@@ -1,19 +1,19 @@
 
 ˜
-java:S1104"UMake userEmail a static final constant or non-public and provide accessors if needed.(ÜóÆí8±úôÜ„2J$398399d9-8061-4df1-b0ef-5fe3ced165c9
+java:S1104"UMake userEmail a static final constant or non-public and provide accessors if needed.(ÜóÆí8±úôÜ„2J$98665676-cb8e-44f8-a68e-79bb294c91c5
 œ
-java:S1104"TMake btnLogin a static final constant or non-public and provide accessors if needed.(’ÎöØùÿÿÿÿ8²úôÜ„2J$00809cf0-dad4-4de8-91f6-b0227da0c50b
+java:S1104"TMake btnLogin a static final constant or non-public and provide accessors if needed.(’ÎöØùÿÿÿÿ8²úôÜ„2J$c1b62c38-6244-4d98-ab1a-7b3d377d582e
 ¢
-java:S1104"ZMake forgotPassword a static final constant or non-public and provide accessors if needed.(ç”½°ÿÿÿÿÿ8²úôÜ„2J$877beeeb-c633-400a-9737-f35c366c8aec
+java:S1104"ZMake forgotPassword a static final constant or non-public and provide accessors if needed.(ç”½°ÿÿÿÿÿ8²úôÜ„2J$a9a4c0da-3027-448e-872b-27ebf0ca7ec1
 œ
-java:S1104"YMake createAccount a static final constant or non-public and provide accessors if needed.(Š™Ê8²úôÜ„2J$d3391aa8-ab84-44d3-b823-42ac0205164d
+java:S1104"YMake createAccount a static final constant or non-public and provide accessors if needed.(Š™Ê8²úôÜ„2J$324fabcf-4b61-477d-bbeb-495e131cbd53
  
-java:S1104"XMake userPassword a static final constant or non-public and provide accessors if needed.(äƒÌùÿÿÿÿ8ù÷Ü„2J$ccb3960f-c04a-487c-ba39-aba85d8862a6
+java:S1104"XMake userPassword a static final constant or non-public and provide accessors if needed.(äƒÌùÿÿÿÿ8ù÷Ü„2J$b560a31b-3d2c-4662-b8fd-a7e8423e2d1d
 ~
-java:S2696'"6Make the enclosing method "static" or remove this set.(ã‹ûÂıÿÿÿÿ8Éù÷Ü„2J$8a9d9da2-5c3a-420d-8f33-7899081e91b9
+java:S2696&"6Make the enclosing method "static" or remove this set.(ã‹ûÂıÿÿÿÿ8Éù÷Ü„2J$5c30b4e2-2057-4d1a-8fa0-2d1b4f589d17
 
-java:S5998_"LRefactor this repetition that can lead to a stack overflow for large inputs.(õæˆB8õù÷Ü„2J$e076f5e9-91e7-4d43-9445-0d9cbf9d3f1e
+java:S5998^"LRefactor this repetition that can lead to a stack overflow for large inputs.(õæˆB8õù÷Ü„2J$18e2bd22-db32-411d-a92e-34f5873f6aeb
 ‰
-java:S1075m"ARefactor your code to get this URI from a customizable parameter.(”·Òßúÿÿÿÿ8üù÷Ü„2J$3805411b-ef35-43d8-b51d-4a0f970e0cf2
+java:S1075l"ARefactor your code to get this URI from a customizable parameter.(”·Òßúÿÿÿÿ8üù÷Ü„2J$e9b15da9-1642-4c37-b955-838d43c2616a
 „
-java:S1075r"ARefactor your code to get this URI from a customizable parameter.(êÙÌ×8üù÷Ü„2J$05aec519-a9c8-4694-9025-d526a0c3c89a
+java:S1075q"ARefactor your code to get this URI from a customizable parameter.(êÙÌ×8üù÷Ü„2J$e2437601-e07b-4ec2-8d2f-994919b96fb7

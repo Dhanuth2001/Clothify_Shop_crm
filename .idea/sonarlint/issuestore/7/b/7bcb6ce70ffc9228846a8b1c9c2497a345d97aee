@@ -1,30 +1,27 @@
 
-	java:S112U"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8å—Á…2J$b6d45e08-636b-4439-bb19-d21d40029699
-‰	java:S112”"FDefine and throw a dedicated exception instead of using a generic one.(öóÀ8ç—Á…2J$236d94e1-6097-4914-8481-d3c64c076067
-‰	java:S112—"FDefine and throw a dedicated exception instead of using a generic one.(Ñ½”ë8ç—Á…2J$3b0ca546-7bd3-4676-aa20-61c1a4624b9b
-c	java:S112¶"FDefine and throw a dedicated exception instead of using a generic one.(ûøĞ8¢ŞÁ…2
-h	java:S112º"FDefine and throw a dedicated exception instead of using a generic one.(òÔÚ°şÿÿÿÿ8¢ŞÁ…2
-‘
-java:S1192B"IDefine a constant instead of duplicating this literal "roleName" 4 times.(¤ÿÔîÿÿÿÿÿ8é—Á…2J$83e29017-025e-4e6c-ba78-5761d73843e5
-ƒ	java:S1250"<This block of commented-out lines of code should be removed.(øõ´Şÿÿÿÿÿ8˜Á…2J$d7264fb5-bba5-4d33-9798-128ec5950a72
-ƒ	java:S125Y"<This block of commented-out lines of code should be removed.(»»İ¤ÿÿÿÿÿ8’˜Á…2J$870b77ff-9919-4111-ac88-b802d9784ce8
-ƒ	java:S125y"<This block of commented-out lines of code should be removed.(»»İ¤ÿÿÿÿÿ8˜˜Á…2J$eb75d1a4-9b87-4615-8744-c490b4ad4862
-„	java:S125™"<This block of commented-out lines of code should be removed.(»»İ¤ÿÿÿÿÿ8œ˜Á…2J$c9780ae3-d13d-4b99-bbc8-b24d20521ca2
-„	java:S125¼"<This block of commented-out lines of code should be removed.(»»İ¤ÿÿÿÿÿ8Ÿ˜Á…2J$cdc6863d-de24-42da-861b-c48390dcc63f
-~
-java:S1128"6Remove this unused import 'edu.icet.crm.bo.BoFactory'.(Òï÷¤úÿÿÿÿ8¢˜Á…2J$bbfeae5b-28a9-4195-ab48-ec95d59177e3
-}
-java:S1128":Remove this unused import 'edu.icet.crm.bo.custom.RoleBo'.(±Ë Ñ8¢˜Á…2J$c7f3adae-a7fc-44ac-8f20-2db0a51de2f9
-u
-java:S1128"2Remove this unused import 'edu.icet.crm.dto.Role'.(¾Í‚Ò8¢˜Á…2J$ea362afb-a5fb-4fc1-8991-3980aa4b6140
-‡
-java:S1128"?Remove this unused import 'edu.icet.crm.entity.EmployeeEntity'.(„Ÿ¤ºûÿÿÿÿ8¢˜Á…2J$5e18051d-0763-4dbd-b4c8-74edec39e043
-x
+k
+java:S1192B"IDefine a constant instead of duplicating this literal "roleName" 3 times.(¤ÿÔîÿÿÿÿÿ8¡Øò«†2
+]	java:S125#"<This block of commented-out lines of code should be removed.(ÑÏè©ÿÿÿÿÿ8ëØò«†2
+X	java:S125H"<This block of commented-out lines of code should be removed.(©†“Ÿ8ñØò«†2
+]	java:S125i"<This block of commented-out lines of code should be removed.(®  ÿşÿÿÿÿ8ôØò«†2
+^	java:S125Œ"<This block of commented-out lines of code should be removed.(™ĞÌüÿÿÿÿ8øØò«†2
+^	java:S125¬"<This block of commented-out lines of code should be removed.(ó×Ø™ùÿÿÿÿ8üØò«†2
+X
+java:S1128"6Remove this unused import 'edu.icet.crm.bo.BoFactory'.(Òï÷¤úÿÿÿÿ8Ùò«†2
+W
+java:S1128":Remove this unused import 'edu.icet.crm.bo.custom.RoleBo'.(±Ë Ñ8Ùò«†2
+O
+java:S1128"2Remove this unused import 'edu.icet.crm.dto.Role'.(¾Í‚Ò8‚Ùò«†2
+a
+java:S1128"?Remove this unused import 'edu.icet.crm.entity.EmployeeEntity'.(„Ÿ¤ºûÿÿÿÿ8‚Ùò«†2
+R
 java:S1128
-"5Remove this unused import 'edu.icet.crm.util.BoType'.(ú®é8¢˜Á…2J$7c93233e-231e-4eb3-94e1-cb0aaa935ef5
-~
-java:S1128"<Remove this unused import 'edu.icet.crm.util.HibernateUtil'.(éÂ’$8¢˜Á…2J$5599ad64-d748-4293-a9fd-19f5b17f4a88
-z
-java:S1128"2Remove this unused import 'org.hibernate.Session'.(È¹›§ùÿÿÿÿ8¢˜Á…2J$1abec416-a9fb-47b3-b9c5-9999e6476605
-y
-java:S1128"6Remove this unused import 'org.hibernate.Transaction'.(ìÌè³8¢˜Á…2J$60f92d98-b44b-43aa-9cf2-51804df931a8
+"5Remove this unused import 'edu.icet.crm.util.BoType'.(ú®é8‚Ùò«†2
+Y
+java:S1128"7Remove this unused import 'java.sql.PreparedStatement'.(òÄ™ƒÿÿÿÿÿ8‚Ùò«†2
+M
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8‚Ùò«†2
+P
+java:S1068".Remove this unused "connection" private field.(·ãÛöûÿÿÿÿ8„Ùò«†2
+R
+java:S1144?"0Remove this unused private "extractRole" method.(°¸‘ıÿÿÿÿ8…Ùò«†2

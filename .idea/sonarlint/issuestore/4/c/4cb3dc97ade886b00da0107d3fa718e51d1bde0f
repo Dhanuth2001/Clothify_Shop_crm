@@ -1,19 +1,24 @@
 
-ƒ	java:S125+"<This block of commented-out lines of code should be removed.(ª‚…Ìýÿÿÿÿ8°Ë¦þ„2J$3d3e44f2-11dd-4c10-9ab4-d6d63232a4d0
-ƒ	java:S125S"<This block of commented-out lines of code should be removed.(»»Ý¤ÿÿÿÿÿ8´Ë¦þ„2J$2c9d4ed7-aa00-4c5d-ac0f-1a5aa42ed5f4
-ƒ	java:S125s"<This block of commented-out lines of code should be removed.(»»Ý¤ÿÿÿÿÿ8¸Ë¦þ„2J$0f9d187a-66a4-4f5e-b3ff-15b53b9ec437
-„	java:S125”"<This block of commented-out lines of code should be removed.(»»Ý¤ÿÿÿÿÿ8»Ë¦þ„2J$9ca024f8-71a8-41ab-a3e0-41b568c1d8d8
-„	java:S125¯"<This block of commented-out lines of code should be removed.(»»Ý¤ÿÿÿÿÿ8¾Ë¦þ„2J$69192f82-239d-49ce-9d5e-5e3a8a4f6b11
+ƒ	java:S125"<This block of commented-out lines of code should be removed.(õ·‰ºøÿÿÿÿ8ð‚µ¤†2J$2a993cbf-e5a2-4960-ba18-063b745136c8
+~	java:S125L"<This block of commented-out lines of code should be removed.(§¿í±8Ù§°¤†2J$0f4c6390-6d46-47ee-a82b-fcc2b6299387
+ƒ	java:S125n"<This block of commented-out lines of code should be removed.(¬¾çîüÿÿÿÿ8Ð¢²¤†2J$9ea81014-7c3d-4681-81eb-bc5984585460
+„	java:S125"<This block of commented-out lines of code should be removed.(ñöÝ³úÿÿÿÿ8Ï³¤¤†2J$f543d934-dc97-4a61-96b7-a6702dfadf17
+w
+java:S1874¤".Remove this use of "update"; it is deprecated.(¥·òÂøÿÿÿÿ8Ç¢¥¤†2J$c9ecb07c-da17-45d2-aac9-0453f89480fd
+	java:S125´"<This block of commented-out lines of code should be removed.(×»´­8”˜­¤†2J$af19781d-4228-4c60-83d8-f28676caed4d
+w
+java:S1874Ä".Remove this use of "delete"; it is deprecated.(®Ý†ýÿÿÿÿ8¥ø®¤†2J$a8b76d4e-bd4f-42fc-80b1-be4c915e1830
 X
-java:S1128"6Remove this unused import 'edu.icet.crm.bo.BoFactory'.(Òï÷¤úÿÿÿÿ8Þ™ýþ„2
+java:S1128"6Remove this unused import 'edu.icet.crm.bo.BoFactory'.(Òï÷¤úÿÿÿÿ8å¾Á¤†2
 X
-java:S1128"6Remove this unused import 'edu.icet.crm.dto.Supplier'.(«¨Þ²ýÿÿÿÿ8Þ™ýþ„2
+java:S1128"6Remove this unused import 'edu.icet.crm.dto.Supplier'.(«¨Þ²ýÿÿÿÿ8å¾Á¤†2
+[
+java:S1128">Remove this unused import 'edu.icet.crm.entity.ProductEntity'.(„µÿþ8æ¾Á¤†2
 R
-java:S1128"5Remove this unused import 'edu.icet.crm.util.BoType'.(Žú®é8Þ™ýþ„2
-X
-java:S1128	"<Remove this unused import 'edu.icet.crm.util.HibernateUtil'.(éÂ’$8Þ™ýþ„2
-T
-java:S1128
-"2Remove this unused import 'org.hibernate.Session'.(È¹›§ùÿÿÿÿ8ß™ýþ„2
-S
-java:S1128"6Remove this unused import 'org.hibernate.Transaction'.(ìÌè³8ß™ýþ„2
+java:S1128	"5Remove this unused import 'edu.icet.crm.util.BoType'.(Žú®é8æ¾Á¤†2
+M
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8æ¾Á¤†2
+v
+java:S1068".Remove this unused "connection" private field.(·ãÛöûÿÿÿÿ8€ƒµ¤†2J$226ad748-bed5-4863-8371-4b7143ac3a8a
+w
+java:S1144?"4Remove this unused private "extractSupplier" method.(ñÕå8ƒµ¤†2J$f2534716-a546-4e24-9dc4-8a220d3a6826

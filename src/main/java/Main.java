@@ -4,18 +4,11 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-public class Main extends Application {
+public class Main {
 
     public static void main(String[] args) {
-        launch();
+
+        AppInitializer.main(args);
     }
 
-    @Override
-    public void start(Stage stage) throws Exception {
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/LoginPage.fxml"))));
-        stage.setResizable(false);
-        stage.getIcons().add(new Image(getClass().getResourceAsStream("/img/5.png")));
-        stage.setTitle("");
-        stage.show();
-    }
 }

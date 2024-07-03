@@ -1,7 +1,9 @@
 package edu.icet.crm.controller;
 import edu.icet.crm.bo.BoFactory;
 import edu.icet.crm.bo.custom.EmployeeBo;
+import edu.icet.crm.bo.custom.OrderBo;
 import edu.icet.crm.bo.custom.UserBo;
+import edu.icet.crm.dto.Order;
 import edu.icet.crm.util.BoType;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -15,9 +17,13 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import net.sf.jasperreports.engine.*;
+import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
+import net.sf.jasperreports.view.JasperViewer;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.List;
 import java.util.Optional;
 
 public class AdminDashboardController {
@@ -36,11 +42,12 @@ public class AdminDashboardController {
     public Label lblLoggedUserName;
 
     private EmployeeBo employeeBo;
-
+    private OrderBo orderBo;
 
 
     public AdminDashboardController() throws SQLException, ClassNotFoundException {
         this.employeeBo = BoFactory.getInstance().getBo(BoType.EMPLOYEE);
+        this.orderBo = BoFactory.getInstance().getBo(BoType.ORDER);
 
 
     }
@@ -123,6 +130,52 @@ public class AdminDashboardController {
         }
         lblLoggedUserName.setText(username);
     }
+
+    public void btnGenerateDailyReportOnAction(ActionEvent actionEvent) {
+        generateReport("Daily");
+    }
+
+    public void btnGenerateMonthlyReportOnAction(ActionEvent actionEvent) {
+        generateReport("Monthly");
+    }
+
+    public void btnGenerateAnnualReportOnAction(ActionEvent actionEvent) {
+        generateReport("Annual");
+    }
+
+    private void generateReport(String reportType) {
+        try {
+            List<Order> reportData = null;
+            String reportPath = null;
+
+            switch (reportType) {
+                case "Daily":
+                    reportData = orderBo.getDailyReportData();
+                    reportPath = "/path/to/daily_report_template.jrxml";
+                    break;
+                case "Monthly":
+                    reportData = orderBo.getMonthlyReportData();
+                    reportPath = "/path/to/monthly_report_template.jrxml";
+                    break;
+                case "Annual":
+                    reportData = orderBo.getAnnualReportData();
+                    reportPath = "/path/to/annual_report_template.jrxml";
+                    break;
+            }
+
+            JRBeanCollectionDataSource dataSource = new JRBeanCollectionDataSource(reportData);
+            JasperReport jasperReport = JasperCompileManager.compileReport(getClass().getResourceAsStream(reportPath));
+            JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, null, dataSource);
+
+            JasperViewer.viewReport(jasperPrint, false);
+
+        } catch (JRException e) {
+            e.printStackTrace();
+            showAlert(Alert.AlertType.ERROR, "Report Generation Error", "Failed to generate " + reportType + " report.");
+        }
+    }
+
+
     private void showAlert(Alert.AlertType alertType, String title, String message) {
         Alert alert = new Alert(alertType);
         alert.setTitle(title);

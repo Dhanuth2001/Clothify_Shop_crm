@@ -32,7 +32,7 @@ public class RoleDaoImpl implements RoleDao {
 
     @Override
     public List<RoleEntity> getAll() {
-        List<RoleEntity> roleEntities = new ArrayList<>();
+        /*List<RoleEntity> roleEntities = new ArrayList<>();
         String query = "SELECT roleId, roleName FROM Role";
         try (PreparedStatement preparedStatement = connection.prepareStatement(query);
              ResultSet resultSet = preparedStatement.executeQuery()) {
@@ -43,13 +43,13 @@ public class RoleDaoImpl implements RoleDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return roleEntities;
+        return roleEntities;*/
 
-        /*List<RoleEntity> roleEntities = null;
+        List<RoleEntity> roleEntities = null;
         Transaction transaction = null;
         try (Session session = HibernateUtil.getSession()) {
             transaction = session.beginTransaction();
-            roleEntities = session.createQuery("FROM Role", RoleEntity.class).list();
+            roleEntities = session.createQuery("FROM RoleEntity", RoleEntity.class).list();
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {
@@ -57,7 +57,7 @@ public class RoleDaoImpl implements RoleDao {
             }
             e.printStackTrace();
         }
-        return roleEntities;*/
+        return roleEntities;
     }
 
     private RoleEntity extractRole(ResultSet resultSet) throws SQLException {
@@ -69,7 +69,7 @@ public class RoleDaoImpl implements RoleDao {
 
     @Override
     public RoleEntity getById(Integer id) {
-        String query = "SELECT * FROM Role WHERE roleID = ?";
+        /*String query = "SELECT * FROM Role WHERE roleID = ?";
         try (
                 PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setInt(1, id);
@@ -84,9 +84,9 @@ public class RoleDaoImpl implements RoleDao {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        return null;
+        return null;*/
 
-        /*Transaction transaction = null;
+        Transaction transaction = null;
         RoleEntity roleEntity = null;
         try (Session session = HibernateUtil.getSession()) {
             transaction = session.beginTransaction();
@@ -98,11 +98,11 @@ public class RoleDaoImpl implements RoleDao {
             }
             e.printStackTrace();
         }
-        return roleEntity;*/
+        return roleEntity;
     }
 
     public RoleEntity getByName(String name) {
-        String query = "SELECT * FROM Role WHERE roleName = ?";
+        /*String query = "SELECT * FROM Role WHERE roleName = ?";
         try (
                 PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setString(1, name);
@@ -116,9 +116,9 @@ public class RoleDaoImpl implements RoleDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return null;
+        return null;*/
 
-        /*Transaction transaction = null;
+        Transaction transaction = null;
         RoleEntity roleEntity = null;
         try (Session session = HibernateUtil.getSession()) {
             transaction = session.beginTransaction();
@@ -132,12 +132,12 @@ public class RoleDaoImpl implements RoleDao {
             }
             e.printStackTrace();
         }
-        return roleEntity;*/
+        return roleEntity;
     }
 
     @Override
     public int getRoleIdByName(String role) {
-        String query = "SELECT roleID FROM Role WHERE roleName = ?";
+        /*String query = "SELECT roleID FROM Role WHERE roleName = ?";
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setString(1, role);
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -149,8 +149,8 @@ public class RoleDaoImpl implements RoleDao {
             }
         } catch (SQLException e) {
             throw new RuntimeException("Error fetching roleID for role: " + role, e);
-        }
-       /* Transaction transaction = null;
+        }*/
+        Transaction transaction = null;
         Integer roleId = null;
         try (Session session = HibernateUtil.getSession()) {
             transaction = session.beginTransaction();
@@ -164,12 +164,12 @@ public class RoleDaoImpl implements RoleDao {
             }
             e.printStackTrace();
         }
-        return roleId != null ? roleId : -1;*/
+        return roleId != null ? roleId : -1;
     }
 
     @Override
     public String getRoleNameById(int id) {
-        String query = "SELECT roleName FROM Role WHERE roleID = ?";
+        /*String query = "SELECT roleName FROM Role WHERE roleID = ?";
         try (
 
                 PreparedStatement preparedStatement = connection.prepareStatement(query)
@@ -184,8 +184,8 @@ public class RoleDaoImpl implements RoleDao {
             }
         } catch (SQLException e) {
             throw new RuntimeException("Error retrieving role name for ID: " + id, e);
-        }
-        /*Transaction transaction = null;
+        }*/
+        Transaction transaction = null;
         String roleName = null;
         try (Session session = HibernateUtil.getSession()) {
             transaction = session.beginTransaction();
@@ -199,7 +199,7 @@ public class RoleDaoImpl implements RoleDao {
             }
             e.printStackTrace();
         }
-        return roleName;*/
+        return roleName;
     }
 
     @Override

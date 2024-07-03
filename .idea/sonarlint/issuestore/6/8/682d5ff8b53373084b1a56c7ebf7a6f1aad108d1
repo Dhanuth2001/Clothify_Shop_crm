@@ -1,69 +1,66 @@
 
 w
-java:S3740"/Provide the parametrized type for this generic.(Ì£Ëâûÿÿÿÿ8åñ—Ö„2J$3a3122f1-9b8a-4dd2-b50a-848d9c51ef84
+java:S3740"/Provide the parametrized type for this generic.(Ì£Ëâûÿÿÿÿ8åñ—Ö„2J$b32f76c8-2df3-486d-8340-162d7cbb6f19
 w
-java:S3740"/Provide the parametrized type for this generic.(ïµ¿Ëüÿÿÿÿ8æñ—Ö„2J$9a4d96ec-09c9-4be7-a048-d506d8a06590
+java:S3740"/Provide the parametrized type for this generic.(ïµ¿Ëüÿÿÿÿ8æñ—Ö„2J$d05d4d79-3779-4a6a-9084-99bfb54bace8
 r
-java:S3740"/Provide the parametrized type for this generic.(¨©¤ê8æñ—Ö„2J$2db01c65-6497-4e45-acd5-4ec831f1c9ac
+java:S3740"/Provide the parametrized type for this generic.(¨©¤ê8æñ—Ö„2J$363fa6de-8823-4f89-8aab-42de50b5de35
 w
-java:S3740"/Provide the parametrized type for this generic.(º°Çşûÿÿÿÿ8æñ—Ö„2J$a172c1f1-a10b-44eb-ab05-b561d9bdca2c
+java:S3740"/Provide the parametrized type for this generic.(º°Çşûÿÿÿÿ8æñ—Ö„2J$5b54279a-4fc5-45e3-bef2-e567172e5eae
 w
-java:S3740"/Provide the parametrized type for this generic.(ÊÚÎ¨ùÿÿÿÿ8æñ—Ö„2J$54309166-5d0e-45a3-a53b-7c780a57d7be
+java:S3740"/Provide the parametrized type for this generic.(ÊÚÎ¨ùÿÿÿÿ8æñ—Ö„2J$756b74ad-1860-4011-abe8-379e9a969c8e
 w
-java:S3740"/Provide the parametrized type for this generic.(·§İñüÿÿÿÿ8æñ—Ö„2J$3a2dcfb6-a333-49fb-9070-5d9c06058352
+java:S3740"/Provide the parametrized type for this generic.(·§İñüÿÿÿÿ8æñ—Ö„2J$a24c224c-1565-4434-a8a0-b3af82a2c634
 r
-java:S3740"/Provide the parametrized type for this generic.(¸™•8æñ—Ö„2J$49600f2a-e215-46d9-8cea-6d7f27fca48e
+java:S3740"/Provide the parametrized type for this generic.(¸™•8æñ—Ö„2J$bbacbb2e-b804-45c9-9118-a5eab35b6089
 w
-java:S3740"/Provide the parametrized type for this generic.(¼»±úÿÿÿÿ8æñ—Ö„2J$9ca73d52-0e43-43e9-bc92-4e5203aee637
+java:S3740"/Provide the parametrized type for this generic.(¼»±úÿÿÿÿ8æñ—Ö„2J$78f65a34-c1e3-4bfe-9946-804aee92c937
 ¦
-java:S1104"^Make salesOverTimeChart a static final constant or non-public and provide accessors if needed.(Ì£Ëâûÿÿÿÿ8èñ—Ö„2J$69c220e0-56dd-47c3-ba6c-f8dbba09d8a9
+java:S1104"^Make salesOverTimeChart a static final constant or non-public and provide accessors if needed.(Ì£Ëâûÿÿÿÿ8èñ—Ö„2J$bb519811-c077-4170-a4f0-f7d4c41d57d1
 «
-java:S1104"cMake topSellingProductsChart a static final constant or non-public and provide accessors if needed.(ïµ¿Ëüÿÿÿÿ8èñ—Ö„2J$587b850a-8f72-4361-9b64-acd4899713a6
+java:S1104"cMake topSellingProductsChart a static final constant or non-public and provide accessors if needed.(ïµ¿Ëüÿÿÿÿ8èñ—Ö„2J$6e921a27-d1d7-4c0e-b177-757dd773cf77
 ¦
-java:S1104"^Make costBreakdownChart a static final constant or non-public and provide accessors if needed.(œÃÙäıÿÿÿÿ8èñ—Ö„2J$86cdd219-33d2-48e6-9eb7-4e0c3cc20249
+java:S1104"^Make costBreakdownChart a static final constant or non-public and provide accessors if needed.(œÃÙäıÿÿÿÿ8èñ—Ö„2J$90f1df18-c38f-41bb-9f8c-0e72041ad4c1
 —
-java:S1104"TMake tblSales a static final constant or non-public and provide accessors if needed.(¨©¤ê8èñ—Ö„2J$52dd7363-6a7b-4eb4-baf3-b9332c9e758c
+java:S1104"TMake tblSales a static final constant or non-public and provide accessors if needed.(¨©¤ê8èñ—Ö„2J$b0bc6cda-5f89-4ab1-80a3-bde95dde75a0
  
-java:S1104"XMake colProductId a static final constant or non-public and provide accessors if needed.(º°Çşûÿÿÿÿ8èñ—Ö„2J$10d5b654-5cf1-479e-8646-f71ef149718b
+java:S1104"XMake colProductId a static final constant or non-public and provide accessors if needed.(º°Çşûÿÿÿÿ8èñ—Ö„2J$14ef1fdd-3429-420e-b543-fafff714fa88
 ›
-java:S1104"SMake colName a static final constant or non-public and provide accessors if needed.(ÊÚÎ¨ùÿÿÿÿ8èñ—Ö„2J$037ef008-c3ae-4be7-b32f-1c14b494e36b
+java:S1104"SMake colName a static final constant or non-public and provide accessors if needed.(ÊÚÎ¨ùÿÿÿÿ8èñ—Ö„2J$19f12b69-c299-40e9-8ae0-a84b22a708bc
 Ÿ
-java:S1104"WMake colCategory a static final constant or non-public and provide accessors if needed.(·§İñüÿÿÿÿ8èñ—Ö„2J$a186fc7a-740c-4b9f-838c-582255202e24
+java:S1104"WMake colCategory a static final constant or non-public and provide accessors if needed.(·§İñüÿÿÿÿ8èñ—Ö„2J$78e12114-6905-4743-93cd-64687e8ce11e
 œ
-java:S1104"YMake colTotalSales a static final constant or non-public and provide accessors if needed.(¸™•8èñ—Ö„2J$5ddfbc07-1184-4d5a-aeaf-8ad22390c170
+java:S1104"YMake colTotalSales a static final constant or non-public and provide accessors if needed.(¸™•8èñ—Ö„2J$3e82612c-dbd1-4bfe-bba9-ca7573a6b19e
 ¤
-java:S1104"\Make colTotalQuantity a static final constant or non-public and provide accessors if needed.(¼»±úÿÿÿÿ8èñ—Ö„2J$f84e658b-1fc7-43d9-83eb-b078ffb41cc4
+java:S1104"\Make colTotalQuantity a static final constant or non-public and provide accessors if needed.(¼»±úÿÿÿÿ8èñ—Ö„2J$b4c420a0-734b-4714-8c86-e85d1568cded
 ¥
-java:S1104"]Make lblVisitCustomers a static final constant or non-public and provide accessors if needed.(­•Ëáüÿÿÿÿ8èñ—Ö„2J$1445893c-d601-4c80-b33d-b412fecdcd63
+java:S1104"]Make lblVisitCustomers a static final constant or non-public and provide accessors if needed.(­•Ëáüÿÿÿÿ8èñ—Ö„2J$4a6ae508-5b29-4aeb-b904-a5c34198423c
 §
-java:S1104 "_Make lblCustomerProgress a static final constant or non-public and provide accessors if needed.(’Ò†‡ÿÿÿÿÿ8èñ—Ö„2J$022829e3-7be5-482b-b4c9-bdc0160b3e25
+java:S1104 "_Make lblCustomerProgress a static final constant or non-public and provide accessors if needed.(’Ò†‡ÿÿÿÿÿ8èñ—Ö„2J$a6d41b1e-3ff5-4012-a498-339ad2804bf9
 ¢
-java:S1104""ZMake lblActualSales a static final constant or non-public and provide accessors if needed.(„ÚŒşÿÿÿÿ8èñ—Ö„2J$71e5b0c7-1d8d-4a83-9eb0-4e0b22676be7
+java:S1104""ZMake lblActualSales a static final constant or non-public and provide accessors if needed.(„ÚŒşÿÿÿÿ8èñ—Ö„2J$be75d656-9ab2-42cc-b825-f51eba0fadcd
 ª
-java:S1104#"bMake lblSalesTargetProgress a static final constant or non-public and provide accessors if needed.(¸“±ıÿÿÿÿ8èñ—Ö„2J$23019bd7-23f7-49e4-9ce5-1175a68119a2
+java:S1104#"bMake lblSalesTargetProgress a static final constant or non-public and provide accessors if needed.(¸“±ıÿÿÿÿ8èñ—Ö„2J$a9777970-8bff-4312-aa71-eda1079c34df
 •
-java:S1104("SMake btnEdit a static final constant or non-public and provide accessors if needed.(Ë¸¶q8èñ—Ö„2J$a50e4e0d-cd82-4e96-a919-27cf7a81ab0a
+java:S1104("SMake btnEdit a static final constant or non-public and provide accessors if needed.(Ë¸¶q8èñ—Ö„2J$32185e07-3d0c-437c-8884-8fd737eefa50
 ¥
-java:S1104)"]Make txtCustomerTarget a static final constant or non-public and provide accessors if needed.(ÓƒÑâÿÿÿÿÿ8èñ—Ö„2J$5b4df4cb-8189-46e6-a485-b33d22070deb
+java:S1104)"]Make txtCustomerTarget a static final constant or non-public and provide accessors if needed.(ÓƒÑâÿÿÿÿÿ8èñ—Ö„2J$9a9c9295-d00c-4556-b8e7-190e1795ad47
 
-java:S1104*"ZMake txtSalesTarget a static final constant or non-public and provide accessors if needed.(ŠÚ¾ò8èñ—Ö„2J$a5b7e847-391e-4d41-a4ee-a78b365a6657
+java:S1104*"ZMake txtSalesTarget a static final constant or non-public and provide accessors if needed.(ŠÚ¾ò8èñ—Ö„2J$0730afdc-5329-4903-9837-337760ccb0bd
 ™
-java:S1104+"QMake btnOk a static final constant or non-public and provide accessors if needed.(Ô•šúÿÿÿÿ8èñ—Ö„2J$4e2cb088-9fd1-4ebd-b78e-63b5abf45448
+java:S1104+"QMake btnOk a static final constant or non-public and provide accessors if needed.(Ô•šúÿÿÿÿ8èñ—Ö„2J$5a4acc75-e2c5-4897-84fa-d6f9eee8277a
 ~
-java:S3518j";Make sure "count" can't be zero before doing this division.(«ÒâÊ8¯•àİ„2J$22f29341-70bf-4cf3-bc1a-ba778c85c06c
+java:S3518j";Make sure "count" can't be zero before doing this division.(«ÒâÊ8¯•àİ„2J$1af6a0e5-d794-4c72-b113-23532e131866
 ~
-java:S3518_";Make sure "count" can't be zero before doing this division.(«ÒâÊ8¯•àİ„2J$cfc5bc22-111c-4798-9647-42784eadf073
-]	java:S1259"<This block of commented-out lines of code should be removed.(›ØÜøüÿÿÿÿ8‡ˆŸ…2
+java:S3518_";Make sure "count" can't be zero before doing this division.(«ÒâÊ8¯•àİ„2J$5e1259fe-50fc-46d1-9a16-411b84adbc8a
 {
-java:S1172’"2Remove this unused method parameter "actionEvent".(û°œ§ıÿÿÿÿ8¦…˜Ö„2J$25441b55-4f51-4097-aeb5-9c6ccd8f97e7
+java:S1172’"2Remove this unused method parameter "actionEvent".(û°œ§ıÿÿÿÿ8¦…˜Ö„2J$9bbe2209-e94d-42f6-aa49-676d40f8f741
 u
-java:S1172º"2Remove this unused method parameter "actionEvent".(şƒá#8ª…˜Ö„2J$fda7e813-578a-410c-b395-f9bf126bf6cf
+java:S1172º"2Remove this unused method parameter "actionEvent".(şƒá#8ª…˜Ö„2J$84499a31-7800-44b9-b7b6-6e619b558e0a
 y
-java:S1128"1Remove this unused import 'edu.icet.crm.service'.(›ğ…Ñúÿÿÿÿ8Ú•àİ„2J$0653e6d9-5814-42b6-bbb2-66d8f6ac457f
+java:S1128"1Remove this unused import 'edu.icet.crm.service'.(›ğ…Ñúÿÿÿÿ8Ú•àİ„2J$b5ca579c-de95-4ec2-80a3-45f0b0ec56bb
 u
 java:S1128
-"-Remove this unused import 'javafx.fxml.FXML'.(ÃÚ¢„şÿÿÿÿ8Ú•àİ„2J$881790eb-ff91-437c-808e-c6497238ac74
+"-Remove this unused import 'javafx.fxml.FXML'.(ÃÚ¢„şÿÿÿÿ8Ú•àİ„2J$8796046f-55b1-4019-a436-5cb4d330b725
 {
-java:S1128"3Remove this unused import 'javafx.scene.text.Text'.(˜ÿ‡Üşÿÿÿÿ8Ú•àİ„2J$c0199f99-2da8-480b-b63a-ea0a6c72ae0a
-a
-java:S1144A"?Remove this unused private "populateSalesOverTimeChart" method.(«ßÑÀÿÿÿÿÿ8§ˆŸ…2
+java:S1128"3Remove this unused import 'javafx.scene.text.Text'.(˜ÿ‡Üşÿÿÿÿ8Ú•àİ„2J$0cf4376b-40df-4a67-aacb-39e5d32ce74e

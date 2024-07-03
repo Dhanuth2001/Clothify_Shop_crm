@@ -1,9 +1,6 @@
 package edu.icet.crm.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,17 +11,19 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-/*@Entity
-@Table(name = "orderDetails")*/
+@Entity
+@Table(name = "orderDetails")
 public class OrderDetailsEntity {
-   /* @Id
-    @Column(name = "orderID")*/
-    private Integer orderID;
-    private Integer productID;
-    private Integer quantity;
-    private String sizes;
-    private Double unitPrice;
-    private Double cost;
+ @Id
+
+ @Column(name = "id")
+ private Integer orderID;
+ private Integer productID;
+
+ private Integer quantity;
+ private String sizes;
+ private Double unitPrice;
+ private Double cost;
 
 }
 

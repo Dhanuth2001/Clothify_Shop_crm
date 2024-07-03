@@ -26,4 +26,10 @@ public interface OrderBo extends SuperBo {
     double getOrderTotalForMonth(int employeeID, int monthValue) throws SQLException;
 
     double getOrderTotalForDay(int employeeID, LocalDate now) throws SQLException;
+
+    List<Order> getDailyReportData();
+
+    List<Order> getMonthlyReportData();
+
+    List<Order> getAnnualReportData();
 }

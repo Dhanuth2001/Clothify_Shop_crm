@@ -14,16 +14,15 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-/*@Entity
-@Table(name = "orders")*/
+@Entity
+@Table(name = "orders")
 public class OrderEntity {
-    /*@Id
-    @Column(name = "orderID")*/
+    @Id
+    @Column(name = "orderID")
     private Integer orderID;
 
 
     private Integer employeeID;
-
 
 
     private Integer customerID;
@@ -33,6 +32,7 @@ public class OrderEntity {
     private String paymentType;
     private LocalDate datePlaced;
 
-    @ElementCollection
+
+    @Transient
     private List<OrderDetails> orderDetailList;
 }

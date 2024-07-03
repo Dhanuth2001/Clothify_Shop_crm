@@ -39,7 +39,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <TableView fx:id="tblOrder" layoutX="446.0" layoutY="106.0" prefHeight="189.0" prefWidth="394.0">
+      <TableView fx:id="tblOrder" layoutX="446.0" layoutY="106.0" prefHeight="189.0" prefWidth="394.0" stylesheets="@../style/table.css">
          <columns>
             <TableColumn fx:id="colProductId" prefWidth="90.0" text="Product ID" />
             <TableColumn fx:id="colSize" prefWidth="55.0" text="Size" />

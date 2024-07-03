@@ -15,11 +15,11 @@ import java.time.LocalDate;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-/*@Entity
-@Table(name = "supplier")*/
+@Entity
+@Table(name = "supplier")
 public class SupplierEntity {
-   /* @Id
-    @Column(name = "supplierID")*/
+    @Id
+    @Column(name = "supplierID")
     private Integer supplierID;
     private String company;
     private String address;

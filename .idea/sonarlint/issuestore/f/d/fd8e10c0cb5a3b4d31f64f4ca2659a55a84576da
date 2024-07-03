@@ -1,72 +1,75 @@
 
-	java:S112Ò"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8·¾²÷„2J$6a7959ef-336a-4519-8890-bfa80ae50fe4
+h	java:S112Ö"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8šŸñ¬†2
+L
+java:S3740#"/Provide the parametrized type for this generic.(®÷¥¨8›Ÿñ¬†2
+L
+java:S3740)"/Provide the parametrized type for this generic.(“ĞÃâ8œŸñ¬†2
+Q
+java:S3740*"/Provide the parametrized type for this generic.(ÊÚÎ¨ùÿÿÿÿ8œŸñ¬†2
+L
+java:S3740+"/Provide the parametrized type for this generic.(§³¸İ8œŸñ¬†2
+L
+java:S3740,"/Provide the parametrized type for this generic.(ú¶øõ8œŸñ¬†2
+L
+java:S3740-"/Provide the parametrized type for this generic.(¯ÿı°8œŸñ¬†2
+L
+java:S3740."/Provide the parametrized type for this generic.(ƒäÆ8œŸñ¬†2
+L
+java:S3740/"/Provide the parametrized type for this generic.(ÕÿàÙ8œŸñ¬†2
+Q
+java:S37404"/Provide the parametrized type for this generic.(Æ²ü€úÿÿÿÿ8œŸñ¬†2
+k
+java:S1192"HDefine a constant instead of duplicating this literal "Success" 3 times.(ˆåÌúÿÿÿÿ8 Ÿñ¬†2
+i
+java:S1192`"GDefine a constant instead of duplicating this literal "Error" 14 times.(˜¨Òïşÿÿÿÿ8 Ÿñ¬†2
+{
+java:S1104 "YMake txtEmployeeId a static final constant or non-public and provide accessors if needed.(ò¯”¬úÿÿÿÿ8§Ÿñ¬†2
+x
+java:S1104!"[Make txtEmployeeName a static final constant or non-public and provide accessors if needed.(´ü¢é8§Ÿñ¬†2
+|
+java:S1104""ZMake txtEmployeeDob a static final constant or non-public and provide accessors if needed.(œß•¤ıÿÿÿÿ8§Ÿñ¬†2
+u
+java:S1104#"XMake employeeRole a static final constant or non-public and provide accessors if needed.(®÷¥¨8¨Ÿñ¬†2
+s
+java:S1104$"VMake txtAddress a static final constant or non-public and provide accessors if needed.(œàÂš8©Ÿñ¬†2
 r
-java:S3740#"/Provide the parametrized type for this generic.(®÷¥¨8¸¾²÷„2J$d9e01aef-594c-4022-b0aa-1d8501cce645
-r
-java:S3740)"/Provide the parametrized type for this generic.(“ĞÃâ8¹¾²÷„2J$5c0ab219-63c1-49b2-82cc-32349569f1ad
+java:S1104%"UMake btnSearch a static final constant or non-public and provide accessors if needed.(É¹ŠÄ8©Ÿñ¬†2
+o
+java:S1104&"RMake btnAdd a static final constant or non-public and provide accessors if needed.(‰ÂÈ8©Ÿñ¬†2
 w
-java:S3740*"/Provide the parametrized type for this generic.(ÊÚÎ¨ùÿÿÿÿ8¹¾²÷„2J$288288c0-235b-450c-9aaf-78ceaebe6c6c
+java:S1104'"UMake btnUpdate a static final constant or non-public and provide accessors if needed.(”ƒ³Šÿÿÿÿÿ8©Ÿñ¬†2
 r
-java:S3740+"/Provide the parametrized type for this generic.(§³¸İ8¹¾²÷„2J$2cf620aa-b9d4-4ae7-8cb8-e118b2a83c28
-r
-java:S3740,"/Provide the parametrized type for this generic.(ú¶øõ8¹¾²÷„2J$9719efc5-7734-45d6-bd9f-da92410f827b
-r
-java:S3740-"/Provide the parametrized type for this generic.(¯ÿı°8¹¾²÷„2J$ded4c272-0f9b-4532-b7ee-a293a5fdc318
-r
-java:S3740."/Provide the parametrized type for this generic.(ƒäÆ8¹¾²÷„2J$6d30f159-6206-41d5-89a7-06021f60c387
-r
-java:S3740/"/Provide the parametrized type for this generic.(ÕÿàÙ8¹¾²÷„2J$8361081c-abb1-4d3e-81c2-474f2bffa867
-w
-java:S37404"/Provide the parametrized type for this generic.(Æ²ü€úÿÿÿÿ8¹¾²÷„2J$7000eca3-8a7b-4ef3-a4b5-93613a4bd8c0
-
-java:S1192`"GDefine a constant instead of duplicating this literal "Error" 14 times.(˜¨Òïşÿÿÿÿ8»¾²÷„2J$534187a5-883f-4291-8155-c4d016a02289
-‘
-java:S1192›"HDefine a constant instead of duplicating this literal "Success" 3 times.(ˆåÌúÿÿÿÿ8¼¾²÷„2J$12da000e-fe72-4ecf-ac51-48663ecc61dd
-¡
-java:S1104 "YMake txtEmployeeId a static final constant or non-public and provide accessors if needed.(ò¯”¬úÿÿÿÿ8¿¾²÷„2J$decbab0e-62f1-4eed-afd1-49bd4d3e03ab
-
-java:S1104!"[Make txtEmployeeName a static final constant or non-public and provide accessors if needed.(´ü¢é8¿¾²÷„2J$74a7ed66-b492-4e1e-976e-851a29273407
-¢
-java:S1104""ZMake txtEmployeeDob a static final constant or non-public and provide accessors if needed.(œß•¤ıÿÿÿÿ8¿¾²÷„2J$d5707041-7357-460f-8c60-ab2baf0e519b
-›
-java:S1104#"XMake employeeRole a static final constant or non-public and provide accessors if needed.(®÷¥¨8¿¾²÷„2J$fd161640-b383-403d-b13d-f5cfd7e3b911
-™
-java:S1104$"VMake txtAddress a static final constant or non-public and provide accessors if needed.(œàÂš8¿¾²÷„2J$4c9c7711-596d-4d7c-b076-e284095bc7df
-˜
-java:S1104%"UMake btnSearch a static final constant or non-public and provide accessors if needed.(É¹ŠÄ8¿¾²÷„2J$aa992099-cdf0-4ae4-940f-b46d25db405e
-•
-java:S1104&"RMake btnAdd a static final constant or non-public and provide accessors if needed.(‰ÂÈ8¿¾²÷„2J$917c2f4a-c034-429f-b89e-84463de6ed00
-
-java:S1104'"UMake btnUpdate a static final constant or non-public and provide accessors if needed.(”ƒ³Šÿÿÿÿÿ8¿¾²÷„2J$b94e4bad-7a8c-4813-8685-32fe31174ee8
-˜
-java:S1104("UMake btnDelete a static final constant or non-public and provide accessors if needed.(ˆªü›8¿¾²÷„2J$ace450be-6688-4b98-bd67-2236c443a18f
-”
-java:S1104)"QMake colId a static final constant or non-public and provide accessors if needed.(“ĞÃâ8¿¾²÷„2J$87dc2944-0052-4cdf-8147-678b8dcf3e21
-›
-java:S1104*"SMake colName a static final constant or non-public and provide accessors if needed.(ÊÚÎ¨ùÿÿÿÿ8¿¾²÷„2J$48aa3e6d-2ef4-4bd1-8891-9daaef9acbff
-•
-java:S1104+"RMake colDob a static final constant or non-public and provide accessors if needed.(§³¸İ8¿¾²÷„2J$07883ee9-3e27-461e-9537-26be8580d9c5
-–
-java:S1104,"SMake colRole a static final constant or non-public and provide accessors if needed.(ú¶øõ8À¾²÷„2J$158ee505-f067-48c6-9ec0-7049dc490af7
-™
-java:S1104-"VMake colAddress a static final constant or non-public and provide accessors if needed.(¯ÿı°8À¾²÷„2J$0d4e3491-21b2-4bb4-9c89-98c340688414
-—
-java:S1104."TMake colEmail a static final constant or non-public and provide accessors if needed.(ƒäÆ8À¾²÷„2J$7d119e00-4540-456a-a19e-00f6154f01b9
-›
-java:S1104/"XMake colContactNo a static final constant or non-public and provide accessors if needed.(ÕÿàÙ8À¾²÷„2J$51574822-a1fb-4b5a-bedf-c852364ad5d4
-›
-java:S11040"SMake txtTime a static final constant or non-public and provide accessors if needed.(İ—’Ùÿÿÿÿÿ8À¾²÷„2J$07eca5d4-fe09-41eb-a5d5-8bfd04d64152
-›
-java:S11041"SMake txtDate a static final constant or non-public and provide accessors if needed.(˜º©²ùÿÿÿÿ8À¾²÷„2J$551f8f2a-13b6-44b0-80cc-09f1aec1a2e8
-œ
-java:S11042"TMake txtEmail a static final constant or non-public and provide accessors if needed.(„Å«ıÿÿÿÿ8À¾²÷„2J$7d64ab0c-b212-49e3-ac98-b0410e08d8bd
- 
-java:S11043"XMake txtContactNo a static final constant or non-public and provide accessors if needed.(¿ıµÁÿÿÿÿÿ8À¾²÷„2J$87331d87-13df-428d-a79a-bfdc7821be16
-¡
-java:S11044"YMake employeeTable a static final constant or non-public and provide accessors if needed.(Æ²ü€úÿÿÿÿ8À¾²÷„2J$5a92ce69-5ac3-4891-a91a-e3cb05b58056
-œ
-java:S11045"TMake btnClear a static final constant or non-public and provide accessors if needed.(¸¹„üÿÿÿÿ8À¾²÷„2J$b6295343-655e-4bbd-b4b2-16527d060c4c
-r	java:S106g"+Replace this use of System.out by a logger.(ïÚïşÿÿÿÿ8®¿²÷„2J$0fa70e77-7014-46b3-b3a0-8ad63b9ced1e
-n	java:S106˜"+Replace this use of System.out by a logger.(¼¡¨ò8·¿²÷„2J$f1bc929d-aa11-450e-9206-502c3eefe0fe
-
-java:S5998ø"LRefactor this repetition that can lead to a stack overflow for large inputs.(õæˆB8Å¿²÷„2J$5a67b655-d64b-4a6a-8ae2-979df4669132
+java:S1104("UMake btnDelete a static final constant or non-public and provide accessors if needed.(ˆªü›8©Ÿñ¬†2
+n
+java:S1104)"QMake colId a static final constant or non-public and provide accessors if needed.(“ĞÃâ8©Ÿñ¬†2
+u
+java:S1104*"SMake colName a static final constant or non-public and provide accessors if needed.(ÊÚÎ¨ùÿÿÿÿ8©Ÿñ¬†2
+o
+java:S1104+"RMake colDob a static final constant or non-public and provide accessors if needed.(§³¸İ8©Ÿñ¬†2
+p
+java:S1104,"SMake colRole a static final constant or non-public and provide accessors if needed.(ú¶øõ8©Ÿñ¬†2
+s
+java:S1104-"VMake colAddress a static final constant or non-public and provide accessors if needed.(¯ÿı°8©Ÿñ¬†2
+q
+java:S1104."TMake colEmail a static final constant or non-public and provide accessors if needed.(ƒäÆ8©Ÿñ¬†2
+u
+java:S1104/"XMake colContactNo a static final constant or non-public and provide accessors if needed.(ÕÿàÙ8ªŸñ¬†2
+u
+java:S11040"SMake txtTime a static final constant or non-public and provide accessors if needed.(İ—’Ùÿÿÿÿÿ8ªŸñ¬†2
+u
+java:S11041"SMake txtDate a static final constant or non-public and provide accessors if needed.(˜º©²ùÿÿÿÿ8ªŸñ¬†2
+v
+java:S11042"TMake txtEmail a static final constant or non-public and provide accessors if needed.(„Å«ıÿÿÿÿ8ªŸñ¬†2
+z
+java:S11043"XMake txtContactNo a static final constant or non-public and provide accessors if needed.(¿ıµÁÿÿÿÿÿ8ªŸñ¬†2
+{
+java:S11044"YMake employeeTable a static final constant or non-public and provide accessors if needed.(Æ²ü€úÿÿÿÿ8ªŸñ¬†2
+v
+java:S11045"TMake btnClear a static final constant or non-public and provide accessors if needed.(¸¹„üÿÿÿÿ8ªŸñ¬†2
+L	java:S106g"+Replace this use of System.out by a logger.(ïÚïşÿÿÿÿ8· ñ¬†2
+M	java:S106—"+Replace this use of System.out by a logger.(ÙúÜúúÿÿÿÿ8Á ñ¬†2
+H	java:S106™"+Replace this use of System.out by a logger.(åşœ³8Á ñ¬†2
+M	java:S106›"+Replace this use of System.out by a logger.(ØÉºìÿÿÿÿÿ8Á ñ¬†2
+M	java:S106¢"+Replace this use of System.out by a logger.(ØÉºìÿÿÿÿÿ8Ã ñ¬†2
+i
+java:S5998ü"LRefactor this repetition that can lead to a stack overflow for large inputs.(õæˆB8Ó ñ¬†2

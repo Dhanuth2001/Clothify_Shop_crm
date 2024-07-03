@@ -15,9 +15,11 @@ import java.time.LocalDate;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-
+@Entity
+@Table(name = "employee")
 public class EmployeeEntity {
-
+    @Id
+    @Column(name = "employeeId")
     private Integer employeeId;
 
     private Integer roleId;

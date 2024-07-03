@@ -4,6 +4,7 @@ import edu.icet.crm.dao.custom.CustomerDao;
 import edu.icet.crm.db.DbConnection;
 import edu.icet.crm.entity.CustomerEntity;
 import edu.icet.crm.entity.EmployeeEntity;
+import edu.icet.crm.entity.ProductEntity;
 import edu.icet.crm.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -25,7 +26,7 @@ public class CustomerDaoImpl implements CustomerDao {
     }
     @Override
     public List<CustomerEntity> getAll() {
-        List<CustomerEntity> customerEntities = new ArrayList<>();
+        /*List<CustomerEntity> customerEntities = new ArrayList<>();
         String query = "SELECT customerID, name, dob,  contactEmail, contactNumber FROM Customer";
         try (PreparedStatement preparedStatement = connection.prepareStatement(query);
              ResultSet resultSet = preparedStatement.executeQuery()) {
@@ -36,14 +37,23 @@ public class CustomerDaoImpl implements CustomerDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return customerEntities;
-       /* List<CustomerEntity> customerEntities = new ArrayList<>();
-        try (Session session = HibernateUtil.getSession()) {
-            customerEntities = session.createQuery("FROM CustomerEntity", CustomerEntity.class).list();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
         return customerEntities;*/
+        List<CustomerEntity> customerEntities = new ArrayList<>();
+        Session session = HibernateUtil.getSession();
+        Transaction transaction = null;
+        try {
+            transaction = session.beginTransaction();
+            customerEntities = session.createQuery("FROM CustomerEntity", CustomerEntity.class).list();
+            transaction.commit();
+        } catch (Exception e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            e.printStackTrace();
+        }finally {
+            session.close();
+        }
+        return customerEntities;
     }
 
     private CustomerEntity extractCustomer(ResultSet resultSet) throws SQLException {
@@ -58,7 +68,7 @@ public class CustomerDaoImpl implements CustomerDao {
 
     @Override
     public CustomerEntity getById(Integer id) {
-        String query = "SELECT customerID, name, dob,  contactEmail, contactNumber FROM Customer WHERE CustomerId = ?";
+        /*String query = "SELECT customerID, name, dob,  contactEmail, contactNumber FROM Customer WHERE CustomerId = ?";
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setInt(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -69,29 +79,41 @@ public class CustomerDaoImpl implements CustomerDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return null;
-        /*try (Session session = HibernateUtil.getSession()) {
-            return session.get(CustomerEntity.class, id);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
         return null;*/
+
+        CustomerEntity customerEntity = null;
+        Session session = HibernateUtil.getSession();
+        Transaction transaction = null;
+        try {
+            transaction = session.beginTransaction();
+
+            customerEntity = session.get(CustomerEntity.class, id);
+            transaction.commit();
+        } catch (Exception e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            e.printStackTrace();
+        }finally {
+            session.close();
+        }
+        return customerEntity;
     }
 
     @Override
     public boolean add(CustomerEntity entity) {
 
-       /*Session session = HibernateUtil.getSession();
-        session.getTransaction().begin();
-        session.persist(entity);
-        session.getTransaction().commit();
-        session.close();*/
+//       Session session = HibernateUtil.getSession();
+//        session.getTransaction().begin();
+//        session.persist(entity);
+//        session.getTransaction().commit();
+//        session.close();
 
-        /*Session session = HibernateUtil.getSession();
+        Session session = HibernateUtil.getSession();
         Transaction transaction = null;
         try {
             transaction = session.beginTransaction();
-            session.save(entity);
+            session.persist(entity);
             transaction.commit();
             return true;
         } catch (Exception e) {
@@ -102,10 +124,10 @@ public class CustomerDaoImpl implements CustomerDao {
             return false;
         } finally {
             session.close();
-        }*/
+        }
 
 
-        String query = "INSERT INTO customer (customerID, name, dob, contactEmail, contactNumber) VALUES (?, ?, ?, ?, ?)";
+        /*String query = "INSERT INTO customer (customerID, name, dob, contactEmail, contactNumber) VALUES (?, ?, ?, ?, ?)";
         try (
                 PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setInt(1, entity.getCustomerID());
@@ -118,29 +140,29 @@ public class CustomerDaoImpl implements CustomerDao {
             return preparedStatement.executeUpdate() > 0;
         } catch (SQLException e) {
             e.printStackTrace();
-        }
-        return false;
+        }*/
+        //return false;
     }
 
     @Override
     public boolean update(CustomerEntity entity) {
-        String query = "UPDATE customer SET name = ?, dob = ?, contactEmail = ?, contactNumber = ? WHERE CustomerID = ?";
-        try (
-                PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-
-            preparedStatement.setString(1, entity.getName());
-            preparedStatement.setDate(2, Date.valueOf(entity.getDob()));
-            preparedStatement.setString(3, entity.getContactEmail());
-            preparedStatement.setString(4, entity.getContactNumber());
-            preparedStatement.setInt(5, entity.getCustomerID());
-
-
-            return preparedStatement.executeUpdate() > 0;
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return false;
-        /*Session session = HibernateUtil.getSession();
+//        String query = "UPDATE customer SET name = ?, dob = ?, contactEmail = ?, contactNumber = ? WHERE CustomerID = ?";
+//        try (
+//                PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+//
+//            preparedStatement.setString(1, entity.getName());
+//            preparedStatement.setDate(2, Date.valueOf(entity.getDob()));
+//            preparedStatement.setString(3, entity.getContactEmail());
+//            preparedStatement.setString(4, entity.getContactNumber());
+//            preparedStatement.setInt(5, entity.getId());
+//
+//
+//            return preparedStatement.executeUpdate() > 0;
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//        return false;
+        Session session = HibernateUtil.getSession();
         Transaction transaction = null;
         try {
             transaction = session.beginTransaction();
@@ -155,20 +177,20 @@ public class CustomerDaoImpl implements CustomerDao {
             return false;
         } finally {
             session.close();
-        }*/
+        }
     }
 
     @Override
-    public boolean delete(Integer id) throws SQLException {
-        String query = "DELETE FROM Customer WHERE customerID = ?";
-        try (
-                PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-            preparedStatement.setInt(1, id);
-            return preparedStatement.executeUpdate() > 0;
-        } catch (SQLIntegrityConstraintViolationException e) {
-            throw new SQLException("Cannot delete customer with ID " + id + " because they are referenced in other records.", e);
-        }
-        /*Session session = HibernateUtil.getSession();
+    public boolean delete(Integer id) {
+//        String query = "DELETE FROM Customer WHERE customerID = ?";
+//        try (
+//                PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+//            preparedStatement.setInt(1, id);
+//            return preparedStatement.executeUpdate() > 0;
+//        } catch (SQLIntegrityConstraintViolationException e) {
+//            throw new SQLException("Cannot delete customer with ID " + id + " because they are referenced in other records.", e);
+//        }
+        Session session = HibernateUtil.getSession();
         Transaction transaction = null;
         try {
             transaction = session.beginTransaction();
@@ -184,16 +206,16 @@ public class CustomerDaoImpl implements CustomerDao {
                 transaction.rollback();
             }
             e.printStackTrace();
-            throw new SQLException("Error deleting customer with ID " + id, e);
+            return false;
         } finally {
             session.close();
-        }*/
+        }
 
     }
 
     @Override
     public List<Integer> getCustomerIDs() {
-        List<Integer> customerIDs = new ArrayList<>();
+       /* List<Integer> customerIDs = new ArrayList<>();
         String query = "SELECT customerID FROM customer";
 
         try (
@@ -209,23 +231,30 @@ public class CustomerDaoImpl implements CustomerDao {
             e.printStackTrace();
         }
 
-        return customerIDs;
-        /*List<Integer> customerIDs = new ArrayList<>();
-        try (Session session = HibernateUtil.getSession()) {
-            List<CustomerEntity> customers = session.createQuery("SELECT c FROM Customer c", CustomerEntity.class).list();
-            for (CustomerEntity customer : customers) {
-                customerIDs.add(customer.getId());
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
         return customerIDs;*/
+        List<Integer> customerIDs = new ArrayList<>();
+        Session session = HibernateUtil.getSession();
+        Transaction transaction = null;
+        try {
+            transaction = session.beginTransaction();
+            customerIDs = session.createQuery("SELECT c.id FROM CustomerEntity c", Integer.class).list();
+            transaction.commit();
+
+        } catch (Exception e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            e.printStackTrace();
+        }finally {
+            session.close();
+        }
+        return customerIDs;
 
     }
 
     @Override
     public String getCustomerEmailById(Integer customerID) {
-        String query = "SELECT contactEmail FROM Customer WHERE customerID = ?";
+        /*String query = "SELECT contactEmail FROM Customer WHERE customerID = ?";
         try (
                 PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setInt(1, customerID);
@@ -235,15 +264,24 @@ public class CustomerDaoImpl implements CustomerDao {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-        }
-        /*try (Session session = HibernateUtil.getSession()) {
+        }*/
+        Session session = HibernateUtil.getSession();
+        Transaction transaction = null;
+        try {
+            transaction = session.beginTransaction();
             CustomerEntity customer = session.get(CustomerEntity.class, customerID);
+            transaction.commit();
             if (customer != null) {
                 return customer.getContactEmail();
             }
         } catch (Exception e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
             e.printStackTrace();
-        }*/
+        }finally {
+            session.close();
+        }
         return null;
     }
 }

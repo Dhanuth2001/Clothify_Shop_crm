@@ -5,6 +5,7 @@ import edu.icet.crm.bo.custom.*;
 import edu.icet.crm.dto.*;
 import edu.icet.crm.service.*;
 import edu.icet.crm.util.BoType;
+import edu.icet.crm.util.SizeType;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -132,8 +133,8 @@ public class EmployeeHomePageController {
     }
 
     private void loadSizesByProductId(int productId) {
-        List<String> sizes = productBo.getSizesByProductId(productId);
-        ObservableList<String> observableSizes = FXCollections.observableArrayList(sizes);
+        List<SizeType> sizes = productBo.getSizesByProductId(productId);
+        ObservableList<SizeType> observableSizes = FXCollections.observableArrayList(sizes);
         comboSize.setItems(observableSizes);
     }
 

@@ -1,31 +1,27 @@
 
-}	java:S125/"<This block of commented-out lines of code should be removed.(”¥8Æ­•ş„2J$36304f7a-f369-48b7-98ce-83b128433233
-ƒ	java:S125M"<This block of commented-out lines of code should be removed.(»»İ¤ÿÿÿÿÿ8Ø­•ş„2J$59cc9db8-13cf-4bc4-8876-983336374912
-ƒ	java:S125}"<This block of commented-out lines of code should be removed.(»»İ¤ÿÿÿÿÿ8Ş­•ş„2J$3488869a-a603-470e-86d6-cbb73bba9fcd
-„	java:S125¡"<This block of commented-out lines of code should be removed.(»»İ¤ÿÿÿÿÿ8ÊÉ•ş„2J$b7b97261-fb61-4335-abd1-7e45c8e39141
-„	java:S125¼"<This block of commented-out lines of code should be removed.(»»İ¤ÿÿÿÿÿ8¹ —ş„2J$84216834-8369-4533-8a38-6abcfa2ccabb
-	java:S125à"<This block of commented-out lines of code should be removed.(ˆ“Å‹8¯Á—ş„2J$5c26e8f5-c59e-406a-96f3-1eb2a0313021
-„	java:S125ş"<This block of commented-out lines of code should be removed.(¥ˆ°¬øÿÿÿÿ8Ş¿–ş„2J$fe8371a0-d9d3-456d-ab6b-c9e5265ff8dc
-„	java:S125œ"<This block of commented-out lines of code should be removed.(»»İ¤ÿÿÿÿÿ8ô¾˜ş„2J$fa684820-df50-4368-be2a-c2dcaee5dd92
-„	java:S125Â"<This block of commented-out lines of code should be removed.(»»İ¤ÿÿÿÿÿ8€ô˜ş„2J$4c40c702-7ffd-4878-82ad-b53e13fc6fee
-„	java:S125ì"<This block of commented-out lines of code should be removed.(»»İ¤ÿÿÿÿÿ8Ü›šş„2J$49210ad2-d692-4566-8101-7080c4a8a90f
-	java:S125”"<This block of commented-out lines of code should be removed.(Şïæé8Û­•ş„2J$0cb816b8-4f46-452d-8dc0-fe051f0ce42f
-„	java:S125±"<This block of commented-out lines of code should be removed.(»»İ¤ÿÿÿÿÿ8µ›ş„2J$16cf3996-ae92-455a-9585-67f0cb576f21
-X
-java:S1128"6Remove this unused import 'edu.icet.crm.bo.BoFactory'.(Òï÷¤úÿÿÿÿ8ç•ış„2
-W
-java:S1128":Remove this unused import 'edu.icet.crm.bo.custom.RoleBo'.(±Ë Ñ8ç•ış„2
-\
-java:S1128":Remove this unused import 'edu.icet.crm.dto.OrderDetails'.(ŠæÖşÿÿÿÿ8ç•ış„2
-Q
-java:S1128"5Remove this unused import 'edu.icet.crm.dto.Product'.(ƒy8è•ış„2
-a
-java:S1128	"?Remove this unused import 'edu.icet.crm.entity.EmployeeEntity'.(„Ÿ¤ºûÿÿÿÿ8è•ış„2
-R
-java:S1128"5Remove this unused import 'edu.icet.crm.util.BoType'.(ú®é8è•ış„2
-X
-java:S1128"<Remove this unused import 'edu.icet.crm.util.HibernateUtil'.(éÂ’$8é•ış„2
-T
-java:S1128"2Remove this unused import 'org.hibernate.Session'.(È¹›§ùÿÿÿÿ8é•ış„2
-S
-java:S1128"6Remove this unused import 'org.hibernate.Transaction'.(ìÌè³8é•ış„2
+ƒ	java:S125"<This block of commented-out lines of code should be removed.(÷ìØ‹ıÿÿÿÿ8ó—ø£†2J$59b31554-f6a8-4b3e-bf98-72bf11967a37
+ƒ	java:S125>"<This block of commented-out lines of code should be removed.(¡Êè—şÿÿÿÿ8÷—ø£†2J$e7996816-7e46-4abc-8f36-7d10c86614dc
+~	java:S125k"<This block of commented-out lines of code should be removed.(±¼€‹8û—ø£†2J$9fea448b-01ac-4e56-8278-b2d8eccaa8db
+ƒ	java:S125|"<This block of commented-out lines of code should be removed.(‚‰Ÿšûÿÿÿÿ8û—ø£†2J$daf95e85-9876-4064-9043-99171fd2b43e
+	java:S125‚"<This block of commented-out lines of code should be removed.(ŞÎÂÚ8û—ø£†2J$3699d078-e86a-4ed9-9606-94bb3f64fddf
+„	java:S125—"<This block of commented-out lines of code should be removed.(©Ü ÿûÿÿÿÿ8ş—ø£†2J$a564e1e0-f21d-4c0a-879d-01fba4de1565
+w
+java:S1874®".Remove this use of "update"; it is deprecated.(¥·òÂøÿÿÿÿ8ÿ—ø£†2J$ed5327e0-8226-4b70-9e93-6685bfef4148
+	java:S125¾"<This block of commented-out lines of code should be removed.(Õö¨¬8˜ø£†2J$4dd0bcb1-f36d-4383-bf55-17a142ede9fc
+w
+java:S1874Î".Remove this use of "delete"; it is deprecated.(´ê²×ÿÿÿÿÿ8‚˜ø£†2J$683a55fb-73ac-441e-b2f5-cc3ac05c8c1c
+	java:S125à"<This block of commented-out lines of code should be removed.(‚Øğ•8ƒ˜ø£†2J$ccb615c8-d2ee-4d0b-ac32-7a6f15fbdb83
+„	java:S125ƒ"<This block of commented-out lines of code should be removed.(îß·úÿÿÿÿ8…˜ø£†2J$65535dd3-a217-47da-b724-e91cbfb67ada
+~	java:S125¦"<This block of commented-out lines of code should be removed.(ĞÎ¡[8‡˜ø£†2J$bdce0c5e-edc7-429c-a26a-92fc9a910bd1
+~	java:S125È"<This block of commented-out lines of code should be removed.(ú€‹8‰˜ø£†2J$2d545759-c059-43a0-bd33-1112374db1cd
+r
+java:S1874ä".Remove this use of "update"; it is deprecated.(äôüü8Š˜ø£†2J$8c8adac7-1599-4904-a099-bb46eaa58e2d
+~	java:S125ö"<This block of commented-out lines of code should be removed.(×©ä8Œ˜ø£†2J$fb3aa578-8e27-43b9-accd-c7ca6532571f
+r
+java:S1874‘".Remove this use of "update"; it is deprecated.(äôüü8˜ø£†2J$80e1677c-cdde-4788-8049-d0741965d244
+	java:S125¢"<This block of commented-out lines of code should be removed.(Áç¶´8˜ø£†2J$ec48b9f8-4c24-49ab-b3d7-2f9bbc56bd07
+	java:S125È"<This block of commented-out lines of code should be removed.(œœ¬¾8‘˜ø£†2J$57316341-c0e7-4cfb-8503-9489069d1ba3
+v
+java:S1068".Remove this unused "connection" private field.(·ãÛöûÿÿÿÿ8”˜ø£†2J$cb01ee27-ec5f-4e89-9921-19c4aa1682fa
+|
+java:S1144\"4Remove this unused private "extractProducts" method.(ë“Û€úÿÿÿÿ8•˜ø£†2J$a538130f-971f-4e95-a424-12fb898b880e

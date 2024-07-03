@@ -1,6 +1,8 @@
 package edu.icet.crm.entity;
 
 
+import edu.icet.crm.util.CategoryType;
+import edu.icet.crm.util.SizeType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,18 +15,24 @@ import java.time.LocalDate;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-/*@Entity
-@Table(name = "product")*/
+@Entity
+@Table(name = "product")
 public class ProductEntity {
-    /*@Id
-    @Column(name = "productID")*/
+    @Id
+    @Column(name = "productID")
     private Integer productID;
     private LocalDate date;
     private String name;
-    private String category;
-    private String size;
+
+    @Enumerated(EnumType.STRING)
+    private CategoryType categoryType;
+
+    @Enumerated(EnumType.STRING)
+    private SizeType sizeType;
+
     private Double unitPrice;
     private Integer quantity;
+
 
 
     private Integer supplierID;

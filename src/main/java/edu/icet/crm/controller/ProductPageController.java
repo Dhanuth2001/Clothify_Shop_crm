@@ -6,6 +6,8 @@ import edu.icet.crm.bo.custom.SupplierBo;
 import edu.icet.crm.dto.Product;
 import edu.icet.crm.dto.Supplier;
 import edu.icet.crm.util.BoType;
+import edu.icet.crm.util.CategoryType;
+import edu.icet.crm.util.SizeType;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -168,8 +170,8 @@ public class ProductPageController {
                     Integer.parseInt(txtProductId.getText()),
                     LocalDate.now(),
                     txtProductName.getText(),
-                    String.valueOf(comboProductCategory.getValue()),
-                    String.valueOf(comboProductSize.getValue()),
+                    CategoryType.valueOf(comboProductCategory.getValue().toString()),
+                    SizeType.valueOf(comboProductSize.getValue().toString()),
                     Double.valueOf(txtUnitPrice.getText()),
                     Integer.valueOf(txtProductQuantity.getText()),
                     Integer.valueOf(comboSupplierID.getValue().toString())
@@ -193,8 +195,8 @@ public class ProductPageController {
                     Integer.parseInt(txtProductId.getText()),
                     LocalDate.now(),
                     txtProductName.getText(),
-                    String.valueOf(comboProductCategory.getValue()),
-                    String.valueOf(comboProductSize.getValue()),
+                    CategoryType.valueOf(comboProductCategory.getValue().toString()),
+                    SizeType.valueOf(comboProductSize.getValue().toString()),
                     Double.valueOf(txtUnitPrice.getText()),
                     Integer.valueOf(txtProductQuantity.getText()),
                     Integer.valueOf(comboSupplierID.getValue().toString())

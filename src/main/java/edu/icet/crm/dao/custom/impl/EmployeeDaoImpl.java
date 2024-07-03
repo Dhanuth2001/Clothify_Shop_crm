@@ -6,6 +6,7 @@ import edu.icet.crm.dao.custom.EmployeeDao;
 import edu.icet.crm.db.DbConnection;
 import edu.icet.crm.dto.Role;
 import edu.icet.crm.entity.EmployeeEntity;
+import edu.icet.crm.entity.ProductEntity;
 import edu.icet.crm.util.BoType;
 import edu.icet.crm.util.HibernateUtil;
 import org.hibernate.Session;
@@ -29,7 +30,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 
     @Override
     public List<EmployeeEntity> getAll() {
-        List<EmployeeEntity> employeeEntitylist = new ArrayList<>();
+        /*List<EmployeeEntity> employeeEntitylist = new ArrayList<>();
         String query = "SELECT * FROM Employee ";
         try (PreparedStatement preparedStatement = connection.prepareStatement(query);
              ResultSet resultSet = preparedStatement.executeQuery()) {
@@ -40,29 +41,30 @@ public class EmployeeDaoImpl implements EmployeeDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return employeeEntitylist;
+        return employeeEntitylist;*/
 
-        /*List<EmployeeEntity> employeeEntityList = new ArrayList<>();
+        List<EmployeeEntity> employeeEntityList = new ArrayList<>();
+        Session session = HibernateUtil.getSession();
         Transaction transaction = null;
-        try (Session session = HibernateUtil.getSession()) {
+        try {
             transaction = session.beginTransaction();
-            List<?> result = session.createQuery("SELECT e FROM EmployeeEntity e JOIN FETCH e.role").list();
-            for (Object obj : result) {
-                employeeEntityList.add((EmployeeEntity) obj);
-            }
+            employeeEntityList = session.createQuery("FROM EmployeeEntity", EmployeeEntity.class).list();
+
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {
                 transaction.rollback();
             }
             e.printStackTrace();
+        } finally {
+            session.close();
         }
-        return employeeEntityList;*/
+        return employeeEntityList;
     }
 
     @Override
     public EmployeeEntity getById(Integer id) {
-        String query = "SELECT * FROM Employee WHERE employeeID = ?";
+        /*String query = "SELECT * FROM Employee WHERE employeeID = ?";
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setInt(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -73,10 +75,12 @@ public class EmployeeDaoImpl implements EmployeeDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return null;
-        /*Transaction transaction = null;
+        return null;*/
+
         EmployeeEntity employeeEntity = null;
-        try (Session session = HibernateUtil.getSession()) {
+        Session session = HibernateUtil.getSession();
+        Transaction transaction = null;
+        try {
             transaction = session.beginTransaction();
             employeeEntity = session.get(EmployeeEntity.class, id);
             transaction.commit();
@@ -85,8 +89,10 @@ public class EmployeeDaoImpl implements EmployeeDao {
                 transaction.rollback();
             }
             e.printStackTrace();
+        } finally {
+            session.close();
         }
-        return employeeEntity;*/
+        return employeeEntity;
     }
 
     @Override
@@ -96,7 +102,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
         //if (role == null) {
           //  return false;
        // }
-        String query = "INSERT INTO Employee (employeeID, roleId, name, dob, doJoin, address, contactEmail, contactNumber) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        /*String query = "INSERT INTO Employee (employeeID, roleId, name, dob, doJoin, address, contactEmail, contactNumber) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setInt(1, employeeEntity.getEmployeeId());
             preparedStatement.setInt(2, employeeEntity.getRoleId());
@@ -110,12 +116,39 @@ public class EmployeeDaoImpl implements EmployeeDao {
             return preparedStatement.executeUpdate() > 0;
         } catch (SQLException e) {
             e.printStackTrace();
-        }
-        return false;
-        /*Transaction transaction = null;
-        try (Session session = HibernateUtil.getSession()) {
+        }*/
+        /*Session session = HibernateUtil.getSession();
+        session.getTransaction().begin();
+        session.persist(employeeEntity);
+        session.getTransaction().commit();
+        session.close();
+        return false;*/
+//        System.out.println("Adding employee: " + employeeEntity);
+//        try (Session session = HibernateUtil.getSession()) {
+//            Transaction transaction = session.beginTransaction();
+//            try {
+//                session.persist(employeeEntity);
+//                System.out.println("Employee persisted: " + employeeEntity);
+//                transaction.commit();
+//                System.out.println("Transaction committed");
+//                return true;
+//            } catch (Exception e) {
+//                if (transaction != null) {
+//                    transaction.rollback();
+//                }
+//                e.printStackTrace();
+//                return false;
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            return false;
+//        }
+
+        Session session = HibernateUtil.getSession();
+        Transaction transaction = null;
+        try {
             transaction = session.beginTransaction();
-            session.save(employeeEntity);
+            session.persist(employeeEntity);
             transaction.commit();
             return true;
         } catch (Exception e) {
@@ -124,7 +157,9 @@ public class EmployeeDaoImpl implements EmployeeDao {
             }
             e.printStackTrace();
             return false;
-        }*/
+        }finally {
+            session.close();
+        }
     }
 
     @Override
@@ -132,21 +167,21 @@ public class EmployeeDaoImpl implements EmployeeDao {
         /*Role role = roleBo.getRoleByName(employeeEntity.getRole());
         if (role == null) {
             return false;
-        }*/
-       String query = "UPDATE Employee SET name = ?, dob = ?, roleId = ?, address = ?, contactEmail = ?, contactNumber = ? WHERE employeeId = ?";
-        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-            preparedStatement.setString(1, employeeEntity.getName());
-            preparedStatement.setDate(2, Date.valueOf(employeeEntity.getDob()));
-            preparedStatement.setInt(3, employeeEntity.getRoleId());
-            preparedStatement.setString(4, employeeEntity.getAddress());
-            preparedStatement.setString(5, employeeEntity.getEmail());
-            preparedStatement.setString(6, employeeEntity.getContactNo());
-            preparedStatement.setInt(7, employeeEntity.getEmployeeId());
-            return preparedStatement.executeUpdate() > 0;
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return false;
+//        }*/
+//       String query = "UPDATE Employee SET name = ?, dob = ?, roleId = ?, address = ?, contactEmail = ?, contactNumber = ? WHERE employeeId = ?";
+//        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+//            preparedStatement.setString(1, employeeEntity.getName());
+//            preparedStatement.setDate(2, Date.valueOf(employeeEntity.getDob()));
+//            preparedStatement.setInt(3, employeeEntity.getRoleId());
+//            preparedStatement.setString(4, employeeEntity.getAddress());
+//            preparedStatement.setString(5, employeeEntity.getEmail());
+//            preparedStatement.setString(6, employeeEntity.getContactNo());
+//            preparedStatement.setInt(7, employeeEntity.getId());
+//            return preparedStatement.executeUpdate() > 0;
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//        return false;
 
         /*Transaction transaction = null;
         try (Session session = HibernateUtil.getSession()) {
@@ -161,18 +196,34 @@ public class EmployeeDaoImpl implements EmployeeDao {
             e.printStackTrace();
             return false;
         }*/
+        Session session = HibernateUtil.getSession();
+        Transaction transaction = null;
+        try {
+            transaction = session.beginTransaction();
+            session.update(employeeEntity);
+            transaction.commit();
+            return true;
+        } catch (Exception e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            e.printStackTrace();
+            return false;
+        }finally {
+            session.close();
+        }
     }
 
     @Override
     public boolean delete(Integer id) {
-       String query = "DELETE FROM Employee WHERE employeeId = ?";
-        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-            preparedStatement.setInt(1, id);
-            return preparedStatement.executeUpdate() > 0;
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return false;
+//       String query = "DELETE FROM Employee WHERE employeeId = ?";
+//        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+//            preparedStatement.setInt(1, id);
+//            return preparedStatement.executeUpdate() > 0;
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//        return false;
 
         /*Transaction transaction = null;
         try (Session session = HibernateUtil.getSession()) {
@@ -191,6 +242,27 @@ public class EmployeeDaoImpl implements EmployeeDao {
             e.printStackTrace();
             return false;
         }*/
+
+        Session session = HibernateUtil.getSession();
+        Transaction transaction = null;
+        try {
+            transaction = session.beginTransaction();
+            EmployeeEntity employeeEntity = session.get(EmployeeEntity.class, id);
+            if (employeeEntity != null) {
+                session.delete(employeeEntity);
+                transaction.commit();
+                return true;
+            }
+            return false;
+        } catch (Exception e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            e.printStackTrace();
+            return false;
+        }finally {
+            session.close();
+        }
     }
 
     private EmployeeEntity extractEmployee(ResultSet resultSet) throws SQLException {
@@ -208,7 +280,8 @@ public class EmployeeDaoImpl implements EmployeeDao {
 
     @Override
     public String getUsernameByEmail(String loggedUserEmail) {
-        String query = "SELECT e.name " +
+
+/*        String query = "SELECT e.name " +
                 "FROM Employee e " +
                 "JOIN User u ON e.employeeID = u.employeeID " +
                 "WHERE u.email = ?";
@@ -222,41 +295,56 @@ public class EmployeeDaoImpl implements EmployeeDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return null;
+        return null;*/
 
-        /*Transaction transaction = null;
+
+
         String username = null;
-        try (Session session = HibernateUtil.getSession()) {
+        Session session = HibernateUtil.getSession();
+        Transaction transaction = null;
+        try {
             transaction = session.beginTransaction();
-            username = (String) session.createQuery("SELECT e.name FROM Employee e JOIN e.user u WHERE u.email = :email")
+            // Step 1: Fetch employeeId from UserEntity based on email
+            Integer employeeId = (Integer) session.createQuery(
+                            "SELECT employeeID FROM UserEntity WHERE email = :email")
                     .setParameter("email", loggedUserEmail)
                     .uniqueResult();
+
+            // Step 2: Fetch name from EmployeeEntity based on employeeId
+            if (employeeId != null) {
+                username = (String) session.createQuery(
+                                "SELECT name FROM EmployeeEntity WHERE employeeId = :employeeId")
+                        .setParameter("employeeId", employeeId)
+                        .uniqueResult();
+            }
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {
                 transaction.rollback();
             }
             e.printStackTrace();
+        } finally {
+            session.close();
         }
-        return username;*/
+        return username;
     }
     @Override
     public String getEmailByEmployeeID(String employeeID) throws SQLException {
-        String query = "SELECT contactEmail FROM employee WHERE employeeId = ?";
-        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-            preparedStatement.setInt(1, Integer.parseInt(employeeID));
-            ResultSet resultSet = preparedStatement.executeQuery();
-            if (resultSet.next()) {
-                return resultSet.getString("contactEmail");
-            }
-        }
-        return null;
+//        String query = "SELECT contactEmail FROM employee WHERE employeeId = ?";
+//        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+//            preparedStatement.setInt(1, Integer.parseInt(employeeID));
+//            ResultSet resultSet = preparedStatement.executeQuery();
+//            if (resultSet.next()) {
+//                return resultSet.getString("contactEmail");
+//            }
+//        }
+//        return null;
 
-        /*Transaction transaction = null;
+        Transaction transaction = null;
         String email = null;
         try (Session session = HibernateUtil.getSession()) {
             transaction = session.beginTransaction();
-            email = (String) session.createQuery("SELECT e.contactEmail FROM Employee e WHERE e.id = :employeeId")
+            email = (String) session.createQuery("SELECT e.email FROM EmployeeEntity e WHERE e.id = :employeeId")
                     .setParameter("employeeId", Integer.parseInt(employeeID))
                     .uniqueResult();
             transaction.commit();
@@ -266,11 +354,11 @@ public class EmployeeDaoImpl implements EmployeeDao {
             }
             e.printStackTrace();
         }
-        return email;*/
+        return email;
     }
     @Override
     public boolean isEmployeeIDValid(String employeeID) throws SQLException {
-        String query = "SELECT COUNT(*) FROM employee WHERE employeeId = ?";
+        /*String query = "SELECT COUNT(*) FROM employee WHERE employeeId = ?";
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setInt(1, Integer.parseInt(employeeID));
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -278,13 +366,15 @@ public class EmployeeDaoImpl implements EmployeeDao {
                 return resultSet.getInt(1) > 0;
             }
         }
-        return false;
+        return false;*/
 
-        /*Transaction transaction = null;
+
         Long count = 0L;
-        try (Session session = HibernateUtil.getSession()) {
+        Session session = HibernateUtil.getSession();
+        Transaction transaction = null;
+        try {
             transaction = session.beginTransaction();
-            count = (Long) session.createQuery("SELECT COUNT(e) FROM Employee e WHERE e.id = :employeeId")
+            count = (Long) session.createQuery("SELECT COUNT(e) FROM EmployeeEntity e WHERE e.id = :employeeId")
                     .setParameter("employeeId", Integer.parseInt(employeeID))
                     .uniqueResult();
             transaction.commit();
@@ -293,12 +383,14 @@ public class EmployeeDaoImpl implements EmployeeDao {
                 transaction.rollback();
             }
             e.printStackTrace();
+        } finally {
+            session.close();
         }
-        return count > 0;*/
+        return count > 0;
     }
     @Override
     public Integer getRoleIDByEmployeeID(String employeeID) throws SQLException {
-        String query = "SELECT roleId FROM employee WHERE employeeId = ?";
+        /*String query = "SELECT roleId FROM employee WHERE employeeId = ?";
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setInt(1, Integer.parseInt(employeeID));
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -306,12 +398,14 @@ public class EmployeeDaoImpl implements EmployeeDao {
                 return resultSet.getInt("roleId");
             }
         }
-        return null;
-        /*Transaction transaction = null;
+        return null;*/
+
         Integer roleId = null;
-        try (Session session = HibernateUtil.getSession()) {
+        Session session = HibernateUtil.getSession();
+        Transaction transaction = null;
+        try {
             transaction = session.beginTransaction();
-            roleId = (Integer) session.createQuery("SELECT e.role.id FROM EmployeeEntity e WHERE e.id = :employeeId")
+            roleId = (Integer) session.createQuery("SELECT roleId FROM EmployeeEntity e WHERE e.employeeId = :employeeId")
                     .setParameter("employeeId", Integer.parseInt(employeeID))
                     .uniqueResult();
             transaction.commit();
@@ -320,13 +414,15 @@ public class EmployeeDaoImpl implements EmployeeDao {
                 transaction.rollback();
             }
             e.printStackTrace();
+        } finally {
+            session.close();
         }
-        return roleId;*/
+        return roleId;
     }
 
     @Override
     public boolean isEmployeeEmailValid(String email) {
-        String query = "SELECT COUNT(*) FROM employee WHERE contactEmail = ?";
+        /*String query = "SELECT COUNT(*) FROM employee WHERE contactEmail = ?";
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setString(1, email);
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -336,10 +432,12 @@ public class EmployeeDaoImpl implements EmployeeDao {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        return false;
-        /*Transaction transaction = null;
+        return false;*/
+
         Long count = 0L;
-        try (Session session = HibernateUtil.getSession()) {
+        Session session = HibernateUtil.getSession();
+        Transaction transaction = null;
+        try {
             transaction = session.beginTransaction();
             count = (Long) session.createQuery("SELECT COUNT(e) FROM EmployeeEntity e WHERE e.contactEmail = :email")
                     .setParameter("email", email)
@@ -350,8 +448,10 @@ public class EmployeeDaoImpl implements EmployeeDao {
                 transaction.rollback();
             }
             e.printStackTrace();
+        } finally {
+            session.close();
         }
-        return count > 0;*/
+        return count > 0;
 
     }
 }

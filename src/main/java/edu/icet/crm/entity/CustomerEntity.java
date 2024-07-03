@@ -15,12 +15,12 @@ import java.time.LocalDate;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-//@Entity
-//@Table(name = "Customer")
+@Entity
+@Table(name = "Customer")
 public class CustomerEntity {
-    /*@Id
-    @Column(name = "customerID")*/
-    private Integer customerID;
+    @Id
+    @Column(name = "customerID")
+    private Integer id;
     private String name;
     private LocalDate dob;
     private String contactEmail;
