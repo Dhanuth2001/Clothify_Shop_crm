@@ -3,7 +3,6 @@ package edu.icet.crm.controller;
 import edu.icet.crm.bo.BoFactory;
 import edu.icet.crm.bo.custom.*;
 import edu.icet.crm.dto.*;
-import edu.icet.crm.service.*;
 import edu.icet.crm.util.BoType;
 import edu.icet.crm.util.SizeType;
 import javafx.animation.Animation;
@@ -16,6 +15,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.util.Duration;
+import net.sf.jasperreports.engine.*;
 
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
@@ -62,25 +62,19 @@ public class EmployeeHomePageController {
     private OrderBo orderBo;
     private CustomerBo customerBo;
     private ProductBo productBo;
-    //private EmployeeBo employeeBo;
-    //private OrderDetailBo orderDetailBo;
-
-    private EmailService emailService;
-
+    private EmailController emailController;
     private UserBo userBo;
-
     private ObservableList<OrderDetails> orderDetailList = FXCollections.observableArrayList();
 
     @FXML
     public void initialize() {
         try {
             this.userBo = BoFactory.getInstance().getBo(BoType.USER);
-            //this.employeeBo = BoFactory.getInstance().getBo(BoType.EMPLOYEE);
             this.productBo = BoFactory.getInstance().getBo(BoType.PRODUCT);
             this.orderBo = BoFactory.getInstance().getBo(BoType.ORDER);
             this.customerBo = BoFactory.getInstance().getBo(BoType.CUSTOMER);
-            //this.orderDetailBo = BoFactory.getInstance().getBo(BoType.ORDERDETAILS);
-            emailService = new EmailService();
+
+            emailController = new EmailController();
 
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
@@ -94,8 +88,6 @@ public class EmployeeHomePageController {
         initializeTable();
     }
 
-    private void loadOrderDetailTable() {
-    }
     private void loadPaymentType() {
         ObservableList<Object> paymentTypes = FXCollections.observableArrayList();
         paymentTypes.add("CASH");
@@ -195,7 +187,7 @@ public class EmployeeHomePageController {
         orderDetailList.add(orderDetails);
         tblOrder.refresh();
         updateTotalAmounts();
-        loadOrderDetailTable();
+        //loadOrderDetailTable();
         clearOrderDetailFields();
     }
 
@@ -234,7 +226,7 @@ public class EmployeeHomePageController {
 
                 showAlert(Alert.AlertType.INFORMATION, "Success", "Customer added successfully.");
                 clearCustomerFields();
-                loadOrderDetailTable();
+                //loadOrderDetailTable();
             } else {
                 showAlert(Alert.AlertType.ERROR, "Error", "Failed to add employee.");
             }
@@ -323,7 +315,7 @@ public class EmployeeHomePageController {
             }
 
             // Calculate total cost of the order
-            double totalCost = calculateTotalCost();
+            double totalCost = calculateTotalCost(discount);
 
             // Get payment type from UI component
             String paymentType = comboPaymentType.getValue().toString();
@@ -339,7 +331,12 @@ public class EmployeeHomePageController {
                 clearAllFields();
                 generateOrderId(); // Clear order ID after order placement
 
+
+
                 // Send email to customer
+                //boolean emailSent = orderBo.sendOrderConfirmationEmail(order);
+
+                System.out.println("Send order to email method");
                 sendOrderConfirmationEmail(order);
             } else {
                 showAlert(Alert.AlertType.ERROR, "Order Placement Failed", "Failed to place order.");
@@ -349,10 +346,13 @@ public class EmployeeHomePageController {
         }
     }
 
-    private double calculateTotalCost() {
-        return orderDetailList.stream()
+    private double calculateTotalCost(double discount) {
+        double totalAmount = orderDetailList.stream()
                 .mapToDouble(orderDetail -> orderDetail.getQuantity() * orderDetail.getUnitPrice())
                 .sum();
+        double discountAmount = totalAmount * (discount / 100);
+        double netAmount = totalAmount - discountAmount;
+        return netAmount;
     }
 
     private Order createOrderObject(int employeeID, int customerID, double discount, double totalCost, String paymentType) {
@@ -372,14 +372,18 @@ public class EmployeeHomePageController {
     private void sendOrderConfirmationEmail(Order order) {
         String customerEmail = customerBo.getCustomerEmailById(order.getCustomerID());
         String subject = "Order Confirmation";
-        String body = "Dear Customer,\n\nYour order has been placed successfully. Details:\n" +
-                "Order ID: " + order.getOrderID() + "\n" +
-                "Total Cost: $" + order.getTotalCost() + "\n" +
-                "Payment Type: " + order.getPaymentType() + "\n" +
-                "Date Placed: " + order.getDatePlaced() + "\n\n" +
-                "Thank you for shopping with us!";
+        System.out.println("sent order to generate bill");
+        byte[] pdfBytes = new byte[0];
+        try {
+            pdfBytes = orderBo.generateOrderBill(order);
+            System.out.println("bill generated");
+        } catch (JRException | SQLException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
 
-        boolean emailSent = emailService.sendEmail(customerEmail, subject, body);
+
+        boolean emailSent = emailController.sendEmailWithAttachment(customerEmail, subject, pdfBytes);
+
 
         if (emailSent) {
             showAlert(Alert.AlertType.INFORMATION, "Order Placed", "Order placed successfully. Bill sent to customer.");
@@ -387,6 +391,8 @@ public class EmployeeHomePageController {
             showAlert(Alert.AlertType.WARNING, "Email Sending Failed", "Failed to send email to customer.");
         }
     }
+
+
 
     private void clearAllFields() {
         clearOrderDetailFields();

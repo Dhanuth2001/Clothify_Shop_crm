@@ -6,7 +6,6 @@ import edu.icet.crm.bo.custom.OrderBo;
 import edu.icet.crm.bo.custom.RoleBo;
 import edu.icet.crm.bo.custom.UserBo;
 import edu.icet.crm.dto.Employee;
-import edu.icet.crm.service.EmailService;
 import edu.icet.crm.util.BoType;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
@@ -25,48 +24,39 @@ import java.util.Date;
 
 public class EmployeeProfilePageController {
     public TextArea txtBio;
-
     public Label lblActualDaySales;
     public TextField txtDaySalesTarget;
     public PieChart myPerformanceChart;
-
     public Label lblSalesTargetProgressMonth;
     public Label lblSalesTargetProgressDay;
     public Label lblActualSalesMonth;
     public TextField txtSalesTargetMonth;
+
     public Label txtDate;
+
     public Label txtTime;
     public Label txtName;
     public Label txtDob;
     public Label txtRole;
     public Label txtAddress;
+
     public Label txtEmail;
     public Label txtContanctNo;
     public Hyperlink hyperOk;
     public Hyperlink hyperEdit;
-
     private EmployeeBo employeeBo;
-
     private RoleBo roleBo;
     private UserBo userBo;
-
     private OrderBo orderBo;
-
     private boolean isEditMode = false;
 
     @FXML
     public void initialize() throws SQLException {
         try {
             this.employeeBo = BoFactory.getInstance().getBo(BoType.EMPLOYEE);
-
             this.roleBo = BoFactory.getInstance().getBo(BoType.ROLE);
             this.userBo = BoFactory.getInstance().getBo(BoType.USER);
-
             this.orderBo = BoFactory.getInstance().getBo(BoType.ORDER);
-
-
-
-
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
             showAlert(Alert.AlertType.ERROR, "Initialization Error", "Failed to initialize services.");
@@ -79,7 +69,6 @@ public class EmployeeProfilePageController {
         Employee employee = employeeBo.getEmployeeById(employeeID);
 
         if (employee != null) {
-
             txtName.setText(employee.getName());
             txtDob.setText(employee.getDob().toString());
             txtRole.setText(roleBo.getRoleNameById(employee.getRoleId()));
@@ -87,15 +76,20 @@ public class EmployeeProfilePageController {
             txtEmail.setText(employee.getEmail());
             txtContanctNo.setText(employee.getContactNo());
             //fetchAndDisplaySalesData(employeeID);
-
-            // Disable bio edit initially
             txtBio.setEditable(false);
         }
+
+        txtName.setText("");
+        txtDob.setText("");
+        txtRole.setText("");
+        txtAddress.setText("");
+        txtEmail.setText("");
+        txtContanctNo.setText("");
+        txtBio.setEditable(false);
     }
 
     private void fetchAndDisplaySalesData(int employeeID) throws SQLException {
-        // Fetch actual sales data for the month and day
-        // Assuming methods like getOrderTotalForMonth and getOrderTotalForDay exist in OrderBo
+
         double salesMonth = orderBo.getOrderTotalForMonth(employeeID, LocalDate.now().getMonthValue());
         double salesDay = orderBo.getOrderTotalForDay(employeeID, LocalDate.now());
 
@@ -115,12 +109,7 @@ public class EmployeeProfilePageController {
     }
     public void hyperOkOnAction(ActionEvent actionEvent) {
         if (isEditMode) {
-            // Save the edited bio
-            // Assuming there's a method in EmployeeBo to update bio
             String newBio = txtBio.getText();
-            // employeeBo.updateEmployeeBio(employee.getId(), newBio);
-
-            // Disable edit mode
             txtBio.setEditable(false);
             hyperOk.setText("Ok");
             hyperEdit.setDisable(false);
@@ -145,6 +134,4 @@ public class EmployeeProfilePageController {
         alert.setContentText(content);
         alert.showAndWait();
     }
-
-
 }

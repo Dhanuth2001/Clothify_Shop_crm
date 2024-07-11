@@ -27,19 +27,16 @@ public class DaoFactory {
                 return (T) new EmployeeDaoImpl();
             case CUSTOMER:
                 return (T) new CustomerDaoImpl();
-
             case ROLE:
                 return (T) new RoleDaoImpl();
             case USER:
                 return (T) new UserDaoImpl();
-
             case PRODUCT:
                 return (T) new ProductDaoImpl();
             case SUPPLIER:
                 return (T) new SupplierDaoImpl();
             case ORDER:
                 return (T) new OrderDaoImpl();
-
             case ORDERDETAILS:
                 return (T) new OrderDetailsDaoImpl();
             default:

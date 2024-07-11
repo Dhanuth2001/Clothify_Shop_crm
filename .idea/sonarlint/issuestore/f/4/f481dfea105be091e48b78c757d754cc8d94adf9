@@ -1,39 +1,44 @@
 
-	java:S112†"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8©×ğ¤†2J$721a76e9-61e7-42f9-ada3-e32eb8c184d9
-ƒ	java:S1250"<This block of commented-out lines of code should be removed.(°åÏ“ûÿÿÿÿ8ˆØğ¤†2J$e9a59986-9e0f-440b-b20a-6b9c82a4acda
-ƒ	java:S125h"<This block of commented-out lines of code should be removed.(©ÎĞ²şÿÿÿÿ8Øğ¤†2J$00ffc085-2387-4724-999d-d4d598cbc6e4
-„	java:S125"<This block of commented-out lines of code should be removed.(Á±èÒıÿÿÿÿ8‘Øğ¤†2J$d410a5cd-43d4-4df4-87b0-88c9aab91c46
-	java:S125è"<This block of commented-out lines of code should be removed.(¦÷§İ8êÿş¤†2J$462fde17-d322-4748-893d-045bfcada880
+	java:S112†"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Äş€Š2J$d3eb4c7a-4166-42db-8ab8-251348bdfee5
+‹
+java:S1192\"HDefine a constant instead of duplicating this literal "orderID" 3 times.(Ñ¬›Ú8Çş€Š2J$81e8eef2-40ac-4a35-816d-cf5d288947dd
+ƒ	java:S1250"<This block of commented-out lines of code should be removed.(°åÏ“ûÿÿÿÿ8Ûÿ€Š2J$9efdf266-2bb9-4c53-a0c4-681b0052a14b
+ƒ	java:S125h"<This block of commented-out lines of code should be removed.(©ÎĞ²şÿÿÿÿ8ãÿ€Š2J$c3279d92-ae3b-4d14-87f5-2f9d9ed3af3e
+„	java:S125"<This block of commented-out lines of code should be removed.(Á±èÒıÿÿÿÿ8æÿ€Š2J$c2b696fe-99a0-4585-8cf7-00139819aa3a
+	java:S125è"<This block of commented-out lines of code should be removed.(¦÷§İ8éÿ€Š2J$ad900971-a50c-4e51-a3b9-eaf4ab41d870
 w
-java:S1874¦".Remove this use of "update"; it is deprecated.(¥·òÂøÿÿÿÿ8ôª€¥†2J$c2332367-cd66-479c-8dfd-2b0556d42dff
-	java:S125Ì"<This block of commented-out lines of code should be removed.(ƒÇûÖ8¸¿ˆ¥†2J$302120ba-42c3-4f93-823e-7ab3f80a67ca
+java:S1874¦".Remove this use of "update"; it is deprecated.(¥·òÂøÿÿÿÿ8ëÿ€Š2J$a79c71e3-8f37-4ed4-94b8-2da19c0c3284
+	java:S125Ì"<This block of commented-out lines of code should be removed.(ƒÇûÖ8ğÿ€Š2J$03160d9c-68d2-48d2-95a4-d78fef083db1
 r
-java:S1874œ".Remove this use of "delete"; it is deprecated.( Ø‘Ş8ßŸ‰¥†2J$5a8df715-2318-4ab8-a13c-4d00b59ace05
-	java:S125Î"<This block of commented-out lines of code should be removed.(ÁÎïÍ8¤Øğ¤†2J$1328e73a-4bb8-4ab7-bffc-c145c72e4779
+java:S1874œ".Remove this use of "delete"; it is deprecated.( Ø‘Ş8óÿ€Š2J$b53cf12a-4d65-4fc3-b500-d62ac92333c7
+	java:S125Î"<This block of commented-out lines of code should be removed.(ÁÎïÍ8ùÿ€Š2J$2a6a4d75-5ca8-40cf-814e-811c32e52016
 w
-java:S1874ò"3Remove this use of "createQuery"; it is deprecated.(˜«¿8¤Øğ¤†2J$11969179-c295-4c56-9d61-1ba7103e91c0
+java:S1874ò"3Remove this use of "createQuery"; it is deprecated.(˜«¿8úÿ€Š2J$cfc8b6de-db2b-45a6-ba01-d963fa28b204
 |
-java:S1874ø"3Remove this use of "createQuery"; it is deprecated.(ï£†¿úÿÿÿÿ8¥Øğ¤†2J$cc66a7bb-039c-4625-bf23-52032b3c3b18
+java:S1874ø"3Remove this use of "createQuery"; it is deprecated.(ï£†¿úÿÿÿÿ8ûÿ€Š2J$0cc57763-4077-4549-8b26-e0e6ef3b76c1
 o
-java:S1168‘"+Return an empty collection instead of null.(¥¹ï8¨Øğ¤†2J$91fbc2b1-b5a6-4ec6-ad7b-22418f4d107c
+java:S1168‘"+Return an empty collection instead of null.(¥¹ï8şÿ€Š2J$4ec79fe0-cd5c-4565-b34c-511c81c146e8
 o
-java:S1168–"+Return an empty collection instead of null.(¥¹ï8¨Øğ¤†2J$5b353ce8-c580-474d-878f-d4c544fbfa54
+java:S1168–"+Return an empty collection instead of null.(¥¹ï8ÿÿ€Š2J$672cb8bf-f1fd-4f2b-a5f1-b5b1792ca34a
+„	java:S125œ"<This block of commented-out lines of code should be removed.(áŠ ¦ıÿÿÿÿ8‚€€Š2J$c3c5c6a0-36f2-467c-8724-b99730ec35af
+s	java:S106ê"+Replace this use of System.out by a logger.(Åİùÿÿÿÿ8‡€€Š2J$43ea8a72-17a8-41ae-b3a4-6fd782021551
+w
+java:S1874ò"3Remove this use of "createQuery"; it is deprecated.(•–”€8ˆ€€Š2J$0273fe9a-e587-477a-91af-092bde85b89a
+„	java:S125‘"<This block of commented-out lines of code should be removed.(ß—÷ûûÿÿÿÿ8‹€€Š2J$f95473c2-0ba6-4ce9-b4e5-144172254fc5
+‚
+java:S1874°"9Remove this use of "createNativeQuery"; it is deprecated.(¾Áçäıÿÿÿÿ8€€Š2J$6ac3135b-acd5-4157-8546-fc576eecee67
 €
-java:S1128"8Remove this unused import 'edu.icet.crm.dao.DaoFactory'.(€µš„ıÿÿÿÿ8ëç¥†2J$90bb90ca-cd83-4444-a770-de2ad483ee9a
+java:S1128"8Remove this unused import 'edu.icet.crm.dao.DaoFactory'.(€µš„ıÿÿÿÿ8Ÿ•§€Š2J$a773c4dd-ad2f-470d-98d4-d12a3980130b
 ‹
-java:S1128	"CRemove this unused import 'edu.icet.crm.dao.custom.OrderDetailDao'.(ê°Û“ûÿÿÿÿ8ëç¥†2J$2a95f2f2-2c9c-4a2a-98c4-37d22a73f7f6
-‡
 java:S1128
-"?Remove this unused import 'edu.icet.crm.dao.custom.ProductDao'.(³–³ƒüÿÿÿÿ8ëç¥†2J$96c9d999-2c5a-4efb-a9dc-afc1ec6821cc
-v
-java:S1128"3Remove this unused import 'edu.icet.crm.dto.Order'.(½Åšã8ëç¥†2J$aa874cfe-1edf-4c71-9afb-bde4daee9659
+"CRemove this unused import 'edu.icet.crm.dao.custom.OrderDetailDao'.(ê°Û“ûÿÿÿÿ8Ÿ•§€Š2J$df62ee9f-64c8-4130-bea2-335c4ea0ef92
+‡
+java:S1128"?Remove this unused import 'edu.icet.crm.dao.custom.ProductDao'.(³–³ƒüÿÿÿÿ8Ÿ•§€Š2J$afac8b73-a517-4c78-b3ae-cc3a1cf251c2
+
+java:S1128"9Remove this unused import 'edu.icet.crm.db.DbConnection'.(ŒÛ½üÿÿÿÿ8 •§€Š2J$82d4e398-68ea-4344-9bda-f047262d1630
 ‹
-java:S1128"CRemove this unused import 'edu.icet.crm.entity.OrderDetailsEntity'.(Åö³Ôûÿÿÿÿ8ìç¥†2J$b983d649-ffb4-4f87-a0a8-441397ab4372
+java:S1128"CRemove this unused import 'edu.icet.crm.entity.OrderDetailsEntity'.(Åö³Ôûÿÿÿÿ8 •§€Š2J$af11161f-e755-49a9-b2f1-22f77f511f7a
 ~
-java:S1128"6Remove this unused import 'edu.icet.crm.util.DaoType'.(¾±èøÿÿÿÿ8ìç¥†2J$79e833cb-f528-4dfd-a732-190abded0052
-~
-java:S1128"6Remove this unused import 'org.hibernate.query.Query'.(¤— ´ûÿÿÿÿ8ìç¥†2J$8bfd43c2-3dee-4a86-a231-df9a6f6876ad
-v
-java:S1068".Remove this unused "connection" private field.(·ãÛöûÿÿÿÿ8Ú¿ˆ¥†2J$a5f5babb-50c1-4d84-bf72-dfdc03c2ba9e
+java:S1128"6Remove this unused import 'edu.icet.crm.util.DaoType'.(¾±èøÿÿÿÿ8 •§€Š2J$0663bcfc-5416-40d0-94ab-2f5edc795297
 t
-java:S1144Z"1Remove this unused private "extractOrder" method.(Š‘Á€8ªØğ¤†2J$8a6c0650-4343-4b7f-91d1-c8bdb1fe0cdc
+java:S1144Z"1Remove this unused private "extractOrder" method.(Š‘Á€8³€€Š2J$c3a36c60-2200-4517-a472-8d25d6c59d2d

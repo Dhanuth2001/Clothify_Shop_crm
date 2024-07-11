@@ -1,6 +1,7 @@
 package edu.icet.crm.util;
 
 import edu.icet.crm.entity.EmployeeEntity;
+import edu.icet.crm.entity.RoleEntity;
 import edu.icet.crm.entity.UserEntity;
 
 import org.hibernate.Session;
@@ -37,12 +38,28 @@ public class DataInitializer {
                 adminUser.setEmail("admin@example.com");
                 adminUser.setPassword(EncryptionUtil.encrypt("admin_password")); // Ensure to hash the password in a real application
                 adminUser.setRoleID(1);
-                //adminUser.setEmployee(adminEmployee);
                 adminUser.setEmployeeID(1);
+
+
+
 
                 // Save entities
                 session.merge(adminEmployee);
                 session.merge(adminUser);
+
+
+
+                    RoleEntity role1 = new RoleEntity();
+                    role1.setRoleId(1);
+                    role1.setRoleName("Admin");
+
+                    RoleEntity role2 = new RoleEntity();
+                    role2.setRoleId(2);
+                    role2.setRoleName("Default");
+
+                    session.merge(role1);
+                    session.merge(role2);
+
 
                 // Commit transaction
                 transaction.commit();

@@ -1,6 +1,8 @@
 
-	java:S112G"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8õõ¢Ö„2J$02ed838b-e493-45e5-b946-b2735752c93d
-y
-java:S1128"6Remove this unused import 'edu.icet.crm.dto.Employee'.(Ïá´8“×Œ…2J$c3a2e1b2-8396-47b0-81c1-a6c0f53fa979
-‡
-java:S1128"?Remove this unused import 'edu.icet.crm.entity.EmployeeEntity'.(„Ÿ¤ºûÿÿÿÿ8“×Œ…2J$0c1639e2-6266-4c27-bc9e-dbf0227ce666
+g	java:S112K"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8‹Ã´ÿ‰2
+H
+java:S1168]"+Return an empty collection instead of null.(¥¹ï8»Ã´ÿ‰2
+H
+java:S1168b"+Return an empty collection instead of null.(¥¹ï8¼Ã´ÿ‰2
+H
+java:S1168g"+Return an empty collection instead of null.(¥¹ï8¼Ã´ÿ‰2

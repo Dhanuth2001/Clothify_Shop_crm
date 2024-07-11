@@ -1,9 +1,7 @@
 package edu.icet.crm.controller;
-
 import edu.icet.crm.bo.BoFactory;
 import edu.icet.crm.bo.custom.*;
 import edu.icet.crm.dto.*;
-import edu.icet.crm.service.*;
 import edu.icet.crm.util.BoType;
 import edu.icet.crm.util.SizeType;
 import javafx.animation.Animation;
@@ -16,7 +14,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.util.Duration;
-
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -26,19 +23,13 @@ import java.util.List;
 
 public class OrderPageController {
     private ObservableList<OrderDetails> tempOrderDetailsList = FXCollections.observableArrayList();
-
     public TextField txtOrderId;
     public Button btnSearch;
-
     public TableColumn colId;
-
-
     public TableColumn colDiscount;
-
     public Label txtTime;
     public Label txtDate;
     public Button btnClear;
-
     public TableColumn colCustomerId;
     public Button btnDeleteOrderDetail;
     public TableColumn colEmployeeID;
@@ -53,7 +44,6 @@ public class OrderPageController {
     public Button btnDeleteOrder;
     public Button btnUpdateOrder;
     public Button btnLoad;
-
     public ComboBox comboCustomerIDs;
     public ComboBox comboPaymentType;
     public TableView tblOrder;
@@ -61,16 +51,12 @@ public class OrderPageController {
     public Spinner spinQuantity;
     public Button btnChangeOrderDetails;
     public Button btnDropOrderDetail;
-
     private CustomerBo customerBo;
-
     private UserBo userBo;
-
     private OrderBo orderBo;
     private ProductBo productBo;
     private OrderDetailBo orderDetailsBo;
     private ObservableList<Order> orderList = FXCollections.observableArrayList();
-
     @FXML
     public void initialize() {
         try {

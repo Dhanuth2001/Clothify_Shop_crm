@@ -4,7 +4,6 @@ import com.jfoenix.controls.JFXTextField;
 import edu.icet.crm.bo.BoFactory;
 import edu.icet.crm.bo.custom.EmployeeBo;
 import edu.icet.crm.bo.custom.UserBo;
-import edu.icet.crm.service.EmailService;
 import edu.icet.crm.util.BoType;
 import edu.icet.crm.util.EncryptionUtil;
 import javafx.event.ActionEvent;
@@ -26,6 +25,7 @@ import java.util.regex.Pattern;
 
 public class ForgotPasswordController {
     public Button btnVerify;
+
     public JFXTextField txtEmail;
     public JFXTextField txtNewPassword;
     public JFXTextField txtConfirmPassword;
@@ -34,20 +34,16 @@ public class ForgotPasswordController {
     public Hyperlink hyperVerification;
     public TextField txtOTP;
     public Button btnEnter;
-
     private String generatedOTP;
-
-
     private UserBo userBo;
-
     private EmployeeBo employeeBo;
-    private EmailService emailService;
+    private EmailController emailController;
 
     public void initialize() throws SQLException, ClassNotFoundException {
         this.employeeBo= BoFactory.getInstance().getBo(BoType.EMPLOYEE);
         this.userBo= BoFactory.getInstance().getBo(BoType.USER);
 
-        emailService = new EmailService();
+        emailController = new EmailController();
         txtOTP.setDisable(true);
         txtNewPassword.setDisable(true);
         txtConfirmPassword.setDisable(true);
@@ -65,7 +61,6 @@ public class ForgotPasswordController {
             showAlert(Alert.AlertType.ERROR, "Error", "Please enter a valid email address.");
             return;
         }
-
 
         if (!employeeBo.isEmployeeEmailValid(employeeEmail)) {
             showAlert(Alert.AlertType.ERROR, "Error", "Invalid Employee Email");
@@ -140,7 +135,7 @@ public class ForgotPasswordController {
         System.out.println("Generated OTP: " + generatedOTP);
 
         // Send OTP via email
-        boolean emailSent = emailService.sendEmail(employeeEmail, "Verification Code",generatedOTP);
+        boolean emailSent = emailController.sendEmail(employeeEmail, "Verification Code",generatedOTP);
         if (emailSent) {
             showAlert(Alert.AlertType.INFORMATION, "Success", "OTP sent to your email");
             txtOTP.setDisable(false); // Enable OTP input field

@@ -1,6 +1,7 @@
 package edu.icet.crm.dao.custom.impl;
 
 import edu.icet.crm.bo.BoFactory;
+import edu.icet.crm.bo.custom.CustomerBo;
 import edu.icet.crm.bo.custom.OrderDetailBo;
 import edu.icet.crm.bo.custom.ProductBo;
 import edu.icet.crm.dao.DaoFactory;
@@ -9,13 +10,19 @@ import edu.icet.crm.dao.custom.OrderDao;
 import edu.icet.crm.dao.custom.OrderDetailDao;
 import edu.icet.crm.dao.custom.ProductDao;
 import edu.icet.crm.db.DbConnection;
+import edu.icet.crm.dto.Customer;
 import edu.icet.crm.dto.Order;
 import edu.icet.crm.dto.OrderDetails;
+import edu.icet.crm.dto.Sales;
 import edu.icet.crm.entity.OrderDetailsEntity;
 import edu.icet.crm.entity.OrderEntity;
 import edu.icet.crm.util.BoType;
+import edu.icet.crm.util.CategoryType;
 import edu.icet.crm.util.DaoType;
 import edu.icet.crm.util.HibernateUtil;
+import net.sf.jasperreports.engine.*;
+import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
+import net.sf.jasperreports.view.JasperViewer;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
@@ -28,20 +35,13 @@ import java.util.List;
 import java.util.Map;
 
 public class OrderDaoImpl implements OrderDao {
-    private final Connection connection;
-
     private final OrderDetailBo orderDetailsBo;
-
     private final ProductBo productBo;
-
+    private final CustomerBo customerBo;
     public OrderDaoImpl() throws SQLException, ClassNotFoundException {
         this.orderDetailsBo = BoFactory.getInstance().getBo(BoType.ORDERDETAILS);
         this.productBo = BoFactory.getInstance().getBo(BoType.PRODUCT);
-
-
-
-        this.connection = DbConnection.getInstance().getConnection();
-
+        this.customerBo = BoFactory.getInstance().getBo(BoType.CUSTOMER);
     }
     @Override
     public List<OrderEntity> getAll() {
@@ -534,4 +534,179 @@ public class OrderDaoImpl implements OrderDao {
         return null;
     }
 
+    @Override
+    public byte[] generateOrderBill(Order order) throws JRException, SQLException, ClassNotFoundException {
+       /* // Retrieve order details
+        List<OrderDetails> orderDetails = order.getOrderDetailList();
+
+        // Retrieve customer information
+        Customer customer = customerBo.getCustomerById(order.getCustomerID());
+        java.util.Date datePlaced = Date.valueOf(order.getDatePlaced());
+
+        // Prepare parameters for JasperReports
+        Map<String, Object> parameters = new HashMap<>();
+        parameters.put("orderID", order.getOrderID());
+        parameters.put("customerName", customer.getName());
+        parameters.put("customerEmail", customer.getContactEmail());
+        parameters.put("date", datePlaced);
+        parameters.put("paymentMethod", order.getPaymentType());
+        parameters.put("totalAmount", order.getTotalCost());
+        parameters.put("discount", order.getDiscount());
+
+        // Calculate subtotal
+        double subtotal = orderDetails.stream()
+                .mapToDouble(od -> od.getQuantity() * od.getUnitPrice())
+                .sum();
+        parameters.put("subTotal", subtotal);
+
+
+
+
+        // Prepare statement for fields query with product name
+        String fieldsQuery = "SELECT " +
+                "p.name AS description, " + // Product name as description
+                "od.quantity, " +
+                "od.unitPrice, " +
+                "od.cost AS amount " +
+                "FROM orders o " +
+                "JOIN orderDetails od ON o.orderID = od.id " +
+                "JOIN product p ON od.productID = p.productID " +
+                "WHERE o.orderID = ?";
+        PreparedStatement fieldsStatement = connection.prepareStatement(fieldsQuery);
+        fieldsStatement.setInt(1, order.getOrderID()); // Use orderID from the Order object
+        ResultSet fieldsResultSet = fieldsStatement.executeQuery();
+
+        // Create a JRDataSource for fieldsResultSet
+        JRResultSetDataSource jrFieldsDataSource = new JRResultSetDataSource(fieldsResultSet);
+
+        // Load and compile JasperReports template
+        String reportPath = "src/main/resources/reports/Clothify_Bill.jrxml"; // Replace with your actual JRXML file path
+        JasperReport jasperReport = JasperCompileManager.compileReport(reportPath);
+
+        // Fill report with data
+        JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, jrFieldsDataSource);
+
+        JasperViewer.viewReport(jasperPrint, false);
+
+        // Export JasperPrint to PDF (byte array)
+        return JasperExportManager.exportReportToPdf(jasperPrint);
+    }*/
+
+        List<OrderDetails> orderDetails = order.getOrderDetailList();
+
+        Session session = HibernateUtil.getSession();
+        Transaction transaction = null;
+
+        try {
+            transaction = session.beginTransaction();
+
+            Customer customer = customerBo.getCustomerById(order.getCustomerID());
+            java.util.Date datePlaced = Date.valueOf(order.getDatePlaced());
+
+            Map<String, Object> parameters = new HashMap<>();
+            parameters.put("orderID", order.getOrderID());
+            parameters.put("customerName", customer.getName());
+            parameters.put("customerEmail", customer.getContactEmail());
+            parameters.put("date", datePlaced);
+            parameters.put("paymentMethod", order.getPaymentType());
+            parameters.put("totalAmount", order.getTotalCost());
+            parameters.put("discount", order.getDiscount());
+
+            double subtotal = orderDetails.stream()
+                    .mapToDouble(OrderDetails::getCost)
+                    .sum();
+            System.out.println(subtotal);
+            parameters.put("subTotal", subtotal);
+
+            String hql = "SELECT new map(p.name as description, od.quantity as quantity, od.unitPrice as unitPrice, od.cost as amount) " +
+                    "FROM OrderEntity o " +
+                    "JOIN OrderDetailsEntity od ON o.orderID = od.id " +
+                    "JOIN ProductEntity p ON od.productID = p.productID " +
+                    "WHERE o.orderID = :orderID";
+            Query<Map<String, Object>> query = session.createQuery(hql);
+            query.setParameter("orderID", order.getOrderID());
+            List<Map<String, Object>> fieldsData = query.list();
+
+            JRBeanCollectionDataSource jrFieldsDataSource = new JRBeanCollectionDataSource(fieldsData);
+
+            String reportPath = "src/main/resources/reports/Clothify_Bill.jrxml"; // Replace with your actual JRXML file path
+            JasperReport jasperReport = JasperCompileManager.compileReport(reportPath);
+
+            JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, jrFieldsDataSource);
+
+            JasperViewer.viewReport(jasperPrint, false);
+
+            transaction.commit();
+
+            return JasperExportManager.exportReportToPdf(jasperPrint);
+        } catch (Exception e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            throw e;
+        } finally {
+            session.close();
+        }
+    }
+
+    @Override
+    public List<Sales> getSalesData() {
+//        String sql = "SELECT p.productID, p.name, p.category, SUM(od.quantity) AS totalQuantity, SUM(od.cost) AS totalCost " +
+//                "FROM orderdetails od " +
+//                "JOIN product p ON od.productID = p.productID " +
+//                "GROUP BY p.productID, p.name, p.category";
+//
+//        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+//        ResultSet resultSet = preparedStatement.executeQuery() ;
+//
+//        List<Object[]> resultList = query.getResultList();
+//        List<Sales> salesList = new ArrayList<>();
+//
+//        for (Object[] result : resultList) {
+//            Sales sales = new Sales();
+//            sales.setProductID((Integer) result[0]);
+//            sales.setName((String) result[1]);
+//            sales.setCategory(CategoryType.valueOf((String) result[2]));  // Assuming CategoryType is an enum
+//            sales.setQuantity(((Number) result[3]).intValue());
+//            sales.setCost(((Number) result[4]).doubleValue());
+//            salesList.add(sales);
+//        }
+//
+//        return salesList;
+
+        List<Sales> salesList = new ArrayList<>();
+        Session session = HibernateUtil.getSession();
+        Transaction transaction = null;
+
+        try {
+            transaction = session.beginTransaction();
+            String sql = "SELECT p.productID, p.name, p.categoryType, SUM(od.quantity) AS totalQuantity, SUM(od.cost) AS totalCost " +
+                    "FROM OrderDetails od " +
+                    "JOIN Product p ON od.productID = p.productID " +
+                    "GROUP BY p.productID, p.name, p.categoryType";
+
+            List<Object[]> resultList = session.createNativeQuery(sql).getResultList();
+
+            for (Object[] result : resultList) {
+                Sales sales = new Sales();
+                sales.setProductID(((Number) result[0]).intValue());
+                sales.setName((String) result[1]);
+                sales.setCategory(CategoryType.valueOf((String) result[2])); // Assuming CategoryType is an enum
+                sales.setQuantity(((Number) result[3]).intValue());
+                sales.setCost(((Number) result[4]).doubleValue());
+                salesList.add(sales);
+            }
+
+            transaction.commit();
+        } catch (Exception e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+
+        return salesList;
+    }
 }

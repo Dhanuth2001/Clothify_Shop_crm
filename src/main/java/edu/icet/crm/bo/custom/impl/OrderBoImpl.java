@@ -5,9 +5,11 @@ import edu.icet.crm.dao.DaoFactory;
 import edu.icet.crm.dao.custom.OrderDao;
 import edu.icet.crm.dto.Employee;
 import edu.icet.crm.dto.Order;
+import edu.icet.crm.dto.Sales;
 import edu.icet.crm.entity.EmployeeEntity;
 import edu.icet.crm.entity.OrderEntity;
 import edu.icet.crm.util.DaoType;
+import net.sf.jasperreports.engine.JRException;
 import org.modelmapper.ModelMapper;
 
 import java.sql.SQLException;
@@ -19,6 +21,8 @@ import java.util.stream.Collectors;
 public class OrderBoImpl implements OrderBo {
     private final ModelMapper modelMapper;
     private final OrderDao orderDao;
+
+
 
     public OrderBoImpl() throws SQLException, ClassNotFoundException {
         this.orderDao = DaoFactory.getInstance().getDao(DaoType.ORDER);
@@ -83,6 +87,32 @@ public class OrderBoImpl implements OrderBo {
         List<OrderEntity> orders = orderDao.getOrdersByEmployeeAndDate(employeeId, date);
         return calculateTotalAmount(orders);
     }
+
+    @Override
+    public List<Order> getDailyReportData() {
+        return null;
+    }
+
+    @Override
+    public List<Order> getMonthlyReportData() {
+        return null;
+    }
+
+    @Override
+    public List<Order> getAnnualReportData() {
+        return null;
+    }
+
+    @Override
+    public byte[] generateOrderBill(Order order) throws JRException, SQLException, ClassNotFoundException {
+        return orderDao.generateOrderBill(order);
+    }
+
+    @Override
+    public List<Sales> getSalesData() {
+        return orderDao.getSalesData();
+    }
+
 
     private double calculateTotalAmount(List<OrderEntity> orders) {
         double total = 0.0;

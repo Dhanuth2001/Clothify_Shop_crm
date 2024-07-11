@@ -4,44 +4,44 @@ import com.jfoenix.controls.JFXButton;
 import edu.icet.crm.bo.BoFactory;
 import edu.icet.crm.bo.custom.OrderBo;
 import edu.icet.crm.bo.custom.OrderDetailBo;
-import edu.icet.crm.service.*;
+import edu.icet.crm.dto.Employee;
+import edu.icet.crm.dto.OrderDetails;
+import edu.icet.crm.dto.Sales;
 import edu.icet.crm.util.BoType;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.scene.chart.*;
 import javafx.scene.control.*;
-import javafx.scene.text.Text;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.sql.SQLException;
+import java.util.List;
 import java.util.Map;
 
 public class AdminHomePageController {
     public LineChart salesOverTimeChart;
-
     public BarChart topSellingProductsChart;
     public PieChart costBreakdownChart;
     public TableView tblSales;
     public TableColumn colProductId;
     public TableColumn colName;
     public TableColumn colCategory;
-   
     public TableColumn colTotalSales;
     public TableColumn colTotalQuantity;
     public Label lblVisitCustomers;
-    
     public Label lblCustomerProgress;
-    
     public Label lblActualSales;
     public Label lblSalesTargetProgress;
-
+    public Button btnMonthly;
+    public Button btnAnnually;
     private OrderBo orderBo;
     private OrderDetailBo orderDetailBo;
-   
     public JFXButton btnEdit;
     public TextField txtCustomerTarget;
     public TextField txtSalesTarget;
     public JFXButton btnOk;
-
+    private ObservableList<Sales> salesList = FXCollections.observableArrayList();
 
     public void initialize() {
         try {
@@ -54,12 +54,35 @@ public class AdminHomePageController {
         }
         txtCustomerTarget.setEditable(false);
         txtSalesTarget.setEditable(false);
+
+        initializeSalesTable();
+        loadSalesTable();
         populateSalesOverTimeChart();
         populateSalesByCategoryChart();
         populateTopSellingProductsChart();
         calculateAndUpdateCustomerProgress();
         calculateAndUpdateSalesProgress();
 
+    }
+
+    private void initializeSalesTable() {
+        colProductId.setCellValueFactory(new PropertyValueFactory<>("productID"));
+        colCategory.setCellValueFactory(new PropertyValueFactory<>("category"));
+        colName.setCellValueFactory(new PropertyValueFactory<>("name"));
+        colTotalQuantity.setCellValueFactory(new PropertyValueFactory<>("quantity"));
+        colTotalSales.setCellValueFactory(new PropertyValueFactory<>("cost"));
+
+
+        tblSales.setItems(salesList);
+    }
+
+    private void loadSalesTable() {
+        try {
+            List<Sales> sales = orderBo.getSalesData();
+            salesList.setAll(sales);
+        } catch (Exception e) {
+            showAlert(Alert.AlertType.ERROR, "Error", "Failed to load sales details.");
+        }
     }
 
     private void populateSalesOverTimeChart() {
@@ -195,5 +218,11 @@ public class AdminHomePageController {
         alert.setHeaderText(null);
         alert.setContentText(content);
         alert.showAndWait();
+    }
+
+    public void btnMonthlyOnAction(ActionEvent actionEvent) {
+    }
+
+    public void btnAnnuallyOnAction(ActionEvent actionEvent) {
     }
 }

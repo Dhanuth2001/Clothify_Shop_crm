@@ -2,6 +2,8 @@ package edu.icet.crm.bo.custom;
 
 import edu.icet.crm.bo.SuperBo;
 import edu.icet.crm.dto.Order;
+import edu.icet.crm.dto.Sales;
+import net.sf.jasperreports.engine.JRException;
 
 import java.sql.SQLException;
 import java.time.LocalDate;
@@ -32,4 +34,8 @@ public interface OrderBo extends SuperBo {
     List<Order> getMonthlyReportData();
 
     List<Order> getAnnualReportData();
+
+    byte[] generateOrderBill(Order order) throws JRException, SQLException, ClassNotFoundException;
+
+    List<Sales> getSalesData();
 }

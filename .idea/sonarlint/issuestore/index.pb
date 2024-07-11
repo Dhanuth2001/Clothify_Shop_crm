@@ -25,8 +25,6 @@ n
 >src/main/java/edu/icet/crm/controller/OrderPageController.java,2\3\23cb931146416e98b997419c04c3f32682b37e99
 _
 /src/main/java/edu/icet/crm/db/DbConnection.java,6\2\622238a9751f10d97c801b0b48f931a5eab80889
-d
-4src/main/java/edu/icet/crm/service/EmailService.java,7\5\752dbb99e52c982fa405b7b0789def4831382300
 v
 Fsrc/main/java/edu/icet/crm/controller/CreateAccountPageController.java,1\2\12234ff51a8f54d35479fbccb8f9a6f8aa676988
 s
@@ -157,3 +155,10 @@ d
 4src/main/java/edu/icet/crm/util/DataInitializer.java,8\a\8a9416c764b37feebb67bd4ba4501f2812a21931
 `
 0src/main/java/edu/icet/crm/config/AppConfig.java,d\5\d57556a301df0f00c75f9bd9a5fd419b4f0ee984
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
+j
+:src/main/java/edu/icet/crm/controller/EmailController.java,d\0\d083d3460510211c2ec31235655ce693dcc5ca3e
+Y
+)src/main/java/edu/icet/crm/dto/Sales.java,2\0\20a7d0703233969e06928260d80406169c00eb6f
