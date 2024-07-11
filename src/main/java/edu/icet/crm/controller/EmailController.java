@@ -9,7 +9,7 @@ import java.util.Properties;
 
 public class EmailController {
     private static final String EMAIL_USERNAME = "dhanuthfernando2001@gmail.com";
-    private static final String EMAIL_PASSWORD = "xnpw urth zzbg hwhd";
+    private static final String EMAIL_PASSWORD = "";
     private static final String SMTP_HOST = "smtp.gmail.com";
     private static final int SMTP_PORT = 587; // Adjust as per your SMTP configuration
 
